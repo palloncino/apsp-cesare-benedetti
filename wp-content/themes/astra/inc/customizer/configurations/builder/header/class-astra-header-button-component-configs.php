@@ -3,6 +3,8 @@
  * [Header] options for astra theme.
  *
  * @package     Astra Header Footer Builder
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       3.0.0
  */
@@ -18,6 +20,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 	 * Register below header Configurations.
 	 */
 	class Astra_Header_Button_Component_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Button control for Header/Footer Customizer Configurations.
 		 *
@@ -27,7 +30,8 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 		 * @return Array Astra Customizer Configurations with updated configurations.
 		 */
 		public function register_configuration( $configurations, $wp_customize ) {
-			return astra_header_button_configuration( $configurations );
+			$configurations = astra_header_button_configuration( $configurations );
+			return $configurations;
 		}
 	}
 

@@ -3,6 +3,8 @@
  * Global Misc Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2022, Astra
  * @link        https://wpastra.com/
  * @since       Astra  4.0.0
  */
@@ -15,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Register Astra Global Misc Configurations.
  */
 class Astra_Global_Misc_Configs extends Astra_Customizer_Config_Base {
+
 	/**
 	 * Register Astra Global Misc  Configurations.
 	 *

@@ -2,7 +2,9 @@
 /**
  * Primary footer Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -68,7 +70,7 @@ function astra_primary_footer_configuration() {
 			),
 			'renderAs'   => 'text',
 			'responsive' => false,
-			'divider'    => array( 'ast_class' => 'ast-section-spacing ast-bottom-divider' ),
+			'divider'    => array( 'ast_class' => 'ast-section-spacing ast-bottom-dotted-divider' ),
 		),
 
 		/**
@@ -134,6 +136,7 @@ function astra_primary_footer_configuration() {
 			'context'     => Astra_Builder_Helper::$general_tab,
 		),
 
+
 		/**
 		 * Option: Vertical Alignment
 		 */
@@ -190,7 +193,7 @@ function astra_primary_footer_configuration() {
 				'max'  => 600,
 			),
 			'context'     => Astra_Builder_Helper::$design_tab,
-			'divider'     => array( 'ast_class' => 'ast-section-spacing ast-bottom-divider' ),
+			'divider'     => array( 'ast_class' => 'ast-section-spacing ast-bottom-dotted-divider' ),
 		),
 
 		// Option: Footer Top Boder Color.
@@ -268,5 +271,5 @@ function astra_primary_footer_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_primary_footer_configuration' );
+	astra_primary_footer_configuration();
 }

@@ -3,6 +3,8 @@
  * Astra Theme Customizer Configuration Builder.
  *
  * @package     astra-builder
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       3.0.0
  */
@@ -22,6 +24,7 @@ if ( ! class_exists( 'Astra_Customizer_Config_Base' ) ) {
  * @since 3.0.0
  */
 class Astra_Customizer_Header_Widget_Configs extends Astra_Customizer_Config_Base {
+
 	/**
 	 * Register Builder Customizer Configurations.
 	 *
@@ -31,8 +34,9 @@ class Astra_Customizer_Header_Widget_Configs extends Astra_Customizer_Config_Bas
 	 * @return Array Astra Customizer Configurations with updated configurations.
 	 */
 	public function register_configuration( $configurations, $wp_customize ) {
-		$html_config = astra_header_widget_configuration();
-		return array_merge( $configurations, $html_config );
+		$html_config    = astra_header_widget_configuration();
+		$configurations = array_merge( $configurations, $html_config );
+		return $configurations;
 	}
 }
 
@@ -41,3 +45,4 @@ class Astra_Customizer_Header_Widget_Configs extends Astra_Customizer_Config_Bas
  */
 
 new Astra_Customizer_Header_Widget_Configs();
+

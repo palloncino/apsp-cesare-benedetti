@@ -12,6 +12,7 @@
  * @since 4.0.0
  */
 class Astra_Scroll_To_Top_Loader {
+
 	/**
 	 * Member Variable
 	 *
@@ -128,6 +129,6 @@ class Astra_Scroll_To_Top_Loader {
 }
 
 /**
- *  Kicking this off by calling 'get_instance()' method
- */
+*  Kicking this off by calling 'get_instance()' method
+*/
 Astra_Scroll_To_Top_Loader::get_instance();

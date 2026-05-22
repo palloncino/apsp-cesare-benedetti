@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 3.0.0
  */
 final class Astra_Builder_Customizer {
+
 	/**
 	 * Constructor
 	 *
@@ -65,6 +66,7 @@ final class Astra_Builder_Customizer {
 		add_action( 'customize_register', array( $this, 'update_default_wp_configs' ) );
 		add_action( 'init', array( $this, 'deregister_menu_locations_widgets' ), 999 );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'builder_customizer_preview_styles' ) );
+
 	}
 
 	/**
@@ -97,7 +99,7 @@ final class Astra_Builder_Customizer {
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => static function() {
+				'render_callback' => function() {
 					bloginfo( 'description' );
 				},
 			)
@@ -107,13 +109,14 @@ final class Astra_Builder_Customizer {
 			'blogname',
 			array(
 				'selector'        => '.site-title',
-				'render_callback' => static function() {
+				'render_callback' => function() {
 					bloginfo( 'name' );
 				},
 			)
 		);
 
 		// @codingStandardsIgnoreStart PHPCompatibility.FunctionDeclarations.NewClosure.Found
+
 	}
 
 	/**
@@ -200,10 +203,6 @@ final class Astra_Builder_Customizer {
 	 * @since 3.0.0
 	 */
 	public function enqueue_customizer_preview_scripts() {
-		// Bail early if it is not astra customizer.
-		if ( ! Astra_Customizer::is_astra_customizer() ) {
-			return;
-		}
 
 		// Enqueue Builder CSS.
 		wp_enqueue_style(
@@ -438,7 +437,7 @@ final class Astra_Builder_Customizer {
 	 * @return bool
 	 */
 	public static function astra_collect_customizer_builder_data() {
-		return ! is_customize_preview() && apply_filters( 'astra_collect_customizer_builder_data', false ) ? true : false;
+		return ( ! is_customize_preview() && apply_filters( 'astra_collect_customizer_builder_data', false ) ) ? true : false;
 	}
 }
 

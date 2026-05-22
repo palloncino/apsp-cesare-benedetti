@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 7.0.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-22 11:36:21+0000\n"
+"PO-Revision-Date: 2026-05-14 20:24:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -325,19 +325,9 @@ msgstr "Proteggi il tuo sito dallo spam."
 msgid "Akismet Anti-spam"
 msgstr "Akismet Anti-spam"
 
-#. translators: %s: Connector ID.
-#: wp-includes/class-wp-connector-registry.php:279
-msgid "Connector \"%s\" plugin is_active must be callable."
-msgstr "Il plugin \"%s\" del connettore is_active deve essere richiamabile."
-
 #: wp-includes/collaboration/class-wp-http-polling-sync-server.php:269
 msgid "Request body is too large."
 msgstr "Il contenuto della richiesta è troppo grande."
-
-#. translators: %s: wp_ai_client_default_request_timeout
-#: wp-includes/ai-client/class-wp-ai-client-prompt-builder.php:210
-msgid "The %s filter must return a non-negative number."
-msgstr "Il filtro %s deve restituire un numero non negativo."
 
 #: wp-includes/script-loader.php:2023
 msgctxt "datepicker: navigate to previous month"
@@ -348,11 +338,6 @@ msgstr "Precedente"
 msgctxt "datepicker: navigate to next month"
 msgid "Next"
 msgstr "Successivo"
-
-#. translators: 1: Ability name, 2: Exception message.
-#: wp-includes/abilities-api/class-wp-ability.php:520
-msgid "Ability \"%1$s\" callback threw an exception: %2$s"
-msgstr "La funzione di callback \"%1$s\" ha generato un'eccezione: %2$s"
 
 #. translators: %s: Connector name.
 #: wp-includes/connectors.php:608

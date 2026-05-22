@@ -5,18 +5,18 @@
  * @package Astra
  */
 
-// phpcs:disable PHPCompatibility.Keywords.NewKeywords.t_namespaceFound, WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound
-
-namespace Elementor;
+namespace Elementor; // phpcs:ignore PHPCompatibility.Keywords.NewKeywords.t_namespaceFound, WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound
 
 // If plugin - 'Elementor' not exist then return.
 if ( ! class_exists( '\Elementor\Plugin' ) || ! class_exists( 'ElementorPro\Modules\ThemeBuilder\Module' ) ) {
 	return;
 }
 
-namespace ElementorPro\Modules\ThemeBuilder\ThemeSupport;
+namespace ElementorPro\Modules\ThemeBuilder\ThemeSupport; // phpcs:ignore PHPCompatibility.Keywords.NewKeywords.t_namespaceFound, PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound, WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound
 
 // @codingStandardsIgnoreStart PHPCompatibility.Keywords.NewKeywords.t_useFound
+use Elementor\TemplateLibrary\Source_Local;
+use ElementorPro\Modules\ThemeBuilder\Classes\Locations_Manager;
 use ElementorPro\Modules\ThemeBuilder\Module;
 // @codingStandardsIgnoreEnd PHPCompatibility.Keywords.NewKeywords.t_useFound
 
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Astra Elementor Compatibility
  */
-if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
+if ( ! class_exists( 'Astra_Elementor_Pro' ) ) :
 
 	/**
 	 * Astra Elementor Compatibility
@@ -35,6 +35,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 	 * @since 1.2.7
 	 */
 	class Astra_Elementor_Pro {
+
 		/**
 		 * Member Variable
 		 *
@@ -115,10 +116,10 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 		 *
 		 * @since  3.8.0
 		 *
-		 * @return bool true iF Elementor Editor is loaded, false If Elementor Editor is not loaded.
+		 * @return boolean true iF Elementor Editor is loaded, false If Elementor Editor is not loaded.
 		 */
 		public function is_elementor_editor() {
-			if ( ( isset( $_REQUEST['action'] ) && 'elementor' === $_REQUEST['action'] ) || isset( $_REQUEST['elementor-preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( ( isset( $_REQUEST['action'] ) && 'elementor' == $_REQUEST['action'] ) || isset( $_REQUEST['elementor-preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				return true;
 			}
 
@@ -277,7 +278,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 		public function override_meta() {
 
 			// don't override meta for `elementor_library` post type.
-			if ( 'elementor_library' === get_post_type() ) {
+			if ( 'elementor_library' == get_post_type() ) {
 				return;
 			}
 
@@ -302,7 +303,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 		 * Override sidebar, title etc with post meta
 		 *
 		 * @since 1.2.7
-		 * @param  int $post_id  Post ID.
+		 * @param  integer $post_id  Post ID.
 		 * @return void
 		 */
 		public function override_with_post_meta( $post_id = 0 ) {
@@ -329,7 +330,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 			if ( 'default' !== $sidebar ) {
 				add_filter(
 					'astra_page_layout',
-					static function( $page_layout ) use ( $sidebar ) {
+					function( $page_layout ) use ( $sidebar ) {
 						return $sidebar;
 					}
 				);
@@ -344,7 +345,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 			if ( 'default' !== $content_layout ) {
 				add_filter(
 					'astra_get_content_layout',
-					static function( $layout ) use ( $content_layout ) {
+					function( $layout ) use ( $content_layout ) {
 						return $content_layout;
 					}
 				);
@@ -359,7 +360,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 			if ( 'disabled' === $footer_layout ) {
 				add_filter(
 					'astra_footer_sml_layout',
-					static function( $is_footer ) {
+					function( $is_footer ) {
 						return 'disabled';
 					}
 				);
@@ -374,7 +375,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 			if ( 'disabled' === $footer_widgets ) {
 				add_filter(
 					'astra_advanced_footer_disable',
-					static function() {
+					function() {
 						return true;
 					}
 				);
@@ -390,7 +391,7 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 				remove_action( 'astra_masthead', 'astra_masthead_primary_template' );
 				add_filter(
 					'astra_main_header_display',
-					static function( $display_header ) {
+					function( $display_header ) {
 						return 'disabled';
 					}
 				);
@@ -555,4 +556,4 @@ if ( ! class_exists( 'Astra_Elementor_Pro' ) ) {
 	 */
 	Astra_Elementor_Pro::get_instance();
 
-}
+endif;

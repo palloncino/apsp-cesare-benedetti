@@ -3,6 +3,8 @@
  * Container Options for Astra theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.0
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Container_Configs' ) ) {
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Woo_Shop_Container_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Astra-WooCommerce Shop Container Settings.
 		 *
@@ -44,15 +47,15 @@ if ( ! class_exists( 'Astra_Woo_Shop_Container_Configs' ) ) {
 					'choices'           => array(
 						'default'                => array(
 							'label' => __( 'Default', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'layout-default', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'layout-default', false ) : '',
 						),
 						'normal-width-container' => array(
 							'label' => __( 'Normal', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'normal-width-container', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'normal-width-container', false ) : '',
 						),
 						'full-width-container'   => array(
 							'label' => __( 'Full Width', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'full-width-container', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'full-width-container', false ) : '',
 						),
 					),
 					'divider'           => array( 'ast_class' => 'ast-section-spacing ast-bottom-spacing' ),
@@ -77,11 +80,12 @@ if ( ! class_exists( 'Astra_Woo_Shop_Container_Configs' ) ) {
 					),
 					'renderAs'    => 'text',
 					'responsive'  => false,
-					'divider'     => array( 'ast_class' => 'ast-top-divider' ),
+					'divider'     => array( 'ast_class' => 'ast-top-dotted-divider' ),
 				),
 			);
 
 			return array_merge( $configurations, $_configs );
+
 		}
 	}
 }

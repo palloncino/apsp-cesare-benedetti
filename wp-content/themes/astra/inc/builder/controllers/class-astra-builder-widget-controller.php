@@ -16,12 +16,14 @@ if ( ! class_exists( 'Astra_Builder_Widget_Controller' ) ) {
 	 * Class Astra_Builder_Widget_Controller.
 	 */
 	final class Astra_Builder_Widget_Controller {
+
 		/**
 		 * Member Variable
 		 *
 		 * @var mixed instance
 		 */
 		private static $instance = null;
+
 
 		/**
 		 *  Initiator
@@ -42,6 +44,7 @@ if ( ! class_exists( 'Astra_Builder_Widget_Controller' ) ) {
 
 			add_action( 'widgets_init', array( $this, 'widget_init' ) );
 			add_filter( 'customize_section_active', array( $this, 'display_sidebar' ), 99, 2 );
+
 		}
 
 		/**
@@ -93,13 +96,15 @@ if ( ! class_exists( 'Astra_Builder_Widget_Controller' ) ) {
 
 				$this->register_sidebar( $index, 'header' );
 			}
+
 		}
+
 
 		/**
 		 * Register widget for the builder.
 		 *
-		 * @param int    $index index of widget.
-		 * @param string $builder_type builder type.
+		 * @param integer $index index of widget.
+		 * @param string  $builder_type builder type.
 		 */
 		public function register_sidebar( $index, $builder_type = 'header' ) {
 			register_sidebar(

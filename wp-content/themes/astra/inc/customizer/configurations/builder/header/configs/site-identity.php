@@ -2,7 +2,9 @@
 /**
  * Site identity Header Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -36,8 +38,8 @@ function astra_header_site_identity_configuration() {
 		),
 
 		/**
-		 * Link to the astra logo and site title settings.
-		 */
+		* Link to the astra logo and site title settings.
+		*/
 		array(
 			'name'           => ASTRA_THEME_SETTINGS . '[logo-title-settings-link]',
 			'type'           => 'control',
@@ -74,6 +76,7 @@ function astra_header_site_identity_configuration() {
 			'priority'    => 5,
 			'context'     => Astra_Builder_Helper::$design_tab,
 			'title'       => __( 'Logo Color', 'astra' ),
+			'divider'     => array( 'ast_class' => 'ast-section-spacing' ),
 			'description' => __( 'Use it with transparent images for optimal results.', 'astra' ),
 		),
 
@@ -105,9 +108,10 @@ function astra_header_site_identity_configuration() {
 			'context'   => Astra_Builder_Helper::$design_tab,
 		),
 
+
 		/**
-		 * Option: Divider
-		 */
+				 * Option: Divider
+				 */
 		array(
 			'name'     => ASTRA_THEME_SETTINGS . '[' . $_section . '-margin-divider]',
 			'section'  => $_section,
@@ -117,7 +121,7 @@ function astra_header_site_identity_configuration() {
 			'priority' => 220,
 			'settings' => array(),
 			'context'  => Astra_Builder_Helper::$design_tab,
-			'divider'  => array( 'ast_class' => 'ast-top-section-divider' ),
+			'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
 		),
 
 		/**
@@ -228,9 +232,8 @@ function astra_header_site_identity_configuration() {
 			'default'           => astra_get_option( 'font-size-site-title' ),
 			'transport'         => 'postMessage',
 			'control'           => 'ast-responsive-slider',
-			'priority'          => true === Astra_Builder_Helper::$is_header_footer_builder_active ? 16 : 8,
+			'priority'          => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? 16 : 8,
 			'title'             => __( 'Title Font Size', 'astra' ),
-			'is_font'           => true,
 			'sanitize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_responsive_slider' ),
 			'suffix'            => array( 'px', 'em', 'vw', 'rem' ),
 			'input_attrs'       => array(
@@ -255,7 +258,7 @@ function astra_header_site_identity_configuration() {
 					'max'  => 20,
 				),
 			),
-			'context'           => true === Astra_Builder_Helper::$is_header_footer_builder_active ? array(
+			'context'           => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? array(
 				Astra_Builder_Helper::$design_tab_config,
 				array(
 					'relation' => 'OR',
@@ -309,9 +312,8 @@ function astra_header_site_identity_configuration() {
 			'control'           => 'ast-responsive-slider',
 			'default'           => astra_get_option( 'font-size-site-tagline' ),
 			'transport'         => 'postMessage',
-			'priority'          => true === Astra_Builder_Helper::$is_header_footer_builder_active ? 20 : 12,
+			'priority'          => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? 20 : 12,
 			'title'             => __( 'Tagline Font Size', 'astra' ),
-			'is_font'           => true,
 			'sanitize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_responsive_slider' ),
 			'suffix'            => array( 'px', 'em', 'vw', 'rem' ),
 			'input_attrs'       => array(
@@ -336,7 +338,7 @@ function astra_header_site_identity_configuration() {
 					'max'  => 20,
 				),
 			),
-			'context'           => true === Astra_Builder_Helper::$is_header_footer_builder_active ? array(
+			'context'           => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? array(
 				Astra_Builder_Helper::$design_tab_config,
 				array(
 					'relation' => 'OR',
@@ -395,5 +397,5 @@ function astra_header_site_identity_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_header_site_identity_configuration' );
+	astra_header_site_identity_configuration();
 }

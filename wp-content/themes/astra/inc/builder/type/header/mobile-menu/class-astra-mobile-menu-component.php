@@ -3,6 +3,8 @@
  * Header Navigation Menu component.
  *
  * @package     Astra Builder
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 3.0.0
  */
@@ -20,6 +22,7 @@ define( 'ASTRA_BUILDER_MOBILE_MENU_URI', ASTRA_THEME_URI . 'inc/builder/type/hea
  * @since 3.0.0
  */
 class Astra_Mobile_Menu_Component {
+
 	/**
 	 * Constructor function that initializes required actions and hooks
 	 */
@@ -98,7 +101,7 @@ class Astra_Mobile_Menu_Component {
 
 		// To add default alignment for navigation which can be added through any third party plugin.
 		// Do not add any CSS from theme except header alignment.
-		echo '<div ' . astra_attr( 'ast-main-header-bar-alignment' ) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<div ' . astra_attr( 'ast-main-header-bar-alignment' ) . '>';
 
 		if ( is_customize_preview() ) {
 			Astra_Builder_UI_Controller::render_customizer_edit_button();
@@ -118,25 +121,21 @@ class Astra_Mobile_Menu_Component {
 
 			// Adding rel="nofollow" for duplicate menu render.
 			$mobile_menu_markup = $astra_builder->nofollow_markup( $theme_location, $mobile_menu_markup );
-			echo do_shortcode( $mobile_menu_markup );
+			echo $mobile_menu_markup;
 		} else {
 			echo '<div class="main-header-bar-navigation">';
 			echo '<nav ';
-			echo wp_kses_post(
-				astra_attr(
-					'site-navigation',
-					array(
-						'id'         => 'ast-' . esc_attr( $device ) . '-site-navigation',
-						'class'      => 'site-navigation ast-flex-grow-1 navigation-accessibility',
-						'aria-label' => esc_attr__( 'Site Navigation', 'astra' ),
-					)
+			echo astra_attr(
+				'site-navigation',
+				array(
+					'id' => 'ast-' . esc_attr( $device ) . '-site-navigation',
 				)
 			);
-			echo '>';
+			echo ' class="site-navigation ast-flex-grow-1 navigation-accessibility" aria-label="' . esc_attr__( 'Site Navigation', 'astra' ) . '">';
 			$mobile_menu_markup = wp_page_menu( $fallback_menu_args );
 			// Adding rel="nofollow" for duplicate menu render.
 			$mobile_menu_markup = $astra_builder->nofollow_markup( $theme_location, $mobile_menu_markup );
-			echo do_shortcode( $mobile_menu_markup );
+			echo $mobile_menu_markup;
 			echo '</nav>';
 			echo '</div>';
 		}

@@ -3,6 +3,8 @@
  * Styling Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.15
  */
@@ -19,6 +21,7 @@ if ( ! class_exists( 'Astra_Single_Typo_Configs' ) ) {
 	 * @since 1.4.3
 	 */
 	class Astra_Single_Typo_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Single Typography configurations.
 		 *
@@ -44,6 +47,7 @@ if ( ! class_exists( 'Astra_Single_Typo_Configs' ) ) {
 						'type'     => 'control',
 						'control'  => 'ast-upgrade',
 						'campaign' => 'blog-single',
+						'renderAs' => 'list',
 						'choices'  => array(
 							'one'   => array(
 								'title' => __( 'Author Box with Social Share', 'astra' ),
@@ -80,7 +84,9 @@ if ( ! class_exists( 'Astra_Single_Typo_Configs' ) ) {
 				);
 			}
 
-			return array_merge( $configurations, $_configs );
+			$configurations = array_merge( $configurations, $_configs );
+
+			return $configurations;
 		}
 	}
 }

@@ -255,11 +255,11 @@ msgstr "Elenco di articoli senza immagini, 1 colonna"
 msgid "I’m <em>Leia Acosta</em>, a passionate photographer who finds inspiration in capturing the fleeting beauty of life."
 msgstr "Sono <em>Leia Acosta</em>, un'appassionata fotografa che trova ispirazione dal catturare la fuggevole bellezza della vita."
 
-#: functions.php:188
+#: functions.php:200
 msgid "A collection of full page layouts."
 msgstr "Una collezione di layout di pagine intere."
 
-#: functions.php:187
+#: functions.php:199
 msgctxt "Block pattern category"
 msgid "Pages"
 msgstr "Pagine"
@@ -514,19 +514,19 @@ msgctxt "Color name"
 msgid "Contrast / 2"
 msgstr "Contrasto / 2"
 
-#: functions.php:107
+#: functions.php:111
 msgid "With asterisk"
 msgstr "Con asterisco"
 
-#: functions.php:89
+#: functions.php:93
 msgid "With arrow"
 msgstr "Con freccia"
 
-#: functions.php:70
+#: functions.php:74
 msgid "Checkmark"
 msgstr "Segno di spunta"
 
-#: functions.php:24
+#: functions.php:28
 msgid "Arrow icon"
 msgstr "Icona freccia"
 
@@ -1390,7 +1390,7 @@ msgctxt "Sample heading for pricing pattern"
 msgid "Our Services"
 msgstr "I nostri servizi"
 
-#: functions.php:47
+#: functions.php:51
 msgid "Pill"
 msgstr "Pillola"
 

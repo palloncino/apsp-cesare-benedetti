@@ -3,6 +3,8 @@
  * Below Header.
  *
  * @package     astra-builder
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       3.0.0
  */
@@ -20,6 +22,7 @@ define( 'ASTRA_BELOW_HEADER_URI', ASTRA_THEME_URI . 'inc/builder/type/header/bel
  * @since 3.0.0
  */
 class Astra_Below_Header {
+
 	/**
 	 * Constructor function that initializes required actions and hooks.
 	 */

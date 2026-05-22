@@ -248,4 +248,5 @@ function astra_pagination_css( $dynamic_css ) {
 		return $dynamic_css .= Astra_Enqueue_Scripts::trim_css( $pagination_static_css );
 	}
 	return $dynamic_css;
+
 }

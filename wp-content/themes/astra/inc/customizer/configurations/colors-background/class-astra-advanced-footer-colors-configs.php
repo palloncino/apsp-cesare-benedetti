@@ -3,6 +3,8 @@
  * Styling Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       1.4.3
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Adv_Footer_Colors_Configs' ) ) {
 	 * Register Advanced Footer Color Customizer Configurations.
 	 */
 	class Astra_Advanced_Footer_Colors_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Advanced Footer Color Customizer Configurations.
 		 *
@@ -164,9 +167,13 @@ if ( ! class_exists( 'Astra_Adv_Footer_Colors_Configs' ) ) {
 				),
 			);
 
-			return array_merge( $configurations, $_configs );
+			$configurations = array_merge( $configurations, $_configs );
+
+			return $configurations;
 		}
 	}
 }
 
 new Astra_Advanced_Footer_Colors_Configs();
+
+

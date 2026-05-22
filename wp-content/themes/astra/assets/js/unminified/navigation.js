@@ -274,7 +274,6 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 		// Add Eventlisteners for Submenu.
 		if (astra_menu_toggle.length > 0) {
 			for (var i = 0; i < astra_menu_toggle.length; i++) {
-				astra_menu_toggle[i].removeEventListener('click', AstraToggleSubMenu);
 				astra_menu_toggle[i].addEventListener('click', AstraToggleSubMenu, false);
 			}
 		}
@@ -291,7 +290,6 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 
 				if ( ! menu_click_listeners_nav[i] ) {
 					menu_click_listeners_nav[i] = menu_toggle_all[i];
-					menu_toggle_all[i].removeEventListener('click', astraNavMenuToggle);
 					menu_toggle_all[i].addEventListener('click', astraNavMenuToggle, false);
 				}
 
@@ -306,7 +304,6 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 					// Add Eventlisteners for Submenu.
 					if (astra_menu_toggle.length > 0) {
 						for (var j = 0; j < astra_menu_toggle.length; j++) {
-							astra_menu_toggle[j].removeEventListener('click', AstraToggleSubMenu);
 							astra_menu_toggle[j].addEventListener('click', AstraToggleSubMenu, false);
 						}
 					}
@@ -549,7 +546,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
             hash = '#';
 
         if( self && ! self.classList.contains('astra-search-icon') ) {
-            var link = String( self );
+            var link = new String( self );
             if( link.indexOf( hash ) !== -1 ) {
             	var link_parent = self.parentNode;
                 if ( document.body.classList.contains('ast-header-break-point') && ! ( document.querySelector("header.site-header").classList.contains("ast-menu-toggle-link") && link_parent.classList.contains("menu-item-has-children") ) ) {
@@ -659,53 +656,42 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 	 * @since x.x.x
 	 */
 	if ( astra.is_scroll_to_id ) {
-		// Calculate the offset top of an element, accounting for nested elements.
-		const getOffsetTop = (element) => {
-			let offsetTop = 0;
-			while (element) {
-				offsetTop += element.offsetTop;
-				element = element.offsetParent;
+		let hashLinks = [];
+		const links = document.querySelectorAll('a[href*="#"]:not([href="#"]):not([href="#0"]):not([href*="uagb-tab"]):not(.uagb-toc-link__trigger):not(.skip-link):not(.nav-links a):not([href*="tab-"])');
+		if (links) {
+
+			for (const link of links) {
+
+				if (link.href.split('#')[0] !== location.href.split('#')[0]) {
+					// Store the hash
+					hashLinks.push({hash: link.hash, url: link.href.split('#')[0]});
+				} else if (link.hash !== "") {
+					link.addEventListener("click", scrollToIDHandler);
+				}
 			}
-			return offsetTop;
 		}
 
-		const scrollToIDHandler = (e) => {
+		function scrollToIDHandler(e) {
 
 			let offset = 0;
 			const siteHeader = document.querySelector('.site-header');
 
 			if (siteHeader) {
 
-				// Check and add offset to scroll top if header is sticky.
-				const stickyHeaders = siteHeader.querySelectorAll(
-					'div[data-stick-support]'
-				);
+				//Check and add offset to scroll top if header is sticky.
+				const headerHeight = siteHeader.querySelectorAll('div[data-stick-support]');
 
-				if ( stickyHeaders.length > 0 ) {
-					stickyHeaders.forEach( ( header ) => ( offset += header.clientHeight ) );
-				} else if ( typeof astraAddon !== 'undefined' && ! ( Number( astraAddon.sticky_hide_on_scroll ) && ! document?.querySelector( '.ast-header-sticked' ) ) ) {
-					const fixedHeader = document.querySelector( '#ast-fixed-header' );
-					if ( fixedHeader ) {
-						offset = fixedHeader?.clientHeight;
-						if ( Number( astraAddon?.header_main_shrink ) ) {
-							const headers = fixedHeader?.querySelectorAll(
-								'.ast-above-header-wrap, .ast-below-header-wrap'
-							);
-							headers?.forEach( () => ( offset -= 10 ) );
-						}
-					}
+				if (headerHeight) {
+					headerHeight.forEach(single => {
+						offset += single.clientHeight;
+					});
 				}
 
-				const href = e.target.closest('a').hash;
+				const href = this.hash;
 				if (href) {
 					const scrollId = document.querySelector(href);
 					if (scrollId) {
-						const elementOffsetTop = getOffsetTop( scrollId );
-						if ( typeof astraAddon !== 'undefined' && Number( astraAddon.sticky_hide_on_scroll ) && window?.scrollY  < elementOffsetTop ) {
-							offset = 0;
-						}
-
-						const scrollOffsetTop = elementOffsetTop - offset;
+						const scrollOffsetTop = getOffsetTop(scrollId) - offset;
 						if( scrollOffsetTop ) {
 							astraSmoothScroll( e, scrollOffsetTop );
 						}
@@ -714,22 +700,14 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 			}
 		}
 
-		let hashLinks = [];
-		const links = document.querySelectorAll(
-			'a[href*="#"]:not([href="#"]):not([href="#0"]):not([href*="uagb-tab"]):not(.uagb-toc-link__trigger):not(.skip-link):not(.nav-links a):not([href*="tab-"])'
-		);
-		if (links) {
-			for (const link of links) {
-				if (link.href.split("#")[0] !== location.href.split("#")[0]) {
-					// Store the hash
-					hashLinks.push({
-						hash: link.hash,
-						url: link.href.split("#")[0],
-					});
-				} else if (link.hash !== "") {
-					link.addEventListener("click", scrollToIDHandler);
-				}
+		// Calculate the offset top of an element, accounting for nested elements.
+		function getOffsetTop(element) {
+			let offsetTop = 0;
+			while (element) {
+				offsetTop += element.offsetTop;
+				element = element.offsetParent;
 			}
+			return offsetTop;
 		}
 
 		window.addEventListener('DOMContentLoaded', (event) => {

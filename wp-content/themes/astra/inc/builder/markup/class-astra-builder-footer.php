@@ -16,6 +16,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 	 * Class Astra_Builder_Footer.
 	 */
 	final class Astra_Builder_Footer {
+
 		/**
 		 * Member Variable
 		 *
@@ -112,6 +113,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 			}
 		}
 
+
 		/**
 		 * Remove existing Footer to load Footer Builder.
 		 *
@@ -131,8 +133,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 		 */
 		public function footer_markup() {
 
-			/** @psalm-suppress InvalidArgument */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-			$display_footer = get_post_meta( astra_get_post_id(), 'footer-sml-layout', true );
+			$display_footer = get_post_meta( get_the_ID(), 'footer-sml-layout', true );
 
 			$display_footer = apply_filters( 'astra_footer_bar_display', $display_footer );
 
@@ -161,6 +162,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 				set_query_var( 'row', 'above' );
 				get_template_part( 'template-parts/footer/builder/footer', 'row' );
 			}
+
 		}
 
 		/**
@@ -182,6 +184,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 				set_query_var( 'row', 'primary' );
 				get_template_part( 'template-parts/footer/builder/footer', 'row' );
 			}
+
 		}
 
 		/**
@@ -203,6 +206,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 				set_query_var( 'row', 'below' );
 				get_template_part( 'template-parts/footer/builder/footer', 'row' );
 			}
+
 		}
 
 		/**
@@ -223,7 +227,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 
 			$theme_author = astra_get_theme_author_details();
 
-			$content = astra_get_i18n_option( 'footer-copyright-editor', _x( '%astra%', 'Footer Builder: Copyright Editor Text', 'astra' ) );
+			$content = astra_get_option( 'footer-copyright-editor' );
 			if ( $content || is_customize_preview() ) {
 				echo '<div class="ast-footer-copyright">';
 						$content = str_replace( '[copyright]', '&copy;', $content );
@@ -233,6 +237,7 @@ if ( ! class_exists( 'Astra_Builder_Footer' ) ) {
 						echo do_shortcode( wp_kses_post( wpautop( $content ) ) );
 				echo '</div>';
 			}
+
 		}
 
 		/**

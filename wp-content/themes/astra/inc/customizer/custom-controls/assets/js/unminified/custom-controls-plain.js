@@ -33,6 +33,7 @@
 		 * Initializes logic for font controls.
 		 *
 		 * @since 1.0.0
+		 * @access private
 		 * @method _initFonts
 		 */
 		_initFonts: function()
@@ -63,6 +64,7 @@
 		 * Initializes logic for a single font control.
 		 *
 		 * @since 1.0.0
+		 * @access private
 		 * @method _initFont
 		 */
 		_initFont: function()
@@ -86,6 +88,7 @@
 		 * Callback for when a font control changes.
 		 *
 		 * @since 1.0.0
+		 * @access private
 		 * @method _fontSelectChange
 		 */
 		_fontSelectChange: function()
@@ -157,6 +160,7 @@
 		 * font family control changes.
 		 *
 		 * @since 1.0.0
+		 * @access private
 		 * @method _setFontWeightOptions
 		 * @param {Boolean} init Whether or not we're initializing this font weight control.
 		 */
@@ -178,9 +182,8 @@
 				weightValue     = init ? weightSelect.val() : 'inherit';
 			}
 
-			// variables defined above.
-			fontValue = AstTypography._cleanGoogleFonts(fontValue);
-			weightObject = AstTypography._getWeightObject( fontValue );
+			var fontValue = AstTypography._cleanGoogleFonts(fontValue);
+			var weightObject = AstTypography._getWeightObject( fontValue );
 
 			weightObject = $.merge( inheritWeightObject, weightObject )
 			weightMap[ 'inherit' ] = currentWeightTitle;
@@ -1519,10 +1522,10 @@
 	};
 
 	Results.prototype.template = function (result, container) {
-	  var _template = this.options.get('templateResult');
+	  var template = this.options.get('templateResult');
 	  var escapeMarkup = this.options.get('escapeMarkup');
 
-	  var content = _template(result, container);
+	  var content = template(result, container);
 
 	  if (content == null) {
 		container.style.display = 'none';
@@ -1824,10 +1827,10 @@
 	};
 
 	SingleSelection.prototype.display = function (data, container) {
-	  var _template = this.options.get('templateSelection');
+	  var template = this.options.get('templateSelection');
 	  var escapeMarkup = this.options.get('escapeMarkup');
 
-	  return escapeMarkup(_template(data, container));
+	  return escapeMarkup(template(data, container));
 	};
 
 	SingleSelection.prototype.selectionContainer = function () {
@@ -1925,10 +1928,10 @@
 	};
 
 	MultipleSelection.prototype.display = function (data, container) {
-	  var _template = this.options.get('templateSelection');
+	  var template = this.options.get('templateSelection');
 	  var escapeMarkup = this.options.get('escapeMarkup');
 
-	  return escapeMarkup(_template(data, container));
+	  return escapeMarkup(template(data, container));
 	};
 
 	MultipleSelection.prototype.selectionContainer = function () {

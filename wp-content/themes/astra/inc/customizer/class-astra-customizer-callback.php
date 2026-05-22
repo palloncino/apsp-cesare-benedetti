@@ -12,16 +12,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Customizer Callback
  */
-if ( ! class_exists( 'Astra_Customizer_Callback' ) ) {
+if ( ! class_exists( 'Astra_Customizer_Callback' ) ) :
 
 	/**
 	 * Customizer Callback
 	 */
 	class Astra_Customizer_Callback {
+
 		/**
 		 * Sidebar Archive
 		 *
-		 * @return bool Return the sidebar status for Home, Archive & Search pages.
+		 * @return boolean Return the sidebar status for Home, Archive & Search pages.
 		 */
 		public static function _sidebar_archive() { // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
 
@@ -34,7 +35,7 @@ if ( ! class_exists( 'Astra_Customizer_Callback' ) ) {
 		/**
 		 * Sidebar Single
 		 *
-		 * @return bool Return the sidebar status for Single Post.
+		 * @return boolean Return the sidebar status for Single Post.
 		 */
 		public static function _sidebar_single() { // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
 
@@ -47,7 +48,7 @@ if ( ! class_exists( 'Astra_Customizer_Callback' ) ) {
 		/**
 		 * Sidebar Page
 		 *
-		 * @return bool Return the sidebar status for Single Page / Custom post type & 404.
+		 * @return boolean Return the sidebar status for Single Page / Custom post type & 404.
 		 */
 		public static function _sidebar_page() { // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
 
@@ -58,4 +59,4 @@ if ( ! class_exists( 'Astra_Customizer_Callback' ) ) {
 		}
 	}
 
-}
+endif;

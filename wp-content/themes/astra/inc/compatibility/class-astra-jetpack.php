@@ -15,7 +15,7 @@ if ( ! class_exists( 'Jetpack' ) ) {
 /**
  * Astra Jetpack Compatibility
  */
-if ( ! class_exists( 'Astra_Jetpack' ) ) {
+if ( ! class_exists( 'Astra_Jetpack' ) ) :
 
 	/**
 	 * Astra Jetpack Compatibility
@@ -23,6 +23,7 @@ if ( ! class_exists( 'Astra_Jetpack' ) ) {
 	 * @since 1.0.0
 	 */
 	class Astra_Jetpack {
+
 		/**
 		 * Member Variable
 		 *
@@ -74,7 +75,7 @@ if ( ! class_exists( 'Astra_Jetpack' ) ) {
 
 	}
 
-}
+endif;
 
 /**
  * Kicking this off by calling 'get_instance()' method

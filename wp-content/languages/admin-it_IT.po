@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 7.0.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-21 13:07:46+0000\n"
+"PO-Revision-Date: 2026-05-08 08:14:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,73 +37,6 @@ msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "Europe/Rome"
 
-#: wp-admin/about.php:150
-msgid "WordPress continues to polish accessibility across WordPress Core and Gutenberg, advancing the goals to meet accessibility standards. WordPress 7.0 includes fixes across the platform, improving media management, usability for voice control, and improvements to color contrast with the new admin color scheme. The editor ships with new blocks and improvements to editor navigation and interaction."
-msgstr "WordPress continua a perfezionare l'accessibilità sia nel Core di WordPress, sia in Gutenberg, compiendo ulteriori passi avanti verso il raggiungimento degli standard di accessibilità. WordPress 7.0 include correzioni a livello di piattaforma, miglioramenti nella gestione dei file multimediali e nell'usabilità per il controllo vocale, oltre a un miglior contrasto cromatico grazie alla nuova combinazione di colori nell'area di amministrazione. L'editor presenta nuovi blocchi e miglioramenti nella navigazione e nell'interazione."
-
-#: wp-admin/about.php:141
-msgid "WordPress 7.0 improves the accuracy of image loading prioritization, preventing hidden images in navigation overlays or interactive blocks from degrading the loading of critical resources. On-demand block stylesheet loading in classic themes is more reliable, and the ability is added for scripts to depend on script modules to reduce render-blocking."
-msgstr "WordPress 7.0 migliora la precisione della priorità di caricamento delle immagini, impedendo che le immagini nascoste dalla sovrapposizione di navigazione o dei blocchi interattivi rallentino il caricamento delle risorse critiche. Il caricamento su richiesta dei fogli di stile dei blocchi nei temi classici è più affidabile ed è stata aggiunta la possibilità per gli script di fare affidamento su moduli di script per ridurre i blocchi di rendering."
-
-#: wp-admin/about.php:125
-msgid "Drop a pattern onto your page and it behaves like one block, so you don’t have to hunt through nested blocks for the element you want to change. Swap the text and images, adjust styles from the inspector, and keep moving. For any advanced edits, a single click to \"edit pattern\" gives you access to all available tools."
-msgstr "Trascina un pattern sulla tua pagina e questo si comporterà come un unico blocco, così non dovrai cercare l'elemento che desideri modificare tra i blocchi nidificati. Sostituisci testo e immagini, regola gli stili dal pannello di ispezione e vai avanti. Per eventuali modifiche avanzate, basta un clic su \"modifica pattern\" per accedere a tutti gli strumenti disponibili."
-
-#: wp-admin/about.php:124
-msgid "Patterns as single blocks."
-msgstr "Pattern come blocchi singoli."
-
-#: wp-admin/about.php:122
-msgid "A simpler way to build with patterns"
-msgstr "Un modo più semplice per sviluppare con i pattern"
-
-#: wp-admin/about.php:105
-msgid "Review your post&#8217;s revision history with a timeline slider and see exactly what changed in the document with visual markers, block by block. Find the version you want and restore it in one click."
-msgstr "Esamina la cronologia delle revisioni del tuo articolo utilizzando il cursore della timeline e scopri cosa è cambiato nel documento grazie agli indicatori visivi, blocco per blocco. Trova la versione che desideri e ripristinala con un solo clic."
-
-#: wp-admin/about.php:104
-msgid "Scrub through every version of your page."
-msgstr "Esamina attentamente ogni versione della tua pagina."
-
-#: wp-admin/about.php:102
-msgid "Visual revisions"
-msgstr "Revisioni"
-
-#: wp-admin/about.php:95
-msgid "The Connectors screen introduces a single hub for managing a range of external service integrations, including AI providers. Opt in by connecting your preferred AI provider, then put it to work across your site. The optional AI plugin adds a growing set of tools directly into the editor: create titles and excerpts, generate and edit images, and suggest alt text. Any plugin that needs to connect to an outside service can tap into this standardized connection management system, making it easy for users and developers alike."
-msgstr "La schermata \"Connettori\" offre un unico punto di controllo per la gestione di una serie di integrazioni con servizi esterni, compresi i servizi che forniscono strumenti di IA. Per attivare questa funzionalità, ti basta collegare il servizio di IA che preferisci e utilizzarlo in tutto il sito. Il plugin IA facoltativo aggiunge una serie sempre più ampia di strumenti direttamente nell'editor: crea titoli e riassunti, genera e modifica immagini e suggerisce testi alternativi. Qualsiasi plugin che necessiti di connettersi a un servizio esterno può avvalersi di questo sistema standardizzato di gestione delle connessioni, semplificando il lavoro sia a chi sviluppa, sia a chi inserisce contenuti."
-
-#: wp-admin/about.php:94
-msgid "A centralized hub for your connections."
-msgstr "Un hub centralizzato per le tue connessioni."
-
-#: wp-admin/about.php:92
-msgid "AI foundations"
-msgstr "Intelligenza artificiale"
-
-#: wp-admin/about.php:75
-msgid "Build the menu overlay you want visitors to see. Go beyond a simple list of links: add columns, increase the font size, and align everything to your liking. Start from a pre-built template, or design your own from scratch."
-msgstr "Crea il menu a comparsa (overlay) che desideri mostrare a chi visita il tuo sito. Non limitarti a un semplice elenco di link: aggiungi colonne, aumenta la dimensione del font e allinea gli elementi come preferisci. Parti da un template già pronto oppure creane uno personalizzato da zero."
-
-#: wp-admin/about.php:74
-msgid "A dedicated canvas for your menu."
-msgstr "Un canvas dedicato per il tuo menu."
-
-#: wp-admin/about.php:72
-msgid "Design your navigation overlay"
-msgstr "Crea la tua navigazione overlay"
-
-#: wp-admin/about.php:66
-msgid "WordPress 7.0 introduces the foundation for AI across the platform, letting you connect your preferred provider and put it to work across your site. Edit more simply by dropping in layouts and swapping content without diving into blocks. The navigation overlay now taps into the full potential of blocks, and reviewing historical changes is easier with a visual comparison."
-msgstr "WordPress 7.0 getta le basi per l'integrazione dell'intelligenza artificiale in tutta la piattaforma, consentendoti di collegare il tuo fornitore preferito e di utilizzarlo in tutto il sito. Modifica i contenuti in modo più semplice trascinando i layout e sostituendo i contenuti senza dover ricorrere ai blocchi. La barra di navigazione a comparsa sfrutta ora il pieno potenziale dei blocchi, mentre la revisione delle modifiche precedenti è più semplice grazie al confronto visivo."
-
-#: wp-admin/customize.php:213 wp-admin/includes/class-custom-background.php:282
-#: wp-admin/includes/class-custom-image-header.php:553
-#: wp-admin/theme-install.php:608
-msgctxt "noun"
-msgid "Preview"
-msgstr "Anteprima"
-
 #. translators: Label for the Notes textarea in the Link Manager edit screen.
 #: wp-admin/includes/meta-boxes.php:1460
 msgctxt "Link manager notes field label"
@@ -114,11 +47,6 @@ msgstr "Note"
 msgctxt "verb"
 msgid "Scale"
 msgstr "Ridimensiona"
-
-#: wp-admin/menu.php:75
-msgctxt "media library menu item"
-msgid "Library"
-msgstr "Libreria"
 
 #: wp-admin/includes/class-wp-posts-list-table.php:440
 msgctxt "verb"
@@ -11911,10 +11839,6 @@ msgstr "<strong>Modifica</strong> apre la pagina di modifica dell'articolo. Puoi
 #: wp-admin/user-new.php:280
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
 msgstr "Poiché si tratta di un'installazione multisito, è possibile aggiungere gli account già esistenti sul network, specificando un nome utente o email e la definizione di un ruolo. Per ulteriori opzioni, come specificare una password, è necessario essere un amministratore del network e utilizzare il link di azione sotto il nome di un utente esistente per modificare il profilo utente sotto Gestione network > Tutti gli utenti."
-
-#: wp-admin/about.php:65
-msgid "Welcome to WordPress 7.0"
-msgstr "Ti diamo il benvenuto in WordPress 7.0"
 
 #: wp-admin/about.php:278
 msgid "Go to Dashboard &rarr; Home"

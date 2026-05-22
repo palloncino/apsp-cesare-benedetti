@@ -11,6 +11,7 @@
  * @since 2.1.2
  */
 class Astra_Yoast_SEO {
+
 	/**
 	 * Constructor
 	 */

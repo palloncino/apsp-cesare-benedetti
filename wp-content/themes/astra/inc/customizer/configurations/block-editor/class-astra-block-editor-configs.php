@@ -3,6 +3,8 @@
  * Entry Content options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2022, Astra
  * @link        https://wpastra.com/
  * @since       Astra 3.8.0
  */
@@ -13,6 +15,7 @@ if ( ! class_exists( 'Astra_Block_Editor_Configs' ) ) {
 	 * Register Site Layout Customizer Configurations.
 	 */
 	class Astra_Block_Editor_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Site Layout Customizer Configurations.
 		 *
@@ -23,7 +26,7 @@ if ( ! class_exists( 'Astra_Block_Editor_Configs' ) ) {
 		 */
 		public function register_configuration( $configurations, $wp_customize ) {
 
-			$is_legacy_setup = 'legacy' === astra_get_option( 'wp-blocks-ui', 'comfort' ) || true === astra_get_option( 'blocks-legacy-setup', false ) ? true : false;
+			$is_legacy_setup = ( 'legacy' === astra_get_option( 'wp-blocks-ui', 'comfort' ) || true === astra_get_option( 'blocks-legacy-setup', false ) ) ? true : false;
 
 			$preset_options = array(
 				'compact' => __( 'Compact', 'astra' ),
@@ -91,7 +94,7 @@ if ( ! class_exists( 'Astra_Block_Editor_Configs' ) ) {
 					'control'  => 'ast-description',
 					'section'  => 'section-block-editor',
 					'priority' => 10,
-					'help'     => '<span style="margin-top: -5px;">' . __( 'Global padding setting for WordPress Group, Column, Cover blocks, it can be overridden by respective block\'s Dimension setting.', 'astra' ) . '</span>',
+					'help'     => '<p style="margin-top: -5px;">' . __( 'Global padding setting for WordPress Group, Column, Cover blocks, it can be overridden by respective block\'s Dimension setting.', 'astra' ) . '</p>',
 					'settings' => array(),
 				),
 			);

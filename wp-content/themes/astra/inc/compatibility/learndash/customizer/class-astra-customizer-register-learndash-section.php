@@ -3,6 +3,8 @@
  * Register customizer panels & sections.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       1.2.0
  * @since       1.4.6 Chnaged to using Astra_Customizer API
@@ -18,6 +20,7 @@ if ( ! class_exists( 'Astra_Customizer_Register_Learndash_Section' ) ) {
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Customizer_Register_Learndash_Section extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Panels and Sections for Customizer.
 		 *
@@ -52,5 +55,6 @@ if ( ! class_exists( 'Astra_Customizer_Register_Learndash_Section' ) ) {
 		}
 	}
 }
+
 
 new Astra_Customizer_Register_Learndash_Section();

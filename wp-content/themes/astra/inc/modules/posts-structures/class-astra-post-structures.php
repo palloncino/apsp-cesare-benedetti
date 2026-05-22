@@ -19,6 +19,7 @@ define( 'ASTRA_THEME_POST_STRUCTURE_URI', ASTRA_THEME_URI . 'inc/modules/posts-s
  * @since 4.0.0
  */
 class Astra_Post_Structures {
+
 	/**
 	 * Constructor function that loads require files.
 	 */

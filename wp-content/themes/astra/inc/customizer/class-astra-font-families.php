@@ -3,6 +3,8 @@
  * Helper class for font settings.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.19
  */
@@ -15,12 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Font info class for System and Google fonts.
  */
-if ( ! class_exists( 'Astra_Font_Families' ) ) {
+if ( ! class_exists( 'Astra_Font_Families' ) ) :
 
 	/**
 	 * Font info class for System and Google fonts.
 	 */
 	final class Astra_Font_Families {
+
 		/**
 		 * System Fonts
 		 *
@@ -171,7 +174,7 @@ if ( ! class_exists( 'Astra_Font_Families' ) ) {
 
 				$google_fonts_arr = include $google_fonts_file;// phpcs:ignore: WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
-				foreach ( $google_fonts_arr as $font ) {
+				foreach ( $google_fonts_arr as $key => $font ) {
 					$name = key( $font );
 					foreach ( $font[ $name ] as $font_key => $single_font ) {
 
@@ -179,7 +182,7 @@ if ( ! class_exists( 'Astra_Font_Families' ) ) {
 
 							foreach ( $single_font as $variant_key => $variant ) {
 
-								if ( 'regular' === $variant ) {
+								if ( 'regular' == $variant ) {
 									$font[ $name ][ $font_key ][ $variant_key ] = '400';
 								}
 							}
@@ -195,4 +198,4 @@ if ( ! class_exists( 'Astra_Font_Families' ) ) {
 
 	}
 
-}
+endif;

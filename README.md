@@ -6,7 +6,8 @@ Custom theme tweaks and APSP plugins for **APSP Cesare Benedetti** (reference / 
 |------|--------|
 | Local URL | http://localhost/apsp-cesare-benedetti |
 | Database | `apsp_cesare_benedetti` |
-| WP admin (dev) | `admin` / `apsp-cesare-benedetti-dev` |
+| WP admin (after import) | `UtenteA` / `apsp-cesare-local-dev` |
+| WP admin (pre-import only) | `admin` / `apsp-cesare-benedetti-dev` (replaced by restore) |
 | Staging (historical) | https://apspcesarebenedetti.chebellagiornata.it |
 
 ## What’s in the Git repo
@@ -31,18 +32,27 @@ WordPress core, `wp-config.php`, uploads, and page content live outside git (or 
 
 3. Open http://localhost/apsp-cesare-benedetti
 
-### See the real site (pages, menus, media)
+### Import production backup (CLI — large `.wpress` files)
 
-The clone does **not** include the production database. To mirror staging/production:
+Plugins: **All-in-One WP Migration** + **Unlimited Extension** (copied from Avio; active).
 
-1. On the source WordPress: **All-in-One WP Migration → Export** (file `.wpress`).
-2. Locally: activate **All-in-One WP Migration**, then **Import** that file.
-3. After import, run (if URLs still point to staging):
+1. Place the `.wpress` file in `wp-content/ai1wm-backups/` (or symlink from `~/Downloads`).
+2. Import without the 64MB browser upload limit:
 
 ```bash
-/Applications/XAMPP/xamppfiles/bin/php scripts/wp-cli.phar search-replace \
-  'https://apspcesarebenedetti.chebellagiornata.it' 'http://localhost/apsp-cesare-benedetti' --all-tables
+cd /Applications/XAMPP/xamppfiles/htdocs/apsp-cesare-benedetti
+/Applications/XAMPP/xamppfiles/bin/php -d memory_limit=2G scripts/wp-cli.phar ai1wm restore \
+  YOUR-BACKUP-FILE.wpress --yes --path=/Applications/XAMPP/xamppfiles/htdocs/apsp-cesare-benedetti
 ```
+
+3. Log in at http://localhost/apsp-cesare-benedetti/wp-admin/ (production admin user; reset local password if needed):
+
+```bash
+/Applications/XAMPP/xamppfiles/bin/php scripts/wp-cli.phar user update UtenteA \
+  --user_pass='apsp-cesare-local-dev' --path=/Applications/XAMPP/xamppfiles/htdocs/apsp-cesare-benedetti
+```
+
+Imported **2026-05-22**: `www-apsp-cesarebenedetti-it-20260522-172408-wnsg23epgm4e.wpress` (~2.8GB). URLs already point to `http://localhost/apsp-cesare-benedetti`. You can delete the `.wpress` from Downloads after verifying the site.
 
 ## Sync custom code after editing repo files
 

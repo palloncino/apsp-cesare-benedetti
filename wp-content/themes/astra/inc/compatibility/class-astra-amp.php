@@ -3,6 +3,8 @@
  * AMP Compatibility.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2018, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -14,12 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Astra BB Ultimate Addon Compatibility
  */
-if ( ! class_exists( 'Astra_AMP' ) ) {
+if ( ! class_exists( 'Astra_AMP' ) ) :
 
 	/**
 	 * Class Astra_AMP
 	 */
 	class Astra_AMP {
+
 		/**
 		 * Member Variable
 		 *
@@ -100,6 +103,7 @@ if ( ! class_exists( 'Astra_AMP' ) ) {
 		 * @return String Updated dynamic CSS with AMP specific changes.
 		 */
 		public function dynamic_css( $compiled_css ) {
+
 
 			if ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) {
 				$css = array(
@@ -1100,7 +1104,9 @@ if ( ! class_exists( 'Astra_AMP' ) ) {
 				);
 			}
 
-			return $parse_css . astra_parse_css( $astra_break_point_navigation, '', astra_header_break_point() );
+			$parse_css .= astra_parse_css( $astra_break_point_navigation, '', astra_header_break_point() );
+
+			return $parse_css;
 		}
 
 		/**
@@ -1205,9 +1211,9 @@ if ( ! class_exists( 'Astra_AMP' ) ) {
 		}
 
 	}
-}
+endif;
 
 /**
- * Kicking this off by calling 'get_instance()' method
- */
+* Kicking this off by calling 'get_instance()' method
+*/
 Astra_AMP::get_instance();

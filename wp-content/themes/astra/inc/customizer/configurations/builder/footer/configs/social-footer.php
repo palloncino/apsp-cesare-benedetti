@@ -2,7 +2,9 @@
 /**
  * Social footer Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -30,5 +32,5 @@ function astra_social_footer_configuration( $configurations = array() ) {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_social_footer_configuration', 10, 0 );
+	astra_social_footer_configuration();
 }

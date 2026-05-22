@@ -14,7 +14,7 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 /**
  * Astra LearnDash Compatibility
  */
-if ( ! class_exists( 'Astra_LearnDash' ) ) {
+if ( ! class_exists( 'Astra_LearnDash' ) ) :
 
 	/**
 	 * Astra LearnDash Compatibility
@@ -22,6 +22,7 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) {
 	 * @since 1.3.0
 	 */
 	class Astra_LearnDash {
+
 		/**
 		 * Member Variable
 		 *
@@ -340,7 +341,8 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) {
 				}
 
 				$supported_post_types = Astra_Posts_Structure_Loader::get_supported_post_types();
-				$post_type            = astra_get_post_type();
+				$post_type            = strval( get_post_type() );
+
 
 				if ( in_array( $post_type, $supported_post_types ) ) {
 					$dynamic_sidebar_layout = '';
@@ -369,20 +371,16 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) {
 			global $learndash_shortcode_used;
 
 			if ( $learndash_shortcode_used && ! ( is_singular( 'sfwd-courses' ) || is_singular( 'sfwd-lessons' ) || is_singular( 'sfwd-topic' ) || is_singular( 'sfwd-quiz' ) || is_singular( 'sfwd-certificates' ) || is_singular( 'sfwd-assignment' ) ) ) {
-
-				// Added check if the shortcode is used in the header.
-				if ( ! did_action( 'astra_header' ) ) {
-					// Page Meta Sidebar.
-					$layout = astra_get_option_meta( 'site-sidebar-layout', '', true );
-					if ( empty( $layout ) ) {
-						// Page Sidebar.
-						$layout = astra_get_option( 'single-page-sidebar-layout' );
-						// Default Site Sidebar.
-						if ( 'default' === $layout || empty( $layout ) ) {
-							// Get the global sidebar value.
-							// NOTE: Here not used `true` in the below function call.
-							$layout = astra_get_option( 'site-sidebar-layout' );
-						}
+				// Page Meta Sidebar.
+				$layout = astra_get_option_meta( 'site-sidebar-layout', '', true );
+				if ( empty( $layout ) ) {
+					// Page Sidebar.
+					$layout = astra_get_option( 'single-page-sidebar-layout' );
+					// Default Site Sidebar.
+					if ( 'default' == $layout || empty( $layout ) ) {
+						// Get the global sidebar value.
+						// NOTE: Here not used `true` in the below function call.
+						$layout = astra_get_option( 'site-sidebar-layout' );
 					}
 				}
 			}
@@ -407,7 +405,7 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) {
 				}
 
 				$supported_post_types = Astra_Posts_Structure_Loader::get_supported_post_types();
-				$post_type            = astra_get_post_type();
+				$post_type            = strval( get_post_type() );
 
 				if ( in_array( $post_type, $supported_post_types ) ) {
 					$dynamic_sidebar_layout = '';
@@ -724,7 +722,7 @@ if ( ! class_exists( 'Astra_LearnDash' ) ) {
 		}
 	}
 
-}
+endif;
 
 if ( apply_filters( 'astra_enable_learndash_integration', true ) ) {
 

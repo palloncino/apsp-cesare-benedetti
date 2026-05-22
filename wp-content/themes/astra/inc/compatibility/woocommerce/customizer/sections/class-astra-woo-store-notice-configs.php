@@ -3,6 +3,8 @@
  * Store Notice options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2021, Astra
  * @link        https://wpastra.com/
  * @since       Astra 3.9.0
  */
@@ -15,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Customizer WooCommerece store notice - customizer config initial setup.
  */
 class Astra_Woo_Store_Notice_Configs extends Astra_Customizer_Config_Base {
+
 	/**
 	 * Register Astra-WooCommerce Shop Cart Layout Customizer Configurations.
 	 *

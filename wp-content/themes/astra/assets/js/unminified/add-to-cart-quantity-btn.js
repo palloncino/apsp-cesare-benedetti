@@ -145,25 +145,25 @@ function astrawpWooQuantityButtons( $quantitySelector ) {
                     checkStepInteger = Number.isInteger( $step ),
                     finalValue;
 
-                    // Fallback default values on falsy values like '' and NaN.
-                    if ( ! $currentQuantity ) {
+                    // Fallback default values.
+                    if ( ! $currentQuantity || '' === $currentQuantity || 'NaN' === $currentQuantity ) {
                         $currentQuantity = 0;
                     }
-                    if ( ! $maxQuantity ) {
+                    if ( '' === $maxQuantity || 'NaN' === $maxQuantity ) {
                         $maxQuantity = '';
                     }
 
-                    if ( ! $minQuantity ) {
+                    if ( '' === $minQuantity || 'NaN' === $minQuantity ) {
                         $minQuantity = 0;
                     }
-                    if ( ! $step ) {
+                    if ( 'any' === $step || '' === $step || undefined === $step || 'NaN' === $step ) {
                         $step = 1;
                     }
 
                     // Change the value.
                     if ( ev.target.classList.contains( 'plus' ) ) {
 
-                        if ( $maxQuantity && ( $maxQuantity === $currentQuantity || $currentQuantity > Number( $maxQuantity ) ) ) {
+                        if ( $maxQuantity && ( $maxQuantity == $currentQuantity || $currentQuantity > $maxQuantity ) ) {
                             $quantityBox.value = $maxQuantity;
                         } else {
                             finalValue = $currentQuantity + parseFloat( $step );
@@ -172,7 +172,7 @@ function astrawpWooQuantityButtons( $quantitySelector ) {
 
                     } else {
 
-                        if ( $minQuantity && ( $minQuantity === $currentQuantity || $currentQuantity < $minQuantity ) ) {
+                        if ( $minQuantity && ( $minQuantity == $currentQuantity || $currentQuantity < $minQuantity ) ) {
                             $quantityBox.value = $minQuantity;
                         } else if ( $currentQuantity > 0 ) {
                             finalValue = $currentQuantity - parseFloat( $step );

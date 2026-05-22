@@ -20,9 +20,11 @@ if ( ! class_exists( 'WP_REST_Controller' ) ) {
  * @since 4.1.0
  */
 class Astra_API_Init extends WP_REST_Controller {
+
 	/**
 	 * Instance
 	 *
+	 * @access private
 	 * @var null $instance
 	 * @since 4.0.0
 	 */
@@ -58,6 +60,7 @@ class Astra_API_Init extends WP_REST_Controller {
 	/**
 	 * Option name
 	 *
+	 * @access private
 	 * @var string $option_name DB option name.
 	 * @since 4.0.0
 	 */
@@ -66,6 +69,7 @@ class Astra_API_Init extends WP_REST_Controller {
 	/**
 	 * Admin settings dataset
 	 *
+	 * @access private
 	 * @var array $astra_admin_settings Settings array.
 	 * @since 4.0.0
 	 */
@@ -122,18 +126,18 @@ class Astra_API_Init extends WP_REST_Controller {
 				'preload_local_fonts'   => self::get_admin_settings_option( 'preload_local_fonts', false ),
 				'use_old_header_footer' => astra_get_option( 'is-header-footer-builder', false ),
 				'use_upgrade_notices'   => astra_showcase_upgrade_notices(),
-				'analytics_enabled'     => get_option( 'astra_analytics_optin', 'no' ) === 'yes',
 			)
 		);
 
-		return wp_parse_args( $db_option, $defaults );
+		$updated_option = wp_parse_args( $db_option, $defaults );
+		return $updated_option;
 	}
 
 	/**
 	 * Check whether a given request has permission to read notes.
 	 *
 	 * @param  WP_REST_Request $request Full details about the request.
-	 * @return WP_Error|bool
+	 * @return WP_Error|boolean
 	 * @since 4.0.0
 	 */
 	public function get_permissions_check( $request ) {
@@ -155,7 +159,8 @@ class Astra_API_Init extends WP_REST_Controller {
 	 * @since 4.0.0
 	 */
 	public static function get_admin_settings_option( $key, $default = false ) {
-		return isset( self::$astra_admin_settings[ $key ] ) ? self::$astra_admin_settings[ $key ] : $default;
+		$value = isset( self::$astra_admin_settings[ $key ] ) ? self::$astra_admin_settings[ $key ] : $default;
+		return $value;
 	}
 
 	/**

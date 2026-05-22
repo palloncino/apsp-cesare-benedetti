@@ -3,6 +3,8 @@
  * Hero section layout for Astra theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2022, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 4.0.0
  */
@@ -17,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 4.0.0
  */
 class Astra_Posts_Structure_Markup {
+
 	/**
 	 *  Constructor
 	 */
@@ -45,9 +48,10 @@ class Astra_Posts_Structure_Markup {
 	 * @return string
 	 */
 	public function astra_archive_custom_title( $title ) {
-		$post_type    = astra_get_post_type();
+		$post_type    = strval( get_post_type() );
 		$custom_title = astra_get_option( 'ast-dynamic-archive-' . $post_type . '-custom-title', '' );
-		return ! empty( $custom_title ) ? $custom_title : $title;
+		$title        = ! empty( $custom_title ) ? $custom_title : $title;
+		return $title;
 	}
 
 	/**
@@ -80,7 +84,12 @@ class Astra_Posts_Structure_Markup {
 			}
 		}
 
-		$post_type = astra_get_post_type();
+		global $post;
+		if ( is_null( $post ) || is_search() ) {
+			return;
+		}
+
+		$post_type = $post->post_type;
 		$type      = is_singular( $post_type ) ? 'single' : 'archive';
 
 		$supported_post_types = Astra_Posts_Structure_Loader::get_supported_post_types();
@@ -88,11 +97,11 @@ class Astra_Posts_Structure_Markup {
 			return;
 		}
 
-		$layout_type = 'single' === $type ? astra_get_option( 'ast-dynamic-single-' . $post_type . '-layout', 'layout-1' ) : astra_get_option( 'ast-dynamic-archive-' . $post_type . '-layout', 'layout-1' );
+		$layout_type = ( 'single' === $type ) ? astra_get_option( 'ast-dynamic-single-' . $post_type . '-layout', 'layout-1' ) : astra_get_option( 'ast-dynamic-archive-' . $post_type . '-layout', 'layout-1' );
 
 		// If banner title section is disabled then halt further processing.
 		if ( 'single' === $type ) {
-			if ( false === astra_get_option( 'ast-single-' . $post_type . '-title', class_exists( 'WooCommerce' ) && 'product' === $post_type ? false : true ) ) {
+			if ( false === astra_get_option( 'ast-single-' . $post_type . '-title', ( class_exists( 'WooCommerce' ) && 'product' === $post_type ) ? false : true ) ) {
 				add_filter( 'astra_single_layout_one_banner_visibility', '__return_false' );
 				return;
 			}
@@ -105,7 +114,7 @@ class Astra_Posts_Structure_Markup {
 			}
 		} else {
 			// If layout-1 is set then no need to process further.
-			if ( false === astra_get_option( 'ast-archive-' . $post_type . '-title', class_exists( 'WooCommerce' ) && 'product' === $post_type ? false : true ) ) {
+			if ( false === astra_get_option( 'ast-archive-' . $post_type . '-title', ( class_exists( 'WooCommerce' ) && 'product' === $post_type ) ? false : true ) ) {
 				add_filter( 'astra_the_title_enabled', '__return_false' );
 				return;
 			}

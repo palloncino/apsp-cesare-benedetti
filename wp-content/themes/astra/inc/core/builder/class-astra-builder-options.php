@@ -22,9 +22,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 
 	$astra_options                              = Astra_Theme_Options::get_astra_options();
 	$astra_update_footer_row_vertical_alignment = Astra_Dynamic_CSS::astra_4_5_0_compatibility();
-	$astra_dark_mode                            = Astra_Dynamic_CSS::astra_4_9_0_compatibility();
 	$blog_update                                = Astra_Dynamic_CSS::astra_4_6_0_compatibility();
-	$is_dark_palette                            = Astra_Global_Palette::is_dark_palette();
 
 	/**
 	 * Update Astra default color and typography values. To not update directly on existing users site, added backwards.
@@ -38,27 +36,30 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 */
 	$defaults['header-desktop-items'] = array(
 		'popup'   => array( 'popup_content' => array( 'mobile-menu' ) ),
-		'above'   => array(
-			'above_left'         => array(),
-			'above_left_center'  => array(),
-			'above_center'       => array(),
-			'above_right_center' => array(),
-			'above_right'        => array(),
-		),
-		'primary' => array(
-			'primary_left'         => array( 'logo' ),
-			'primary_left_center'  => array(),
-			'primary_center'       => array(),
-			'primary_right_center' => array(),
-			'primary_right'        => array( 'menu-1' ),
-		),
-		'below'   => array(
-			'below_left'         => array(),
-			'below_left_center'  => array(),
-			'below_center'       => array(),
-			'below_right_center' => array(),
-			'below_right'        => array(),
-		),
+		'above'   =>
+			array(
+				'above_left'         => array(),
+				'above_left_center'  => array(),
+				'above_center'       => array(),
+				'above_right_center' => array(),
+				'above_right'        => array(),
+			),
+		'primary' =>
+			array(
+				'primary_left'         => array( 'logo' ),
+				'primary_left_center'  => array(),
+				'primary_center'       => array(),
+				'primary_right_center' => array(),
+				'primary_right'        => array( 'menu-1' ),
+			),
+		'below'   =>
+			array(
+				'below_left'         => array(),
+				'below_left_center'  => array(),
+				'below_center'       => array(),
+				'below_right_center' => array(),
+				'below_right'        => array(),
+			),
 	);
 
 	/**
@@ -66,21 +67,24 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 */
 	$defaults['header-mobile-items'] = array(
 		'popup'   => array( 'popup_content' => array( 'mobile-menu' ) ),
-		'above'   => array(
-			'above_left'   => array(),
-			'above_center' => array(),
-			'above_right'  => array(),
-		),
-		'primary' => array(
-			'primary_left'   => array( 'logo' ),
-			'primary_center' => array(),
-			'primary_right'  => array( 'mobile-trigger' ),
-		),
-		'below'   => array(
-			'below_left'   => array(),
-			'below_center' => array(),
-			'below_right'  => array(),
-		),
+		'above'   =>
+			array(
+				'above_left'   => array(),
+				'above_center' => array(),
+				'above_right'  => array(),
+			),
+		'primary' =>
+			array(
+				'primary_left'   => array( 'logo' ),
+				'primary_center' => array(),
+				'primary_right'  => array( 'mobile-trigger' ),
+			),
+		'below'   =>
+			array(
+				'below_left'   => array(),
+				'below_center' => array(),
+				'below_right'  => array(),
+			),
 	);
 
 	/**
@@ -88,7 +92,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 */
 	$defaults['hb-header-main-layout-width'] = 'content';
 	$defaults['hb-header-height']            = array(
-		'desktop' => false === astra_check_is_structural_setup() ? 70 : 80,
+		'desktop' => ( false === astra_check_is_structural_setup() ) ? 70 : 80,
 		'tablet'  => '',
 		'mobile'  => '',
 	);
@@ -99,11 +103,11 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 
 	$defaults['hb-header-main-sep']          = 1;
-	$defaults['hb-header-main-sep-color']    = 'var( --ast-global-color-subtle-background, --ast-global-color-7 )';
+	$defaults['hb-header-main-sep-color']    = '#eaeaea';
 	$defaults['hb-header-main-menu-align']   = 'inline';
 	$defaults['hb-header-bg-obj-responsive'] = array(
 		'desktop' => array(
-			'background-color'      => 'var( --ast-global-color-primary, --ast-global-color-4 )',
+			'background-color'      => '#ffffff',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -179,10 +183,10 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 		'mobile'  => 'stack',
 	);
 	$defaults['hba-header-separator']               = 1;
-	$defaults['hba-header-bottom-border-color']     = 'var( --ast-global-color-subtle-background, --ast-global-color-7 )';
+	$defaults['hba-header-bottom-border-color']     = '#eaeaea';
 	$defaults['hba-header-bg-obj-responsive']       = array(
 		'desktop' => array(
-			'background-color'      => 'var( --ast-global-color-primary, --ast-global-color-4 )',
+			'background-color'      => '#ffffff',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -282,10 +286,10 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 
 	$defaults['hbb-header-separator']           = 1;
-	$defaults['hbb-header-bottom-border-color'] = 'var( --ast-global-color-subtle-background, --ast-global-color-7 )';
+	$defaults['hbb-header-bottom-border-color'] = '#eaeaea';
 	$defaults['hbb-header-bg-obj-responsive']   = array(
 		'desktop' => array(
-			'background-color'      => $is_dark_palette ? 'var( --ast-global-color-primary, --ast-global-color-4 )' : '#eeeeee',
+			'background-color'      => '#eeeeee',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -345,6 +349,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 		'mobile-unit'  => 'px',
 	);
 
+
 	$margin_defaults = array(
 		'section-footer-builder-layout-padding',
 		'section-footer-builder-layout-margin',
@@ -388,9 +393,8 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	/**
 	 * Header Types - Defaults
 	 */
-	$defaults['transparent-header-main-sep']       = false === astra_get_transparent_header_default_value() ? '' : 0;
+	$defaults['transparent-header-main-sep']       = ( false === astra_get_transparent_header_default_value() ) ? '' : 0;
 	$defaults['transparent-header-main-sep-color'] = '';
-	$reorder_color_seq                             = Astra_Dynamic_CSS::astra_4_8_9_compatibility();
 
 	/**
 	 * Header > Sticky Defaults.
@@ -402,27 +406,30 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 * Footer Builder - Desktop Defaults.
 	 */
 	$defaults['footer-desktop-items'] = array(
-		'above'   => array(
-			'above_1' => array(),
-			'above_2' => array(),
-			'above_3' => array(),
-			'above_4' => array(),
-			'above_5' => array(),
-		),
-		'primary' => array(
-			'primary_1' => array(),
-			'primary_2' => array(),
-			'primary_3' => array(),
-			'primary_4' => array(),
-			'primary_5' => array(),
-		),
-		'below'   => array(
-			'below_1' => array( 'copyright' ),
-			'below_2' => array(),
-			'below_3' => array(),
-			'below_4' => array(),
-			'below_5' => array(),
-		),
+		'above'   =>
+			array(
+				'above_1' => array(),
+				'above_2' => array(),
+				'above_3' => array(),
+				'above_4' => array(),
+				'above_5' => array(),
+			),
+		'primary' =>
+			array(
+				'primary_1' => array(),
+				'primary_2' => array(),
+				'primary_3' => array(),
+				'primary_4' => array(),
+				'primary_5' => array(),
+			),
+		'below'   =>
+			array(
+				'below_1' => array( 'copyright' ),
+				'below_2' => array(),
+				'below_3' => array(),
+				'below_4' => array(),
+				'below_5' => array(),
+			),
 	);
 
 	/**
@@ -441,7 +448,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 */
 	$defaults['hba-footer-bg-obj-responsive'] = array(
 		'desktop' => array(
-			'background-color'      => $is_dark_palette ? 'var( --ast-global-color-primary, --ast-global-color-4 )' : '#eeeeee',
+			'background-color'      => '#eeeeee',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -479,7 +486,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 	$defaults['hbb-footer-bg-obj-responsive'] = array(
 		'desktop' => array(
-			'background-color'      => $apply_new_default_color_typo_values ? ( $reorder_color_seq ? 'var(--ast-global-color-4 )' : 'var(--ast-global-color-5)' ) : ( $astra_dark_mode ? '#eeeeee' : 'var( --ast-global-color-primary, --ast-global-color-4 )' ),
+			'background-color'      => $apply_new_default_color_typo_values ? 'var(--ast-global-color-5)' : '#eeeeee',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -517,7 +524,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 	$defaults['hb-footer-bg-obj-responsive']  = array(
 		'desktop' => array(
-			'background-color'      => $is_dark_palette ? 'var( --ast-global-color-primary, --ast-global-color-4 )' : '#f9f9f9',
+			'background-color'      => '#f9f9f9',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -553,7 +560,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 			'overlay-gradient'      => '',
 		),
 	);
-	$defaults['hbb-footer-top-border-color']  = $blog_update ? 'var( --ast-global-color-subtle-background, --ast-global-color-7 )' : 'var(--ast-global-color-subtle-background, --ast-global-color-6)';
+	$defaults['hbb-footer-top-border-color']  = $blog_update ? '#eaeaea' : 'var(--ast-global-color-6)';
 	$defaults['hbb-footer-separator']         = 1;
 
 	/**
@@ -659,13 +666,12 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 
 	$defaults['hb-footer-main-sep']       = 1;
-	$defaults['hb-footer-main-sep-color'] = 'var( --ast-global-color-subtle-background, --ast-global-color-7 )';
-	$defaults['live-search-result-count'] = 5;
+	$defaults['hb-footer-main-sep-color'] = '#e6e6e6';
 
 	/**
 	 * Footer Copyright.
 	 */
-	$defaults['footer-copyright-editor']              = __( 'Copyright [copyright] [current_year] [site_title] | Powered by [theme_author]', 'astra' );
+	$defaults['footer-copyright-editor']              = 'Copyright [copyright] [current_year] [site_title] | Powered by [theme_author]';
 	$defaults['footer-copyright-color']               = $apply_new_default_color_typo_values ? 'var(--ast-global-color-3)' : '';
 	$defaults['line-height-section-footer-copyright'] = 2;
 	$defaults['footer-copyright-alignment']           = array(
@@ -800,7 +806,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	$defaults['header-builder-menu-toggle-target']  = 'icon';
 	$defaults['header-offcanvas-content-alignment'] = 'flex-start';
 	$defaults['off-canvas-background']              = array(
-		'background-color'      => $is_dark_palette ? 'var( --ast-global-color-secondary, --ast-global-color-5 )' : '#ffffff',
+		'background-color'      => '#ffffff',
 		'background-image'      => '',
 		'background-repeat'     => 'repeat',
 		'background-position'   => 'center center',
@@ -813,7 +819,6 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 	$defaults['off-canvas-close-color']             = '#3a3a3a';
 	$defaults['mobile-header-type']                 = 'dropdown';
-	$defaults['off-canvas-move-body']               = false;
 	$defaults['off-canvas-inner-spacing']           = '';
 	$defaults['footer-menu-layout']                 = array(
 		'desktop' => 'horizontal',
@@ -984,8 +989,6 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	 */
 	$update_colors_for_starter_library = Astra_Dynamic_CSS::astra_4_4_0_compatibility();
 	$update_color_for_forms_ui         = Astra_Dynamic_CSS::astra_4_6_0_compatibility();
-	$color_palette_reorganize          = Astra_Dynamic_CSS::astra_4_8_9_compatibility();
-
 	if ( $update_color_for_forms_ui ) {
 		$color_palette_7 = '#D1D5DB';
 	} else {
@@ -997,10 +1000,10 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 			'#045cb4',
 			'#1e293b',
 			'#334155',
-			$color_palette_reorganize ? '#FFFFFF' : ( $update_colors_for_starter_library ? '#F0F5FA' : '#f9fafb' ),
-			$color_palette_reorganize ? ( $update_colors_for_starter_library ? '#F0F5FA' : '#f9fafb' ) : '#FFFFFF',
-			$color_palette_reorganize ? ( $update_colors_for_starter_library ? '#111111' : '#cbd5e1' ) : $color_palette_7,
-			$color_palette_reorganize ? $color_palette_7 : ( $update_colors_for_starter_library ? '#111111' : '#cbd5e1' ),
+			$update_colors_for_starter_library ? '#F0F5FA' : '#f9fafb',
+			'#FFFFFF',
+			$color_palette_7,
+			$update_colors_for_starter_library ? '#111111' : '#cbd5e1',
 			$update_colors_for_starter_library ? '#111111' : '#94a3b8',
 		),
 	)
@@ -1011,10 +1014,10 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 			'#3a3a3a',
 			'#3a3a3a',
 			'#4B4F58',
-			$color_palette_reorganize ? '#FFFFFF' : '#F5F5F5',
-			$color_palette_reorganize ? '#F5F5F5' : '#FFFFFF',
-			$color_palette_reorganize ? '#424242' : '#E5E5E5',
-			$color_palette_reorganize ? '#E5E5E5' : '#424242',
+			'#F5F5F5',
+			'#FFFFFF',
+			'#E5E5E5',
+			'#424242',
 			'#000000',
 		),
 	);
@@ -1023,8 +1026,8 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	$defaults['header-logo-color'] = '';
 
 	/**
-	 * Mobile Menu
-	 */
+	* Mobile Menu
+	*/
 
 	// Specify all the default values for Menu from here.
 	$defaults['header-mobile-menu-bg-color']   = '';
@@ -1048,7 +1051,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 			'overlay-gradient'      => '',
 		),
 		'tablet'  => array(
-			'background-color'      => $apply_new_default_color_typo_values ? ( $reorder_color_seq ? 'var(--ast-global-color-4)' : 'var(--ast-global-color-5)' ) : '',
+			'background-color'      => $apply_new_default_color_typo_values ? 'var(--ast-global-color-5)' : '',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -1093,21 +1096,21 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 
 	$defaults['header-mobile-menu-h-bg-color-responsive'] = array(
 		'desktop' => '',
-		'tablet'  => $apply_new_default_color_typo_values ? ( $reorder_color_seq ? 'var(--ast-global-color-5)' : 'var(--ast-global-color-4)' ) : '',
+		'tablet'  => $apply_new_default_color_typo_values ? 'var(--ast-global-color-4)' : '',
 		'mobile'  => '',
 	);
 
 	$defaults['header-mobile-menu-a-bg-color-responsive'] = array(
 		'desktop' => '',
-		'tablet'  => $apply_new_default_color_typo_values ? ( $reorder_color_seq ? 'var(--ast-global-color-5)' : 'var(--ast-global-color-4)' ) : '',
+		'tablet'  => $apply_new_default_color_typo_values ? 'var(--ast-global-color-4)' : '',
 		'mobile'  => '',
 	);
 
 	$defaults['header-mobile-menu-submenu-container-animation'] = 'fade';
 
-	/**
-	 * Submenu
-	 */
+		/**
+		 * Submenu
+		*/
 	$defaults['header-mobile-menu-submenu-item-border']  = false;
 	$defaults['header-mobile-menu-submenu-item-b-size']  = '1';
 	$defaults['header-mobile-menu-submenu-item-b-color'] = '#eaeaea';
@@ -1118,9 +1121,10 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 		'right'  => 0,
 	);
 
-	/**
-	 * Menu - Typography.
-	 */
+
+		/**
+		 * Menu - Typography.
+		*/
 	$defaults['header-mobile-menu-font-size'] = array(
 		'desktop'      => '',
 		'tablet'       => '',
@@ -1164,7 +1168,6 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 	$defaults['woo-header-cart-icon']                      = 'default';
 	$defaults['woo-header-cart-icon-style']                = 'outline';
-	$defaults['woo-header-cart-product-count-color-group'] = 'var( --ast-global-color-secondary, --ast-global-color-5 )';
 	$defaults['woo-desktop-cart-flyout-direction']         = 'right';
 	$defaults['header-woo-cart-icon-color']                = '';
 	$defaults['transparent-header-woo-cart-icon-color']    = '';
@@ -1228,7 +1231,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 
 	/**
 	 * EDD-Cart.
-	 */
+	*/
 	$defaults['edd-header-cart-icon-style']             = 'outline';
 	$defaults['edd-header-cart-icon-color']             = '';
 	$defaults['edd-header-cart-icon-radius']            = 3;
@@ -1250,7 +1253,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 
 	/**
 	 * Account element.
-	 */
+	*/
 	$defaults['header-account-type']                                  = 'default';
 	$defaults['header-account-login-style']                           = 'icon';
 	$defaults['header-account-login-style-extend-text-profile-type']  = 'default';
@@ -1272,7 +1275,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 		'mobile'  => 18,
 	);
 
-	$defaults['header-account-icon-color'] = 'var(--ast-global-color-2)';
+	$defaults['header-account-icon-color'] = '';
 
 	$defaults['header-account-login-link'] = array(
 		'url'      => '',
@@ -1306,8 +1309,8 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 /**
  * Prepare Divider Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_divider_defaults( $defaults, $index ) {
 
@@ -1320,8 +1323,8 @@ function astra_prepare_divider_defaults( $defaults, $index ) {
 /**
  * Prepare Button Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_button_defaults( $defaults, $index ) {
 
@@ -1503,6 +1506,7 @@ function astra_prepare_button_defaults( $defaults, $index ) {
 	$defaults[ 'section-hb-button-' . $index . '-margin' ]          = Astra_Builder_Helper::$default_responsive_spacing;
 	$defaults[ 'sticky-header-button' . $index . '-padding' ]       = Astra_Builder_Helper::$default_responsive_spacing;
 
+
 	$_prefix = 'button' . $index;
 
 	$defaults[ 'footer-' . $_prefix . '-text' ]                 = __( 'Button', 'astra' );
@@ -1672,8 +1676,8 @@ function astra_prepare_button_defaults( $defaults, $index ) {
 /**
  * Prepare HTML Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_html_defaults( $defaults, $index ) {
 
@@ -1776,8 +1780,8 @@ function astra_prepare_html_defaults( $defaults, $index ) {
 /**
  * Prepare Social Icon Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_social_icon_defaults( $defaults, $index ) {
 
@@ -1833,41 +1837,43 @@ function astra_prepare_social_icon_defaults( $defaults, $index ) {
 		'mobile-unit'  => 'px',
 	);
 	$defaults[ 'header-social-icons-' . $index ]                   = array(
-		'items' => array(
+		'items' =>
 			array(
-				'id'         => 'facebook',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#557dbc',
-				'background' => 'transparent',
-				'icon'       => 'facebook',
-				'label'      => 'Facebook',
+				array(
+					'id'         => 'facebook',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#557dbc',
+					'background' => 'transparent',
+					'icon'       => 'facebook',
+					'label'      => 'Facebook',
+				),
+				array(
+					'id'         => 'twitter',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#7acdee',
+					'background' => 'transparent',
+					'icon'       => 'twitter',
+					'label'      => 'Twitter',
+				),
+				array(
+					'id'         => 'instagram',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#8a3ab9',
+					'background' => 'transparent',
+					'icon'       => 'instagram',
+					'label'      => 'Instagram',
+				),
 			),
-			array(
-				'id'         => 'twitter',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#7acdee',
-				'background' => 'transparent',
-				'icon'       => 'twitter',
-				'label'      => 'Twitter',
-			),
-			array(
-				'id'         => 'instagram',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#8a3ab9',
-				'background' => 'transparent',
-				'icon'       => 'instagram',
-				'label'      => 'Instagram',
-			),
-		),
 	);
 
 	$defaults[ 'section-hb-social-icons-' . $index . '-margin' ] = Astra_Builder_Helper::$default_responsive_spacing;
+
 
 	$defaults[ 'footer-social-' . $index . '-space' ]              = array(
 		'desktop' => '',
@@ -1899,38 +1905,39 @@ function astra_prepare_social_icon_defaults( $defaults, $index ) {
 		'mobile-unit'  => 'px',
 	);
 	$defaults[ 'footer-social-icons-' . $index ]                   = array(
-		'items' => array(
+		'items' =>
 			array(
-				'id'         => 'facebook',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#557dbc',
-				'background' => 'transparent',
-				'icon'       => 'facebook',
-				'label'      => 'Facebook',
+				array(
+					'id'         => 'facebook',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#557dbc',
+					'background' => 'transparent',
+					'icon'       => 'facebook',
+					'label'      => 'Facebook',
+				),
+				array(
+					'id'         => 'twitter',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#7acdee',
+					'background' => 'transparent',
+					'icon'       => 'twitter',
+					'label'      => 'Twitter',
+				),
+				array(
+					'id'         => 'instagram',
+					'enabled'    => true,
+					'source'     => 'icon',
+					'url'        => '',
+					'color'      => '#8a3ab9',
+					'background' => 'transparent',
+					'icon'       => 'instagram',
+					'label'      => 'Instagram',
+				),
 			),
-			array(
-				'id'         => 'twitter',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#7acdee',
-				'background' => 'transparent',
-				'icon'       => 'twitter',
-				'label'      => 'Twitter',
-			),
-			array(
-				'id'         => 'instagram',
-				'enabled'    => true,
-				'source'     => 'icon',
-				'url'        => '',
-				'color'      => '#8a3ab9',
-				'background' => 'transparent',
-				'icon'       => 'instagram',
-				'label'      => 'Instagram',
-			),
-		),
 	);
 	$defaults[ 'footer-social-' . $index . '-alignment' ]          = array(
 		'desktop' => 'center',
@@ -1946,8 +1953,8 @@ function astra_prepare_social_icon_defaults( $defaults, $index ) {
 /**
  * Prepare Widget Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_widget_defaults( $defaults, $index ) {
 
@@ -1997,6 +2004,7 @@ function astra_prepare_widget_defaults( $defaults, $index ) {
 		'text-transform'      => ! isset( $astra_options[ 'header-widget-' . $index . '-font-extras' ] ) && isset( $astra_options[ 'header-widget-' . $index . '-text-transform' ] ) ? $astra_options[ 'header-widget-' . $index . '-text-transform' ] : '',
 		'text-decoration'     => '',
 	);
+
 
 	// Content Typography.
 	$defaults[ 'header-widget-' . $index . '-content-font-family' ] = 'inherit';
@@ -2079,12 +2087,13 @@ function astra_prepare_widget_defaults( $defaults, $index ) {
 	);
 
 	$defaults[ 'footer-widget-alignment-' . $index ] = array(
-		'desktop' => is_rtl() ? 'right' : 'left',
+		'desktop' => 'left',
 		'tablet'  => $apply_new_default_color_typo_values ? '' : 'center',
 		'mobile'  => $apply_new_default_color_typo_values ? '' : 'center',
 	);
 
 	$defaults[ 'sidebar-widgets-footer-widget-' . $index . '-margin' ] = Astra_Builder_Helper::$default_responsive_spacing;
+
 
 	return $defaults;
 }
@@ -2092,8 +2101,8 @@ function astra_prepare_widget_defaults( $defaults, $index ) {
 /**
  * Prepare menu Defaults.
  *
- * @param array $defaults defaults.
- * @param int   $index index.
+ * @param array   $defaults defaults.
+ * @param integer $index index.
  */
 function astra_prepare_menu_defaults( $defaults, $index ) {
 

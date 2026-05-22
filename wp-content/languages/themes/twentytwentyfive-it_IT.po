@@ -150,7 +150,7 @@ msgctxt "Template part name"
 msgid "Sidebar"
 msgstr "Barra laterale"
 
-#: functions.php:80
+#: functions.php:84
 msgid "Checkmark"
 msgstr "Segno di spunta"
 
@@ -201,7 +201,7 @@ msgctxt "Pattern title"
 msgid "List of posts, 1 column"
 msgstr "Elenco di articoli in una colonna"
 
-#: functions.php:109
+#: functions.php:114
 msgid "A collection of full page layouts."
 msgstr "Una collezione di layout di pagine intere."
 
@@ -352,7 +352,7 @@ msgstr "·"
 msgid "Architecture"
 msgstr "Architettura"
 
-#: functions.php:108
+#: functions.php:113
 msgid "Pages"
 msgstr "Pagine"
 
@@ -370,7 +370,7 @@ msgctxt "Template part name"
 msgid "Header with large title"
 msgstr "Header con titolo largo"
 
-#: functions.php:136
+#: functions.php:142
 msgctxt "Label for the block binding placeholder in the editor"
 msgid "Post format name"
 msgstr "Nome del formato dell'articolo"
@@ -1744,7 +1744,7 @@ msgstr "Ritratto di un'infermiera"
 msgid "Picture of a person typing on a typewriter."
 msgstr "Immagine di una persona che scrive con una macchina per scrivere."
 
-#: functions.php:117
+#: functions.php:122
 msgid "A collection of post format patterns."
 msgstr "Una raccolta di pattern per diversi formati di articolo."
 
@@ -2265,7 +2265,7 @@ msgctxt "Pattern title"
 msgid "Post format name"
 msgstr "Nome del formato dell'articolo"
 
-#: functions.php:116
+#: functions.php:121
 msgid "Post formats"
 msgstr "Formati dell'articolo"
 

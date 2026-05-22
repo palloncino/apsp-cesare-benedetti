@@ -3,9 +3,9 @@ Contributors: brainstormforce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-menu, custom-logo, entertainment, featured-images, full-width-template, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
-Tested up to: 6.8
+Tested up to: 6.6
 Requires PHP: 5.3
-Stable tag: 4.11.3
+Stable tag: 4.8.0
 
 Astra is fast, fully customizable & beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront.
 
@@ -16,20 +16,6 @@ Astra is fast, fully customizable & beautiful WordPress theme suitable for blog,
 It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL & Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force.
 
 Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
-
-The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 5,700+ five-star reviews! 
-
-It’s ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website.
-
-It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc.
-
-Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly.
-
-It’s fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates.
-
-Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme.
-
-<a href="https://zipwp.org/themes/astra/" target="_blank">Try the live demo of Astra</a>
 
 == Installation ==
 
@@ -118,22 +104,3 @@ https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https:
 
 Astra local fonts feature is based on Webfonts Loader by WordPress Themes Team (WPTT). (https://github.com/WPTT/webfont-loader)
 Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE )
-
-= WP Background Processing =
-
-Astra uses a modified version of WP Background Processing library for handling background tasks efficiently.
-Original library by Delicious Brains (https://github.com/deliciousbrains/wp-background-processing)
-Licensed under GNU GPL v2.0 or later.
-
-= Privacy Policy =
-
-Astra uses a YouTube video embedded in the Astra dashboard to provide helpful information and tutorials.
-Please note that YouTube may collect user data as outlined in their Privacy Policy (https://policies.google.com/privacy).
-No personal data is collected or stored by the Astra theme itself through this video embed.
-For more details on YouTube’s data collection, please refer to their Terms of Service (https://www.youtube.com/t/terms) and Privacy Policy (https://policies.google.com/privacy).
-
-== Frequently Asked Questions ==
-
-= How can I report security bugs? =
-
-You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/9e5fbe9d-5d93-420a-8168-1e61d027c71e)

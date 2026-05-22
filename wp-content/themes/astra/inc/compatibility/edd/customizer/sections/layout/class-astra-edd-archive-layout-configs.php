@@ -3,6 +3,8 @@
  * Easy Digital Downloads Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.5.5
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Edd_Archive_Layout_Configs' ) ) {
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Edd_Archive_Layout_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Astra-Easy Digital Downloads Shop Layout Customizer Configurations.
 		 *
@@ -28,7 +31,7 @@ if ( ! class_exists( 'Astra_Edd_Archive_Layout_Configs' ) ) {
 		public function register_configuration( $configurations, $wp_customize ) {
 
 			/** @psalm-suppress UndefinedClass */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-			$grid_ast_divider = defined( 'ASTRA_EXT_VER' ) && Astra_Ext_Extension::is_active( 'edd' ) ? array() : array( 'ast_class' => 'ast-top-section-divider' );
+			$grid_ast_divider = ( defined( 'ASTRA_EXT_VER' ) && Astra_Ext_Extension::is_active( 'edd' ) ) ? array() : array( 'ast_class' => 'ast-top-section-divider' );
 			/** @psalm-suppress UndefinedClass */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
 
 			$_configs = array(
@@ -235,7 +238,7 @@ if ( ! class_exists( 'Astra_Edd_Archive_Layout_Configs' ) ) {
 						'step' => 1,
 						'max'  => 1920,
 					),
-					'divider'     => array( 'ast_class' => 'ast-top-divider' ),
+					'divider'     => array( 'ast_class' => 'ast-top-dotted-divider' ),
 				),
 			);
 
@@ -254,16 +257,20 @@ if ( ! class_exists( 'Astra_Edd_Archive_Layout_Configs' ) ) {
 						'section'  => 'section-edd-archive',
 						'priority' => 999,
 						'title'    => __( 'View Astra Pro Features', 'astra' ),
-						'url'      => astra_get_pro_url( '/pricing/', 'free-theme', 'customizer', 'edd' ),
+						'url'      => astra_get_pro_url( 'https://wpastra.com/pricing/', 'customizer', 'free-theme', 'edd' ),
 						'settings' => array(),
 						'divider'  => array( 'ast_class' => 'ast-top-section-divider' ),
 					);
 
 			}
 
-			return array_merge( $configurations, $_configs );
+			$configurations = array_merge( $configurations, $_configs );
+
+			return $configurations;
+
 		}
 	}
 }
 
 new Astra_Edd_Archive_Layout_Configs();
+

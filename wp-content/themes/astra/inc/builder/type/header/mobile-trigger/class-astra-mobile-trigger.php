@@ -3,6 +3,8 @@
  * Mobile Trigger.
  *
  * @package     astra-builder
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       3.0.0
  */
@@ -20,6 +22,7 @@ define( 'ASTRA_MOBILE_TRIGGER_URI', ASTRA_THEME_URI . 'inc/builder/type/header/m
  * @since 3.0.0
  */
 class Astra_Mobile_Trigger {
+
 	/**
 	 * Constructor function that initializes required actions and hooks.
 	 */

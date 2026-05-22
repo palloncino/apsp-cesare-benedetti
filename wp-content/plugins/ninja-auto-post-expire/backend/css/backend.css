@@ -1,0 +1,9 @@
+.njt-option-page table.form-table tbody {
+    background-color: #fff;
+}
+.njt-option-page table.form-table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.njt-option-page table.form-table tbody th {
+    padding: 15px 10px;
+}

@@ -3,6 +3,8 @@
  * Easy Digital Downloads Sidebar Options for our theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.5.5
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Edd_Sidebar_Configs' ) ) {
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Edd_Sidebar_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Astra Easy Digital Downloads Sidebar Configurations.
 		 *
@@ -45,19 +48,19 @@ if ( ! class_exists( 'Astra_Edd_Sidebar_Configs' ) ) {
 					'choices'           => array(
 						'default'       => array(
 							'label' => __( 'Default', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'layout-default', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'layout-default', false ) : '',
 						),
 						'no-sidebar'    => array(
 							'label' => __( 'No Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'no-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'no-sidebar', false ) : '',
 						),
 						'left-sidebar'  => array(
 							'label' => __( 'Left Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'left-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'left-sidebar', false ) : '',
 						),
 						'right-sidebar' => array(
 							'label' => __( 'Right Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'right-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'right-sidebar', false ) : '',
 						),
 					),
 					'description'       => __( 'Sidebar will only apply when container layout is set to normal.', 'astra' ),
@@ -87,8 +90,12 @@ if ( ! class_exists( 'Astra_Edd_Sidebar_Configs' ) ) {
 			);
 
 			return array_merge( $configurations, $_configs );
+
 		}
 	}
 }
 
 new Astra_Edd_Sidebar_Configs();
+
+
+

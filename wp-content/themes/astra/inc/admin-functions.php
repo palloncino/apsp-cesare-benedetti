@@ -43,6 +43,7 @@ if ( ! function_exists( 'astra_register_menu_locations' ) ) {
 				)
 			);
 
+
 			$component_limit = defined( 'ASTRA_EXT_VER' ) ? Astra_Builder_Helper::$component_limit : Astra_Builder_Helper::$num_of_header_menu;
 
 			for ( $index = 3; $index <= $component_limit; $index++ ) {
@@ -77,6 +78,7 @@ if ( ! function_exists( 'astra_register_menu_locations' ) ) {
 				'footer_menu' => esc_html__( 'Footer Menu', 'astra' ),
 			)
 		);
+
 	}
 }
 

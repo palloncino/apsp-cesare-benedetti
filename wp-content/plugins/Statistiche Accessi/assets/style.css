@@ -1,0 +1,188 @@
+/* Access Statistics Plugin Styles */
+
+.access-statistics {
+    margin: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.access-statistics h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.access-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.access-stats-table thead {
+    background: #f8f9fa;
+}
+
+.access-stats-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.access-stats-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    color: #333;
+}
+
+.access-stats-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.access-stats-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Shortcode output styles */
+.access-total-visits,
+.access-unique-visits {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.1em;
+}
+
+.access-total-visits {
+    color: #0066cc;
+}
+
+.access-unique-visits {
+    color: #28a745;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .access-stats-table {
+        font-size: 14px;
+    }
+    
+    .access-stats-table th,
+    .access-stats-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Admin page styles */
+.access-statistics-admin {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.access-statistics-admin .card,
+.access-statistics-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.access-statistics-admin .card h2,
+.access-statistics-card h2 {
+    margin-top: 0;
+    color: #23282d;
+    display: flex;
+    align-items: center;
+}
+
+.access-statistics-admin .form-table th {
+    width: 150px;
+}
+
+.access-statistics-admin .form-table input[type="number"],
+.access-statistics-admin .form-table select {
+    width: 200px;
+}
+
+/* Shortcode legend styles */
+#shortcode-legend-content {
+    margin-top: 15px;
+}
+
+#shortcode-legend-content table {
+    margin-top: 15px;
+}
+
+#shortcode-legend-content th {
+    background: #f8f9fa;
+    padding: 10px;
+    font-weight: 600;
+}
+
+#shortcode-legend-content td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+#shortcode-legend-content code {
+    background: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Dashboard stats cards */
+.access-statistics-admin .dashboard-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.access-statistics-admin .stat-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.access-statistics-admin .stat-card.total {
+    background: #e7f5ff;
+}
+
+.access-statistics-admin .stat-card.unique {
+    background: #f0f8ff;
+}
+
+.access-statistics-admin .stat-card h3 {
+    margin: 0 0 10px 0;
+    color: #0066cc;
+}
+
+.access-statistics-admin .stat-card .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.access-statistics-admin .stat-card .stat-description {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Override theme max-width constraints */
+.access-statistics-admin .wrap {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.access-statistics-admin .card {
+    max-width: none !important;
+    width: 100% !important;
+} 

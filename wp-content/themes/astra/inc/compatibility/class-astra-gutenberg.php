@@ -12,6 +12,7 @@
  * @since 3.7.1
  */
 class Astra_Gutenberg {
+
 	/**
 	 * Constructor
 	 */
@@ -64,7 +65,7 @@ class Astra_Gutenberg {
 	 * @return array       Updated embed markup.
 	 */
 	public function add_ast_block_container( $attr ) {
-		$attr['data-ast-blocks-layout'] = 'true';
+		$attr['ast-blocks-layout'] = 'true';
 		return $attr;
 	}
 
@@ -73,6 +74,7 @@ class Astra_Gutenberg {
 	 * to avoid the group block width from changing to full width.
 	 *
 	 * @since 3.7.1
+	 * @access public
 	 *
 	 * @param string $block_content Rendered block content.
 	 * @param array  $block         Block object.
@@ -93,18 +95,21 @@ class Astra_Gutenberg {
 			return $block_content;
 		}
 
-		$replace_regex = '/(^\s*<div\b[^>]*wp-block-group[^>]*>)(.*)(<\/div>\s*$)/ms';
-		return preg_replace_callback(
+
+		$replace_regex   = '/(^\s*<div\b[^>]*wp-block-group[^>]*>)(.*)(<\/div>\s*$)/ms';
+		$updated_content = preg_replace_callback(
 			$replace_regex,
 			array( $this, 'group_block_replace_regex' ),
 			$block_content
 		);
+		return $updated_content;
 	}
 
 	/**
 	 * Add Group block custom class when "Inherit default layout" toggle enabled.
 	 *
 	 * @since 3.8.3
+	 * @access public
 	 *
 	 * @param string $block_content Rendered block content.
 	 * @param array  $block         Block object.
@@ -130,6 +135,7 @@ class Astra_Gutenberg {
 	 * Update the block content with inner div.
 	 *
 	 * @since 3.7.1
+	 * @access public
 	 *
 	 * @param mixed $matches block content.
 	 *
@@ -143,6 +149,7 @@ class Astra_Gutenberg {
 	 * Add iframe wrapper for videos.
 	 *
 	 * @since 4.4.0
+	 * @access public
 	 *
 	 * @param string $block_content Rendered block content.
 	 * @param array  $block         Block object.
@@ -166,9 +173,9 @@ class Astra_Gutenberg {
 		}
 
 		$video_url     = ! empty( $block['attrs']['url'] ) ? esc_url( $block['attrs']['url'] ) : '';
-		$replace_regex = '/<div\s+class="wp-block-embed__wrapper"\s+>(.*?)<\/div>/s';
+		$replace_regex = '/<div\s+class="wp-block-embed__wrapper">(.*?)<\/div>/s';
 
-		return preg_replace_callback(
+		$updated_content = preg_replace_callback(
 			$replace_regex,
 			/**
 			 * Add iframe wrapper for videos.
@@ -176,11 +183,13 @@ class Astra_Gutenberg {
 			 * @param  array $matches Matches.
 			 * @return mixed          Updated content.
 			 */
-			static function ( $matches ) use ( $video_url ) {
+			function ( $matches ) use ( $video_url, $block_content, $block ) {
 				return Astra_After_Setup_Theme::get_instance()->responsive_oembed_wrapper( $matches[1], $video_url, array(), true );
 			},
 			$block_content
 		);
+
+		return $updated_content;
 	}
 }
 

@@ -3,6 +3,8 @@
  * Template for Single Page
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2022, Astra
  * @link        https://wpastra.com/
  * @since       Astra 4.0.0
  */
@@ -21,12 +23,10 @@ if ( apply_filters( 'astra_single_layout_one_banner_visibility', true ) ) {
 
 <div class="entry-content clear"
 	<?php
-			echo wp_kses_post(
-				astra_attr(
-					'article-entry-content-page',
-					array(
-						'class' => '',
-					)
+			echo astra_attr(
+				'article-entry-content-page',
+				array(
+					'class' => '',
 				)
 			);
 			?>

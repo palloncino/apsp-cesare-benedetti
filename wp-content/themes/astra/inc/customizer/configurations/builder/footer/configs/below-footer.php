@@ -2,7 +2,9 @@
 /**
  * Below footer Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -68,7 +70,7 @@ function astra_below_footer_configuration() {
 				'render_callback'     => array( Astra_Builder_Footer::get_instance(), 'below_footer' ),
 			),
 			'responsive' => false,
-			'divider'    => array( 'ast_class' => 'ast-section-spacing ast-bottom-divider' ),
+			'divider'    => array( 'ast_class' => 'ast-section-spacing ast-bottom-dotted-divider' ),
 		),
 
 		/**
@@ -191,7 +193,7 @@ function astra_below_footer_configuration() {
 				'max'  => 600,
 			),
 			'context'     => Astra_Builder_Helper::$design_tab,
-			'divider'     => array( 'ast_class' => 'ast-section-spacing ast-bottom-divider' ),
+			'divider'     => array( 'ast_class' => 'ast-section-spacing ast-bottom-dotted-divider' ),
 		),
 
 		// Section: Below Footer Border Color.
@@ -265,5 +267,5 @@ function astra_below_footer_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_below_footer_configuration' );
+	astra_below_footer_configuration();
 }

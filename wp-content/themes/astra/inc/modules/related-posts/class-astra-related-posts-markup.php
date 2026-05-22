@@ -3,6 +3,8 @@
  * Related Posts for Astra theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2021, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 3.5.0
  */
@@ -17,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 3.5.0
  */
 class Astra_Related_Posts_Markup {
+
 	/**
 	 *  Constructor
 	 */
@@ -68,7 +71,7 @@ class Astra_Related_Posts_Markup {
 	public function astra_get_related_posts() {
 		global $post;
 		$post_id                   = $post->ID;
-		$related_posts_title       = astra_get_i18n_option( 'related-posts-title', _x( '%astra%', 'Single Blog/Post Related Posts: Title', 'astra' ) );
+		$related_posts_title       = astra_get_option( 'related-posts-title' );
 		$related_post_meta         = astra_get_option( 'related-posts-meta-structure' );
 		$related_post_structure    = astra_get_option_meta( 'related-posts-structure' );
 		$exclude_ids               = apply_filters( 'astra_related_posts_exclude_post_ids', array( $post_id ), $post_id );
@@ -214,7 +217,7 @@ class Astra_Related_Posts_Markup {
 
 		$target = apply_filters( 'astra_related_post_cta_target', '_self' );
 
-		$cta_text = apply_filters( 'astra_related_post_read_more_text', astra_get_i18n_option( 'blog-read-more-text', _x( '%astra%', 'Blogs: Read More Text', 'astra' ) ) );
+		$cta_text = apply_filters( 'astra_related_post_read_more_text', astra_get_option( 'blog-read-more-text' ) );
 
 		$blog_read_more_as_button = astra_get_option( 'blog-read-more-as-button' );
 		$show_read_more_as_button = apply_filters( 'astra_related_post_read_more_as_button', $blog_read_more_as_button );
@@ -306,10 +309,10 @@ class Astra_Related_Posts_Markup {
 	/**
 	 * Render Featured Image HTML.
 	 *
-	 * @param int    $current_post_id current post ID.
-	 * @param string $before Markup before thumbnail image.
-	 * @param string $after  Markup after thumbnail image.
-	 * @param bool   $echo   Output print or return.
+	 * @param int     $current_post_id current post ID.
+	 * @param string  $before Markup before thumbnail image.
+	 * @param string  $after  Markup after thumbnail image.
+	 * @param boolean $echo   Output print or return.
 	 * @return string|null
 	 *
 	 * @since 3.5.0

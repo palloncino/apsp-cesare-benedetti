@@ -2,7 +2,9 @@
 /**
  * Register customizer panels & sections.
  *
- * @package     Astra\
+ * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.2.0
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Liferlms_Section_Configs' ) ) {
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Liferlms_Section_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register LearnDash Container settings.
 		 *
@@ -49,6 +52,7 @@ if ( ! class_exists( 'Astra_Liferlms_Section_Configs' ) ) {
 			);
 
 			return array_merge( $configurations, $_configs );
+
 		}
 	}
 }

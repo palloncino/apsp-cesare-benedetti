@@ -2,7 +2,9 @@
 /**
  * Primary Header Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -31,7 +33,7 @@ function astra_primary_header_configuration() {
 			'name'     => 'panel-header-builder-group',
 			'type'     => 'panel',
 			'priority' => 20,
-			'title'    => __( 'Header', 'astra' ),
+			'title'    => __( 'Header Builder', 'astra' ),
 		),
 
 		// Section: Primary Header.
@@ -148,5 +150,5 @@ function astra_primary_header_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_primary_header_configuration' );
+	astra_primary_header_configuration();
 }

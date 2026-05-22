@@ -3,6 +3,8 @@
  * Bottom Footer Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 	 * Register Blog Single Layout Configurations.
 	 */
 	class Astra_Blog_Single_Layout_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Blog Single Layout Configurations.
 		 *
@@ -79,7 +82,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 						'step' => 1,
 						'max'  => 1920,
 					),
-					'divider'     => array( 'ast_class' => 'ast-top-divider' ),
+					'divider'     => array( 'ast_class' => 'ast-top-dotted-divider' ),
 				),
 
 				/**
@@ -92,7 +95,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 					'section'  => 'section-blog-single',
 					'title'    => __( 'Content Images Box Shadow', 'astra' ),
 					'control'  => 'ast-toggle-control',
-					'divider'  => array( 'ast_class' => 'ast-top-section-divider' ),
+					'divider'  => array( 'ast_class' => 'ast-top-section-divider ast-bottom-spacing' ),
 					'priority' => 9,
 					'context'  => Astra_Builder_Helper::$general_tab,
 				),
@@ -155,7 +158,7 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 						'left'   => __( 'Left', 'astra' ),
 					),
 					'priority'          => 30,
-					'divider'           => array( 'ast_class' => 'ast-top-divider' ),
+					'divider'           => array( 'ast_class' => 'ast-top-dotted-divider' ),
 					'context'           => $tab_config,
 				),
 			);
@@ -169,7 +172,9 @@ if ( ! class_exists( 'Astra_Blog_Single_Layout_Configs' ) ) {
 				'description' => '',
 			);
 
-			return array_merge( $configurations, $_configs );
+			$configurations = array_merge( $configurations, $_configs );
+
+			return $configurations;
 		}
 	}
 }

@@ -15,6 +15,7 @@ define( 'ASTRA_SCROLL_TO_TOP_URL', ASTRA_THEME_URI . 'inc/addons/scroll-to-top/'
  * @since 4.0.0
  */
 class Astra_Scroll_To_Top {
+
 	/**
 	 * Member Variable
 	 *

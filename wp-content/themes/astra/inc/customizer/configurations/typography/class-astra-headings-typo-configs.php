@@ -3,11 +3,13 @@
  * Styling Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2021, Astra
  * @link        https://wpastra.com/
  * @since       Astra 3.7.0
  */
 
-/** @psalm-suppress ParadoxicalCondition */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
+/** @psalm-suppress ParadoxicalCondition **/ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -16,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Customizer Sanitizes Initial setup
  */
 class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
+
 	/**
 	 * Register headings Typography Customizer Configurations.
 	 *
@@ -49,8 +52,9 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h1]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
+
 
 			/**
 			 * Option: Heading <H1> Font Weight
@@ -68,7 +72,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h1',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -112,8 +116,8 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H1 Font Extras
-			 */
+			* Option: Heading H1 Font Extras
+			*/
 			array(
 				'name'     => 'font-extras-h1',
 				'type'     => 'sub-control',
@@ -123,6 +127,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority' => 28,
 				'default'  => astra_get_option( 'font-extras-h1' ),
 			),
+
 
 			/**
 			 * Option: Heading <H2> Font Family
@@ -139,7 +144,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h2]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -158,7 +163,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h2',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -202,17 +207,17 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H2 Font Extras
-			 */
-			array(
-				'name'     => 'font-extras-h2',
-				'type'     => 'sub-control',
-				'parent'   => ASTRA_THEME_SETTINGS . '[ast-heading-h2-typo]',
-				'control'  => 'ast-font-extras',
-				'section'  => $section,
-				'priority' => 28,
-				'default'  => astra_get_option( 'font-extras-h2' ),
-			),
+				 * Option: Heading H2 Font Extras
+				 */
+				array(
+					'name'     => 'font-extras-h2',
+					'type'     => 'sub-control',
+					'parent'   => ASTRA_THEME_SETTINGS . '[ast-heading-h2-typo]',
+					'control'  => 'ast-font-extras',
+					'section'  => $section,
+					'priority' => 28,
+					'default'  => astra_get_option( 'font-extras-h2' ),
+				),
 
 			/**
 			 * Option: Heading <H3> Font Family
@@ -229,7 +234,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h3]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -248,7 +253,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h3',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -292,17 +297,17 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H3 Font Extras
-			 */
-			array(
-				'name'     => 'font-extras-h3',
-				'type'     => 'sub-control',
-				'parent'   => ASTRA_THEME_SETTINGS . '[ast-heading-h3-typo]',
-				'control'  => 'ast-font-extras',
-				'section'  => $section,
-				'priority' => 28,
-				'default'  => astra_get_option( 'font-extras-h3' ),
-			),
+				 * Option: Heading H3 Font Extras
+				 */
+				array(
+					'name'     => 'font-extras-h3',
+					'type'     => 'sub-control',
+					'parent'   => ASTRA_THEME_SETTINGS . '[ast-heading-h3-typo]',
+					'control'  => 'ast-font-extras',
+					'section'  => $section,
+					'priority' => 28,
+					'default'  => astra_get_option( 'font-extras-h3' ),
+				),
 
 			/**
 			 * Option: Heading <H4> Font Family
@@ -319,7 +324,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h4]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -338,7 +343,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h4',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -382,8 +387,8 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H4 Font Extras
-			 */
+			* Option: Heading H4 Font Extras
+			*/
 			array(
 				'name'     => 'font-extras-h4',
 				'type'     => 'sub-control',
@@ -409,7 +414,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h5]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -428,8 +433,9 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h5',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
+
 
 			/**
 			 * Option: Heading 5 (H5) Font Size
@@ -471,8 +477,8 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H5 Font Extras
-			 */
+			* Option: Heading H5 Font Extras
+			*/
 			array(
 				'name'     => 'font-extras-h5',
 				'type'     => 'sub-control',
@@ -498,7 +504,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'  => 28,
 				'connect'   => ASTRA_THEME_SETTINGS . '[font-weight-h6]',
 				'transport' => 'postMessage',
-				'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -517,7 +523,7 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 				'priority'          => 28,
 				'connect'           => 'font-family-h6',
 				'transport'         => 'postMessage',
-				'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+				'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 			),
 
 			/**
@@ -560,8 +566,8 @@ class Astra_Headings_Typo_Configs extends Astra_Customizer_Config_Base {
 			),
 
 			/**
-			 * Option: Heading H6 Font Extras
-			 */
+			* Option: Heading H6 Font Extras
+			*/
 			array(
 				'name'     => 'font-extras-h6',
 				'type'     => 'sub-control',

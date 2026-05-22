@@ -2,7 +2,9 @@
 /**
  * Below Header Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -134,5 +136,5 @@ function astra_below_header_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_below_header_configuration' );
+	astra_below_header_configuration();
 }

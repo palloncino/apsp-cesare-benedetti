@@ -1,0 +1,1248 @@
+# Translation of Plugins - TablePress &#8211; Tables in WordPress made easy - Stable (latest release) in Italian
+# This file is distributed under the same license as the Plugins - TablePress &#8211; Tables in WordPress made easy - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-29 10:11:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: it\n"
+"Project-Id-Version: Plugins - TablePress &#8211; Tables in WordPress made easy - Stable (latest release)\n"
+
+#: admin/js/build/edit.js:1 admin/js/common/help.jsx:44
+msgid "Help"
+msgstr "Aiuto"
+
+#: admin/js/build/edit.js:1 admin/js/build/list.js:1
+#: admin/js/edit/table-information.js:123 admin/js/list/screen.jsx:114
+msgid "Copy Shortcode to clipboard"
+msgstr "Copia lo shortcode negli appunti"
+
+#: admin/js/build/edit.js:1 admin/js/build/list.js:1
+#: admin/js/edit/table-information.js:43 admin/js/list/screen.jsx:83
+msgid "Copied Shortcode to clipboard."
+msgstr "Shortcode copiato negli appunti."
+
+#: admin/js/build/list.js:1 admin/js/list/screen.jsx:94
+msgid "Table Shortcode"
+msgstr "Shortcode della tabella"
+
+#: admin/js/build/list.js:1 admin/js/list/screen.jsx:56
+msgid "Open the preview in a new tab"
+msgstr "Apri l'anteprima in una nuova scheda"
+
+#: admin/js/build/edit.js:2 admin/js/build/list.js:1
+#: admin/js/edit/other-actions.js:69 admin/js/list/screen.jsx:164
+msgid "Deleting a table is permanent and can not be undone!"
+msgstr "L'eliminazione di una tabella è definitiva e non può essere annullata!"
+
+#: blocks/table/block.json
+msgctxt "block keyword"
+msgid "table"
+msgstr "tabella"
+
+#: classes/class-elementor-widget-table.php:232 blocks/table/build/index.js:5
+#: blocks/table/src/edit.js:149
+msgid "See the TablePress Documentation for more information."
+msgstr "Guarda la documentazione ufficiale di TablePress per ulteriori informazioni."
+
+#. translators: %1$s: URL to tables list, %2$s: Link text
+#: classes/class-elementor-widget-table.php:204 blocks/table/build/index.js:3
+#: blocks/table/src/edit.js:51
+msgid "Manage your tables."
+msgstr "Gestisci le tue tabelle."
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:318
+msgid "You must select a table."
+msgstr "Devi selezionare una tabella."
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:312
+msgid "You must specify a path to a file on the server."
+msgstr "Devi specificare un percorso per il file sul server."
+
+#: blocks/table/block.json
+msgctxt "block description"
+msgid "Embed a TablePress table."
+msgstr "Incorpora una tabella TablePress."
+
+#: blocks/table/block.json
+msgctxt "block title"
+msgid "TablePress table"
+msgstr "Tabella TablePress"
+
+#: classes/class-elementor-widget-table.php:230 blocks/table/build/index.js:5
+#: blocks/table/src/edit.js:148
+msgid "Configuration parameters:"
+msgstr "Parametri di configurazione:"
+
+#: classes/class-elementor-widget-table.php:201 blocks/table/build/index.js:5
+#: blocks/table/src/edit.js:122
+msgid "Select the TablePress table that you want to embed."
+msgstr "Seleziona la tabella TablePress che vuoi incorporare."
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:186
+msgid "You have selected %1$d file:"
+msgid_plural "You have selected %1$d files:"
+msgstr[0] "Hai selezionato %1$d file:"
+msgstr[1] "Hai selezionato %1$d file:"
+
+#: classes/class-elementor-widget-table.php:232 blocks/table/build/index.js:5
+#: blocks/table/src/edit.js:149
+msgid "These additional parameters can be used to modify specific table features."
+msgstr "Questi parametri aggiuntivi possono essere usati per modificare specifiche caratteristiche della tabella."
+
+#: admin/js/build/edit.js:2 admin/js/build/export.js:1
+#: admin/js/build/options.js:1 admin/js/common/keyboard-shortcut.js:25
+#: admin/js/edit/data/contextmenu.js:35 admin/js/export/screen.jsx:151
+msgctxt "keyboard shortcut modifier key on a Mac keyboard"
+msgid "⌘"
+msgstr "⌘"
+
+#: views/view-edit.php:283 views/view-list.php:238
+msgid "TablePress has more to offer!"
+msgstr "TablePress ha molto altro da offrire!"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:152
+msgctxt "keyboard key"
+msgid "Shift"
+msgstr "Shift"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:151
+msgctxt "keyboard key"
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: views/view-edit.php:485 views/view-edit.php:504 views/view-import.php:159
+#: views/view-options.php:99
+msgid "Did you know?"
+msgstr "Lo sapevi?"
+
+#: classes/class-view.php:473 controllers/environment-checks.php:33
+#: controllers/environment-checks.php:74
+msgid "Attention: Unfortunately, there is a problem!"
+msgstr "Attenzione: purtroppo c'è un problema!"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:279
+msgid "— Select or type —"
+msgstr "— Seleziona o digita —"
+
+#: views/view-list.php:205
+msgid "Thank you for choosing TablePress, the most popular table plugin for WordPress!"
+msgstr "Grazie per aver scelto TablePress, il plugin più popolare per le tabelle in WordPress!"
+
+#: views/view-list.php:223
+msgid "Thank you for using it!"
+msgstr "Grazie di utilizzarlo!"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:185
+msgid "Click to select files, or drag them here."
+msgstr "Fai clic per selezionare i file oppure trascinali qui."
+
+#: views/view-list.php:244
+msgid "To find out more about what’s new, please read the <a href=\"%s\"><strong>release announcement</strong></a>."
+msgstr "Per saperne di più sulle novità, leggi l'<a href=\"%s\"><strong>annuncio della versione</strong></a>."
+
+#. translators: %s: Number of tables
+#: views/class-all-tables-list-table.php:495
+#: views/class-editor-button-thickbox-list-table.php:243
+msgid "%s table"
+msgid_plural "%s tables"
+msgstr[0] "%s tabella"
+msgstr[1] "%s tabelle"
+
+#. translators: %1$s: Table name, %2$s: Table ID
+#: views/class-all-tables-list-table.php:242 admin/js/build/edit.js:2
+#: admin/js/edit/table-preview.js:38
+msgid "Preview of table “%1$s” (ID %2$s)"
+msgstr "Anteprima della tabella “%1$s” (ID %2$s)"
+
+#: controllers/controller-admin.php:439
+msgid "Go Premium"
+msgstr "Passa a Premium"
+
+#: controllers/controller-admin.php:439
+msgid "Check out the Premium version of TablePress!"
+msgstr "Dai un'occhiata alla versione Premium di TablePress!"
+
+#: classes/class-view.php:431
+msgid "Upgrade to Premium"
+msgstr "Aggiorna a Premium"
+
+#: classes/class-view.php:220
+msgid "Error code: %s"
+msgstr "Codice di errore: %s"
+
+#. translators: %s: URL to TablePress premium features
+#: classes/class-admin-page-helper.php:128
+msgid "Take a look at the <a href=\"%s\">Premium features</a>!"
+msgstr "Dai un'occhiata alle <a href=\"%s\">funzionalità Premium</a>!"
+
+#: controllers/controller-admin.php:509 controllers/controller-admin.php:593
+#: controllers/controller-admin.php:865 controllers/controller-admin.php:921
+#: controllers/controller-admin.php:1000 controllers/controller-admin.php:1041
+#: controllers/controller-admin.php:1166 controllers/controller-admin.php:1262
+#: controllers/controller-admin.php:1289 controllers/controller-admin.php:1330
+#: controllers/controller-admin.php:1369 controllers/controller-admin.php:1422
+#: controllers/controller-admin.php:1448
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Non hai i permessi per accedere a questa pagina."
+
+#: views/view-edit.php:465
+msgid "To edit the content or modify the structure of this table, use the input fields and buttons below."
+msgstr "Per modificare il contenuto o la struttura di questa tabella, usa i campi di inserimento e i pulsanti qui sotto."
+
+#. translators: %s: Label for unknown user
+#: classes/class-tablepress.php:406
+msgid "unknown"
+msgstr "sconosciuto"
+
+#. translators: %s: Error message
+#: views/view-edit.php:436
+msgid "The following error was registered: %s."
+msgstr "È stato registrato il seguente errore: %s."
+
+#. translators: %s: URL to TablePress website
+#: classes/class-admin-page-helper.php:125
+msgid "Thank you for using <a href=\"%s\">TablePress</a>."
+msgstr "Grazie per aver scelto <a href=\"%s\">TablePress</a>."
+
+#: views/view-about.php:260
+msgid "the translators in the <a href=\"%s\">Plugin Directory</a>,"
+msgstr "i traduttori nella <a href=\"%s\">directory dei plugin</a>,"
+
+#: views/view-about.php:259
+msgid "Allan Jardine for <a href=\"%s\">DataTables</a>,"
+msgstr "Allan Jardine per <a href=\"%s\">DataTables</a>,"
+
+#: views/view-list.php:215
+msgid "Welcome!"
+msgstr "Benvenuto!"
+
+#: views/view-list.php:196 views/view-list.php:213 views/view-list.php:236
+#: views/view-list.php:250
+msgid "Hide this message"
+msgstr "Nascondi questo messaggio"
+
+#: views/view-list.php:222
+msgid "Hi, my name is Tobias, I&#8217;m the developer of the TablePress plugin."
+msgstr "Salve, sono Tobias Bäthge, lo sviluppatore di TablePress."
+
+#: views/view-list.php:252
+msgid "Thank you for updating to TablePress %s!"
+msgstr "Grazie per aver aggiornato a TablePress %s!"
+
+#: views/view-list.php:272
+msgid "Error: This bulk action is invalid!"
+msgstr "Errore: questa azione di gruppo non &egrave; valida!"
+
+#: views/view-list.php:273
+msgid "Error: You did not select any tables!"
+msgstr "Errore: Non hai selezionato nessuna tabella!"
+
+#: views/view-list.php:275
+msgid "Notice: Not all selected tables could be copied!"
+msgstr "Nota: non tutte le tabelle selezionate possono essere copiate!"
+
+#: views/view-list.php:276
+msgid "The tables were imported successfully."
+msgstr "La tabella &egrave; stata correttamente importata."
+
+#: views/view-list.php:282
+msgid "Tables"
+msgstr "Tabelle"
+
+#: controllers/controller-admin_ajax.php:301 views/view-about.php:115
+#: views/view-list.php:363 views/view-preview_table.php:81
+msgid "Each table has a unique ID that needs to be adjusted in that Shortcode."
+msgstr "Ciascuna tabella ha un ID univoco che deve essere inserito in questo Shortcode."
+
+#: views/class-all-tables-list-table.php:106
+msgid "Author"
+msgstr "Autore"
+
+#: views/class-all-tables-list-table.php:107
+msgid "Last Modified By"
+msgstr "Ultima modifica di"
+
+#: views/class-all-tables-list-table.php:231
+msgid "Show Shortcode"
+msgstr "Vedi Shortcode"
+
+#: views/class-all-tables-list-table.php:233
+msgid "Copy &#8220;%s&#8221;"
+msgstr "Copia &#8220;%s&#8221;"
+
+#: views/class-all-tables-list-table.php:233 admin/js/build/edit.js:2
+#: admin/js/edit/data/contextmenu.js:85
+msgid "Copy"
+msgstr "Copia"
+
+#: views/class-all-tables-list-table.php:236
+msgid "Export &#8220;%s&#8221;"
+msgstr "Esporta &#8220;%s&#8221;"
+
+#: views/class-all-tables-list-table.php:236
+msgctxt "row action"
+msgid "Export"
+msgstr "Esporta"
+
+#: views/class-all-tables-list-table.php:368
+msgctxt "bulk action"
+msgid "Copy"
+msgstr "Copia"
+
+#: views/class-all-tables-list-table.php:371
+msgctxt "bulk action"
+msgid "Export"
+msgstr "Esporta"
+
+#: views/class-all-tables-list-table.php:410
+msgid "Select Bulk Action"
+msgstr "Seleziona azioni di gruppo"
+
+#: views/class-all-tables-list-table.php:412
+msgid "Bulk Actions"
+msgstr "Azioni di gruppo"
+
+#: views/class-all-tables-list-table.php:417
+msgid "Apply"
+msgstr "Applica"
+
+#: views/class-all-tables-list-table.php:439
+msgid "You should <a href=\"%s\">add</a> a table to get started!"
+msgstr "Devi <a href=\"%s\">aggiungere</a> una tabella per iniziare!"
+
+#: views/class-all-tables-list-table.php:441
+msgid "You should <a href=\"%s\">import</a> a table to get started!"
+msgstr "Devi <a href=\"%s\">importare</a> una tabella per iniziare!"
+
+#: views/view-options.php:41
+msgid "Options saved successfully."
+msgstr "Opzioni salvate con successo."
+
+#: views/view-options.php:62
+msgid "User Options"
+msgstr "Opzioni utente"
+
+#: views/view-options.php:80
+msgid "TablePress has some options which affect the plugin&#8217;s behavior in different areas."
+msgstr "TablePress ha diverse opzioni che influenzano il comportamento del plugin in diverse aree."
+
+#: views/view-options.php:129
+msgid "Custom CSS"
+msgstr "CSS personalizzato"
+
+#: views/view-options.php:139
+msgid "&#8220;Custom CSS&#8221; (<a href=\"%s\">Cascading Style Sheets</a>) can be used to change the styling or layout of a table."
+msgstr "&#8220;CSS personalizzato&#8221; (<a href=\"%s\">Cascading Style Sheets</a>) può essere usato per modificare lo stile e l'aspetto di una tabella."
+
+#: views/view-options.php:143
+msgid "Information on available CSS selectors can be found in the <a href=\"%s\">Documentation</a>."
+msgstr "Informazioni sul selettori CSS disponibili possono essere trovate nella <a href=\"%s\">documentazione</a>."
+
+#: views/view-options.php:145
+msgid "Please note that invalid CSS code will be stripped, if it can not be corrected automatically."
+msgstr "Si prega di notare che il codice CSS valida sar&agrave; eliminato se non pu&ograve; essere corretto automaticamente."
+
+#: views/view-options.php:181
+msgid "Top-Level (top)"
+msgstr "Livello superiore (sopra)"
+
+#: views/view-options.php:182
+msgid "Top-Level (middle)"
+msgstr "Livello medio (medio)"
+
+#: views/view-options.php:230
+msgid "Uninstalling <strong>will permanently delete</strong> all TablePress tables and options from the database."
+msgstr "La disinstallazione <strong>canceller&agrave; definitivamente</strong> tutte le tabelle e le opzioni del database TablePress."
+
+#: views/view-options.php:231
+msgid "It is recommended that you create a backup of the tables (by exporting the tables in the JSON format), in case you later change your mind."
+msgstr "Si consiglia di creare una copia di backup delle tabelle (esportando le tabelle in formato JSON), nel caso in cui in seguito si cambi idea."
+
+#: views/view-options.php:232
+msgid "You will manually need to remove the plugin&#8217;s files from the plugin folder afterwards."
+msgstr "Sar&agrave; necessario rimuovere manualmente in seguito i file del plugin nella cartella plugin."
+
+#. translators: %s: Connection information form label
+#: views/view-options_custom_css.php:122
+msgid "To try again with the same method that you use for updating plugins or themes, please fill out the &#8220;%s&#8221; form below."
+msgstr "Per provare di nuovo con lo stesso metodo che si utilizza per aggiornare i plugin o temi, si prega di compilare il modulo &#8220;%s&#8221; qui di seguito."
+
+#. translators: %s: Connection information form label
+#: views/view-options_custom_css.php:122
+msgid "Connection Information"
+msgstr "Informazioni di connessione"
+
+#: views/view-options_custom_css.php:150
+msgid "Proceed without saving a file"
+msgstr "Continua senza salvare il file"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: tablepress.php
+msgid "https://tablepress.org/"
+msgstr "https://tablepress.org/"
+
+#. Author of the plugin
+#: tablepress.php
+msgid "Tobias Bäthge"
+msgstr "Tobias Bäthge"
+
+#: views/view-options.php:233
+msgid "Be very careful with this and only click the button if you know what you are doing!"
+msgstr "Fai attenzione con questo e fai clic sul pulsante solo se sai cosa stai facendo!"
+
+#: views/class-all-tables-list-table.php:374
+msgctxt "bulk action"
+msgid "Delete"
+msgstr "Elimina"
+
+#: views/view-list.php:234
+msgid "Sincerely, Tobias"
+msgstr "Cordialmente, Tobias"
+
+#: views/view-options.php:130
+msgid "Load this &#8220;Custom CSS&#8221; code to change the table styling:"
+msgstr "Carica questo codice &#8220;CSS personalizzato&#8221; per modificare lo stile della tabella:"
+
+#. translators: %1$s: URL to FAQ, %2$s: URL to Documentation, %3$s: URL to
+#. Support, %4$s: URL to plugin website
+#: views/view-list.php:207
+msgid "If you encounter any questions or problems, please visit the <a href=\"%1$s\">FAQ</a>, the <a href=\"%2$s\">Documentation</a>, and the <a href=\"%3$s\">Support</a> section on the <a href=\"%4$s\">plugin website</a>."
+msgstr "Se hai domande o problemi, visita le <a href=\"%1$s\">FAQ</a>, la <a href=\"%2$s\">documentazione</a> e la sezione <a href=\"%3$s\">supporto</a> del <a href=\"%4$s\">sito web del plugin</a>."
+
+#: views/class-all-tables-list-table.php:222
+#: views/class-all-tables-list-table.php:229
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Modifica &#8220;%s&#8221;"
+
+#: views/view-list.php:221
+msgid "Tobias Bäthge, developer of TablePress"
+msgstr "Tobias Bäthge, sviluppatore di TablePress"
+
+#: views/view-list.php:258 views/view-list.php:259
+msgid "The table was deleted successfully."
+msgid_plural "The tables were deleted successfully."
+msgstr[0] "La tabella è stata correttamente eliminata."
+msgstr[1] "Le tabelle sono state correttamente eliminate."
+
+#: views/view-list.php:265
+msgid "The copied table has the table ID &#8220;%s&#8221;."
+msgstr "La tabella copiata ha ID tabella &#8220;%s&#8221;."
+
+#: views/view-list.php:269
+msgid "Error: The table could not be copied."
+msgstr "Errore: impossibile copiare la tabella."
+
+#: views/view-list.php:270
+msgid "Error: You did not specify a valid table ID."
+msgstr "Errore: non hai specificato un ID tabella valido."
+
+#: views/view-list.php:274
+msgid "Notice: Not all selected tables could be deleted!"
+msgstr "Nota: non tutte le tabelle selezionate possono essere eliminate!"
+
+#: views/view-editor_button_thickbox.php:120 views/view-list.php:353
+msgid "This is a list of your tables."
+msgstr "Questo è un elenco delle tue tabelle."
+
+#: views/view-options.php:141
+msgid "You can get styling examples from the <a href=\"%s\">FAQ</a>."
+msgstr "È possibile ottenere esempi di formattazione dalle <a href=\"%s\">FAQ</a>."
+
+#: views/view-options.php:183
+msgid "Top-Level (bottom)"
+msgstr "Livello inferiore (sotto)"
+
+#: views/view-options_custom_css.php:119
+msgid "Due to the configuration of your server, TablePress was not able to automatically save your &#8220;Custom CSS&#8221; to a file."
+msgstr "A causa della configurazione del tuo server, TablePress non è in grado di salvare automaticamente il tuo &#8220;CSS personalizzato&#8221; in un file."
+
+#: views/view-options_custom_css.php:152
+msgid "To proceed without trying to save the &#8220;Custom CSS&#8221; to a file, click the button below."
+msgstr "Per procedere senza cercare di salvare il &#8220;CSS personalizzato&#8221; in un file fai clic sul pulsante qui sotto."
+
+#: views/view-options_custom_css.php:153
+msgid "Your &#8220;Custom CSS&#8221; will then be loaded inline."
+msgstr "Il tuo &#8220;CSS personalizzato&#8221; sarà caricato inline."
+
+#: views/view-options_custom_css.php:155
+msgid "Proceed without saving &#8220;Custom CSS&#8221; to a file"
+msgstr "Continua senza salvare il &#8220;CSS personalizzato&#8221; in un file"
+
+#: views/view-options_custom_css.php:44
+msgid "Attention: Further action is required to save the changes to your &#8220;Custom CSS&#8221;!"
+msgstr "Attenzione: è necessaria un'ulteriore azione per salvare le modifiche nel tuo &#8220;CSS personalizzato&#8221;!"
+
+#: views/view-options.php:42
+msgid "Options saved successfully, but &#8220;Custom CSS&#8221; was not saved to file."
+msgstr "Opzioni salvate con successo, ma il &#8220;CSS personalizzato&#8221; non è stato salvato in un file."
+
+#: views/view-options.php:43
+msgid "Error: Options could not be saved."
+msgstr "Errore: impossibile salvare le opzioni."
+
+#: admin/js/build/list.js:1 admin/js/list/screen.jsx:99
+msgid "To embed this table into a post or page, use this Shortcode:"
+msgstr "Per incorporare questa tabella in un articolo o in una pagina usa questo shortcode:"
+
+#: views/view-options.php:193
+msgid "Admin menu entry"
+msgstr "Voce del menu di amministrazione"
+
+#: views/view-options.php:194
+msgid "TablePress shall be shown in this section of my admin menu: %s"
+msgstr "TablePress deve essere mostrato in questa sezione del mio menu di amministrazione: %s"
+
+#: views/view-about.php:97
+msgid "At first, you should add or import a table."
+msgstr "Innanzitutto dovresti aggiugere o importare una tabella."
+
+#: views/view-about.php:98
+msgid "This means that you either let the plugin create an empty table for you or that you load an existing table from either a CSV, HTML, JSON, XLS, or XLSX file."
+msgstr "Questo significa che puoi lasciare che il plugin crei una tabella vuota per te o puoi caricare una tabella esistente da un file CSV, HTML, JSON, XLS o XLSX."
+
+#: views/view-about.php:102
+msgid "To easily add a link or an image to a cell, use the provided buttons."
+msgstr "Per aggiungere facilmente un collegamento o una immagine da una cella di usare i bottoni forniti."
+
+#: views/view-about.php:120
+msgid "Tables can be styled by changing and adding CSS commands."
+msgstr "Le tabelle possono essere formattate modificando e aggiungendo comandi CSS."
+
+#: views/view-about.php:121
+msgid "The plugin ships with default CSS stylesheets, which can be customized with own code or replaced with other stylesheets."
+msgstr "Il plugin contiene fogli di stile CSS predefiniti, che possono essere personalizzati con il proprio codice o sostituiti con altri fogli di stile."
+
+#: views/view-about.php:122
+msgid "For this, each table is given certain CSS classes that can be used as CSS selectors."
+msgstr "Per questo, a ciascuna tabella viene assegnata una certa classe CSS che pu&ograve; essere usata come selettore CSS."
+
+#. translators: %s: Author's website URL
+#: views/view-about.php:159
+msgid "This plugin was written and developed by <a href=\"%s\">Tobias Bäthge</a>."
+msgstr "Questo plugin &egrave; stato scritto e sviluppato da <a href=\"%s\"> Tobias Bäthge </a>."
+
+#: views/view-about.php:256
+msgid "Special Thanks go to:"
+msgstr "Ringraziamenti speciali vanno a:"
+
+#: admin/js/add/screen.jsx:128 admin/js/build/add.js:1
+msgid "Add Table"
+msgstr "Aggiungi tabella"
+
+#: admin/js/add/screen.jsx:72 admin/js/build/add.js:1
+msgid "The name or title of your table."
+msgstr "Il nome o il titolo della tua tabella."
+
+#: views/class-all-tables-list-table.php:105
+#: views/class-editor-button-thickbox-list-table.php:86
+#: admin/js/add/screen.jsx:79 admin/js/build/add.js:1 admin/js/build/edit.js:1
+#: admin/js/edit/table-information.js:150
+msgid "Description"
+msgstr "Descrizione"
+
+#: admin/js/add/screen.jsx:80 admin/js/build/add.js:1
+msgid "A description of the contents of your table."
+msgstr "Una descrizione del contenuto di questa tabella."
+
+#: admin/js/add/screen.jsx:95 admin/js/build/add.js:1
+msgid "Number of Rows"
+msgstr "Numero di righe"
+
+#: admin/js/add/screen.jsx:96 admin/js/build/add.js:1
+msgid "The number of rows in your table."
+msgstr "Il numero di righe nella tua tabella."
+
+#: admin/js/add/screen.jsx:112 admin/js/build/add.js:1
+msgid "Number of Columns"
+msgstr "Numero di colonne"
+
+#: admin/js/add/screen.jsx:113 admin/js/build/add.js:1
+msgid "The number of columns in your table."
+msgstr "Il numero di colonne nella tua tabella."
+
+#: views/view-edit.php:54
+msgid "The table was added successfully."
+msgstr "La tabella &egrave; stata aggiunta."
+
+#: views/view-edit.php:55 views/view-list.php:261 views/view-list.php:268
+msgid "The table was copied successfully."
+msgid_plural "The tables were copied successfully."
+msgstr[0] "La tabella &egrave; stata correttamente copiata."
+msgstr[1] "Le tabelle sono state correttamente copiate."
+
+#: views/view-edit.php:56
+msgid "The table was imported successfully."
+msgstr "La tabella &egrave; stata importata."
+
+#: views/view-edit.php:103
+msgid "Insert into Table"
+msgstr "Inserisci in una pagina"
+
+#: views/view-edit.php:82
+msgid "Table Information"
+msgstr "Informazioni tabella"
+
+#: views/view-edit.php:83
+msgid "Table Content"
+msgstr "Contenuti tabella"
+
+#: views/view-edit.php:84 admin/js/build/edit.js:1
+#: admin/js/edit/table-manipulation.js:391
+#: admin/js/edit/table-manipulation.js:401
+#: admin/js/edit/table-manipulation.js:408
+msgid "Table Manipulation"
+msgstr "Gestione  tabella"
+
+#: views/view-edit.php:85 admin/js/build/edit.js:1 admin/js/build/edit.js:2
+#: admin/js/edit/datatables-features.js:94 admin/js/edit/editor.js:198
+#: admin/js/edit/editor.js:208
+msgid "Table Options"
+msgstr "Opzioni tabella"
+
+#: views/view-edit.php:374 admin/js/build/edit.js:1 admin/js/build/edit.js:2
+#: admin/js/edit/data/contextmenu.js:137 admin/js/edit/table-manipulation.js:97
+msgid "Advanced Editor"
+msgstr "Editor avanzato"
+
+#: admin/js/build/edit.js:1 admin/js/build/edit.js:2
+#: admin/js/common/alert.jsx:73 admin/js/edit/editor.js:521
+msgid "OK"
+msgstr "OK"
+
+#: views/view-edit.php:441
+msgid "Because of this error, the table can not be edited at this time, to prevent possible further data loss."
+msgstr "A causa di questo errore la tabella non può essere modificata in questo momento per prevenire ulteriori perdite di dati."
+
+#. translators: %1$s: Page title, %2$s: Plugin name
+#: views/view-editor_button_thickbox.php:73
+#: views/view-editor_button_thickbox.php:118
+msgid "List of Tables"
+msgstr "Elenco delle tabelle"
+
+#: views/view-editor_button_thickbox.php:120
+msgid "You may insert a table into a post or page here."
+msgstr "Puoi inserire una tabella in un articolo o in una pagina qui."
+
+#: views/class-editor-button-thickbox-list-table.php:179
+#: views/view-editor_button_thickbox.php:121
+msgid "Insert Shortcode"
+msgstr "Inserisci lo shortcode"
+
+#: views/view-editor_button_thickbox.php:131 views/view-list.php:386
+msgid "Search Tables"
+msgstr "Cerca tabelle"
+
+#: views/class-all-tables-list-table.php:103
+#: views/class-editor-button-thickbox-list-table.php:84
+msgid "ID"
+msgstr "ID"
+
+#: views/class-editor-button-thickbox-list-table.php:87
+msgid "Action"
+msgstr "Azione"
+
+#: views/class-all-tables-list-table.php:258
+#: views/class-editor-button-thickbox-list-table.php:165
+msgid "(no description)"
+msgstr "(nessuna descrizione)"
+
+#: views/class-all-tables-list-table.php:428
+#: views/class-editor-button-thickbox-list-table.php:189
+#: views/view-export.php:92
+msgid "No tables found."
+msgstr "Nessuna tabella trovata."
+
+#: views/class-editor-button-thickbox-list-table.php:191
+msgid "You should add or import a table on the TablePress screens to get started!"
+msgstr "Dovresti aggiungere o importare una tabella per iniziare!"
+
+#: views/view-export.php:41
+msgid "Error: The export failed."
+msgstr "Errore: L'esportazione &egrave; fallita."
+
+#: views/view-export.php:42 views/view-list.php:271
+msgid "Error: This table could not be loaded!"
+msgstr "Errore: Questa tabella non pu&ograve; essere caricata!"
+
+#: views/view-export.php:43
+msgid "Error: The internal data of this table is corrupted!"
+msgstr "Errore: I dati interni di questa tabella sono corrotti!"
+
+#: views/view-export.php:44
+msgid "Error: The ZIP file could not be created."
+msgstr "Errore: Il file ZIP non pu&ograve; essere creato."
+
+#: views/view-export.php:49 views/view-export.php:52
+msgid "Export Tables"
+msgstr "Esporta tabelle"
+
+#: views/view-export.php:67
+msgid "Exporting a table allows you to use it in other programs, like spreadsheets applications."
+msgstr "L'esportazione di una tabella ti permette di usarla in altri programmi, come applicazioni di foglio di calcolo."
+
+#: views/view-export.php:68
+msgid "Regularly exporting tables is also recommended as a backup of your data."
+msgstr "Esportare regolarmente le tabelle &egrave; anche raccomandato come un backup dei tuoi dati."
+
+#: views/view-export.php:71
+msgid "To export, select the tables and the desired export format."
+msgstr "Per esportare selezionare le tabelle e il formato di esportazione desiderato."
+
+#: views/view-export.php:72
+msgid "If you choose more than one table, the exported files will automatically be stored in a ZIP archive file."
+msgstr "Se si sceglie pi&ugrave; di una tabella, i file esportati vengono automaticamente memorizzati in un file di archivio ZIP."
+
+#: views/view-export.php:74
+msgid "Be aware that for the CSV and HTML formats only the table data, but no table options are exported!"
+msgstr "Attenzione che nei formati CSV e HTML sono esportati solo i dati della tabella, e non le opzioni!"
+
+#: views/view-export.php:75
+msgid "For the JSON format, the table data and the table options are exported."
+msgstr "Nel formato JSON sono esportati dati e opzioni della tabella."
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:96
+msgid "Tables to Export"
+msgstr "Tabelle da esportare"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:103
+msgid "Select all"
+msgstr "Seleziona tutto"
+
+#. translators: %1$s: Table ID, %2$s: Table name
+#: classes/class-elementor-widget-table.php:183 admin/js/build/export.js:1
+#: admin/js/build/import.js:1 admin/js/export/screen.jsx:39
+#: admin/js/import/screen.jsx:62
+msgid "ID %1$s: %2$s"
+msgstr "ID %1$s: %2$s"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:162
+#: admin/js/export/screen.jsx:173
+msgid "Export Format"
+msgstr "Esporta formato"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:184
+#: admin/js/export/screen.jsx:197
+msgid "CSV Delimiter"
+msgstr "Delimitatore CSV"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:205
+msgid "(Only needed for CSV export.)"
+msgstr "(Necessario solo per l'esportazione CSV.)"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:222
+msgid "Create a ZIP archive."
+msgstr "Crea un archivio ZIP."
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:229
+msgid "(Mandatory if more than one table is selected.)"
+msgstr "(Obbligatorio se &egrave; selezionata pi&ugrave; di una tabella.)"
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:235
+msgid "Note: Support for ZIP file creation seems not to be available on this server."
+msgstr "Nota: Il supporto per la creazione di file ZIP non sembra essere disponibile su questo server."
+
+#: views/view-import.php:52
+msgid "Error: The import failed."
+msgstr "Errore: L'importazione &egrave; fallita."
+
+#: views/view-import.php:79
+msgid "You can also choose to import it as a new table, to replace an existing table, or to append the rows to an existing table."
+msgstr "Puoi anche scegliere di importarla come nuova tabella, di rimpiazzare una tabella esistente, o di aggiungere le righe ad una tabella esistente."
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:137
+#: admin/js/import/screen.jsx:142
+msgid "Import Source"
+msgstr "Importa sorgente"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:30
+msgid "File Upload"
+msgstr "Carica file"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:34
+msgid "URL"
+msgstr "URL"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:38
+msgid "File on server"
+msgstr "File sul server"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:42
+msgid "Manual Input"
+msgstr "Inserimento manuale"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:35
+msgid "File URL"
+msgstr "URL del file"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:39
+msgid "Server Path to file"
+msgstr "Percorso al file sul server"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:43
+msgid "Import data"
+msgstr "Importa dati"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:258
+msgid "Add as new table"
+msgstr "Aggiungi come nuova tabella"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:259
+msgid "Replace existing table"
+msgstr "Sostituisci tabella esistente"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:260
+msgid "Append rows to existing table"
+msgstr "Aggiungi righe ad una tabella esistente"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:267
+#: admin/js/import/screen.jsx:277
+msgid "Table to replace or append to"
+msgstr "Tabella da sostituire o a cui aggiungere righe"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:305
+msgctxt "button"
+msgid "Import"
+msgstr "Importa"
+
+#. translators: %1$s: URL to add table page, %2$s: URL to import table page
+#: views/class-all-tables-list-table.php:437 views/view-export.php:96
+msgid "You should <a href=\"%1$s\">add</a> or <a href=\"%2$s\">import</a> a table to get started!"
+msgstr "Devi <a href=\"%1$s\">aggiungere</a> o <a href=\"%2$s\">importare</a> una tabella per iniziare!"
+
+#: admin/js/build/edit.js:2 admin/js/build/list.js:1
+#: admin/js/edit/editor.js:514 admin/js/edit/other-actions.js:75
+#: admin/js/list/screen.jsx:170
+msgid "Cancel"
+msgstr "Annulla"
+
+#: views/class-all-tables-list-table.php:239 admin/js/build/edit.js:1
+#: admin/js/build/edit.js:2 admin/js/build/list.js:1
+#: admin/js/edit/other-actions.js:83 admin/js/edit/table-manipulation.js:179
+#: admin/js/edit/table-manipulation.js:204 admin/js/list/screen.jsx:178
+msgid "Delete"
+msgstr "Elimina"
+
+#. translators: %1$s: Table name, %2$s: Table ID
+#: views/view-edit.php:433
+msgid "The internal data of table &#8220;%1$s&#8221; (ID %2$s) is corrupted."
+msgstr "I dati interni della tabella &#8220;%1$s&#8221; (ID %2$s) sono corrotti."
+
+#: views/view-about.php:103
+msgid "Those will ask you for the necessary information and corresponding HTML code will be added to the cell automatically."
+msgstr "Questo ti chiederà le informazioni necessarie e il corrispondente codice HTML verrà aggiunto alla cella automaticamente."
+
+#: views/class-all-tables-list-table.php:108 admin/js/build/edit.js:1
+#: admin/js/edit/table-information.js:162
+msgid "Last Modified"
+msgstr "Ultima modifica"
+
+#: views/view-about.php:123
+msgid "Please see the <a href=\"%s\">Documentation</a> for a list of these selectors and for styling examples."
+msgstr "Consulta la <a href=\"%s\">documentazione</a> per un elenco di questi selettori e per esempi di formattazione."
+
+#: views/view-about.php:101
+msgid "Then, you can edit your data or change the structure of your table (e.g. by inserting, deleting, moving, or swapping rows or columns or sorting them) and select specific table features like alternating row colors or whether to print the name or description, if you want."
+msgstr "Puoi quindi modificare i tuoi dati o cambiare la struttura della tabella (ad esempio con l'inserimento, l'eliminazione, lo spostamento o lo scambio di righe o colonne oppure del loro ordinamento) e selezionare le caratteristiche specifiche della tabella come i colori alternati delle righe o se il nome o la descrizione devono essere mostrati, se lo desideri."
+
+#: admin/js/build/export.js:1 admin/js/export/screen.jsx:213
+msgid "ZIP file"
+msgstr "File ZIP"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:240
+msgid "You can also import multiple tables by placing them in a ZIP file."
+msgstr "Puoi importare più tabelle mettendole in un file ZIP."
+
+#: views/view-add.php:64
+msgid "You can always change the name, description, and size of your table later."
+msgstr "Puoi sempre cambiare più tardi il nome, la descrizione e la dimensione della tua tabella."
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:31
+msgid "Select files"
+msgstr "Seleziona i file"
+
+#: views/view-import.php:78
+msgid "To import tables, select and enter the import source in the following form."
+msgstr "Per importare delle tabelle, seleziona e inserisci la sorgente dei dati nel modulo seguente."
+
+#: views/view-about.php:261
+msgid "all customers, donors, contributors, supporters, reviewers, and users of the plugin!"
+msgstr "tutti i clienti, i donatori, i contributori, i supporter, i recensori e gli utenti del plugin!"
+
+#: views/view-about.php:161
+msgid "It is licensed as Free Software under GNU General Public License 2 (GPL 2)."
+msgstr "È concesso in licenza come software libero sotto GNU General Public License 2 (GPL 2)."
+
+#. translators: %s: WordPress Plugin Directory URL
+#: views/view-about.php:166
+msgid "Please rate and review the plugin in the <a href=\"%s\">WordPress Plugin Directory</a>."
+msgstr "Valuta e recensisci il plugin nella <a href=\"%s\">Directory dei plugin di WordPress</a>."
+
+#: views/view-about.php:199
+msgid "If you do not find an answer there, please <a href=\"%s\">open a new thread</a> in the WordPress Support Forums."
+msgstr "Se non trovi una risposta <a href=\"%s\">apri un nuovo thread</a> nei forum di supporto di WordPress."
+
+#: views/view-about.php:216
+msgid "Please provide this information in bug reports and support requests."
+msgstr "Fornisci queste informazioni nelle segnalazioni di bug e nelle richieste di supporto."
+
+#: views/view-add.php:41
+msgid "Error: The table could not be added."
+msgstr "Errore: impossibile aggiungere la tabella."
+
+#: views/view-add.php:61
+msgid "To add a new table, enter its name, a description (optional), and the number of rows and columns into the form below."
+msgstr "Per aggiungere una nuova tabella, inserisci il suo nome, una descrizione (facoltativa), e il numero di righe e colonne nel modulo qui sotto."
+
+#: views/class-all-tables-list-table.php:104
+#: views/class-editor-button-thickbox-list-table.php:85
+#: admin/js/add/screen.jsx:71 admin/js/build/add.js:1 admin/js/build/edit.js:1
+#: admin/js/edit/table-information.js:138
+msgid "Table Name"
+msgstr "Nome della tabella"
+
+#: admin/js/add/screen.jsx:79 admin/js/build/add.js:1
+msgid "(optional)"
+msgstr "(facoltativa)"
+
+#: admin/js/add/screen.jsx:97 admin/js/add/screen.jsx:114
+#: admin/js/build/add.js:1 admin/js/build/edit.js:1
+#: admin/js/edit/table-manipulation.js:320
+#: admin/js/edit/table-manipulation.js:359
+msgid "This field must contain a positive number."
+msgstr "Questo campo deve contenere un numero positivo."
+
+#: views/view-edit.php:55
+msgid "You are now seeing the copied table, which has the table ID &#8220;%s&#8221;."
+msgstr "Ora stai vedendo la tabella copiata, che ha l'ID tabella &#8220;%s&#8221;."
+
+#: views/view-edit.php:57 views/view-list.php:260
+msgid "Error: The table could not be deleted."
+msgstr "Errore: impossibile eliminare la tabella."
+
+#: views/view-edit.php:428 admin/js/build/edit.js:1
+#: admin/js/common/ajax-request.js:159
+msgid "Attention: Unfortunately, an error occurred."
+msgstr "Attenzione: purtroppo si è verificato un errore."
+
+#. translators: %s: URL to TablePress FAQ page
+#: views/view-edit.php:444
+msgid "Please see the <a href=\"%s\">TablePress FAQ page</a> for further instructions."
+msgstr "Leggi la <a href=\"%s\">pagina delle FAQ di TablePress</a> per ulteriori informazioni."
+
+#: classes/class-view.php:480 views/view-edit.php:448
+msgid "Back to the List of Tables"
+msgstr "Ritorna all'elenco delle tabelle"
+
+#: views/view-editor_button_thickbox.php:124 views/view-list.php:378
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Risultati della ricerca per &#8220;%s&#8221;"
+
+#: views/view-import.php:56
+msgid "Import Tables"
+msgstr "Importa tabelle"
+
+#: admin/js/build/import.js:1 admin/js/import/screen.jsx:248
+msgid "Add, Replace, or Append?"
+msgstr "Aggiungere, sostituire o aggiungere righe?"
+
+#: classes/class-export.php:55
+msgid "CSV - Character-Separated Values"
+msgstr "CSV - Valori separati da virgola"
+
+#: classes/class-export.php:56
+msgid "HTML - Hypertext Markup Language"
+msgstr "HTML - Hypertext Markup Language"
+
+#: classes/class-export.php:57
+msgid "JSON - JavaScript Object Notation"
+msgstr "JSON - JavaScript Object Notation"
+
+#: classes/class-export.php:60
+msgid "; (semicolon)"
+msgstr "; (punto e virgola)"
+
+#: classes/class-export.php:61
+msgid ", (comma)"
+msgstr ", (virgola)"
+
+#: classes/class-export.php:62
+msgid "\\t (tabulator)"
+msgstr "\\t (tabulatore)"
+
+#: classes/class-import-legacy.php:179 classes/class-import-legacy.php:276
+#: libraries/html-parser.class.php:68
+msgid "The imported file contains errors:"
+msgstr "Il file importato contiene errori:"
+
+#. translators: %s: URL to Documentation page
+#: classes/class-view.php:101 views/view-about.php:140
+msgid "For technical information, please see the <a href=\"%s\">Documentation</a>."
+msgstr "Per informazione tecniche fai riferimento alla <a href=\"%s\">documentazione</a>."
+
+#: classes/class-view.php:107 views/view-about.php:197
+msgid "<a href=\"%1$s\">Support</a> is provided through the <a href=\"%2$s\">WordPress Support Forums</a>."
+msgstr "<a href=\"%1$s\">Il supporto</a> &egrave; fornito tramite il <a href=\"%2$s\">Forum di Supporto WordPress</a>."
+
+#: classes/class-view.php:109 views/view-about.php:198
+msgid "Before asking for support, please carefully read the <a href=\"%s\">Frequently Asked Questions</a>, where you will find answers to the most common questions, and search through the forums."
+msgstr "Prima di richiedere supporto, per favore leggi accuratamente le <a href=\"%s\">Frequently Asked Questions</a> dove si possono trovare risposte alle pi&ugrave; comuni domande, e fai una ricerca sui forum."
+
+#: classes/class-view.php:121
+msgid "For more information:"
+msgstr "Per ulteriori informazioni:"
+
+#. translators: %1$s: Page title, %2$s: Plugin name (TablePress)
+#. translators: %1$s: Page title, %2$s: Plugin name
+#. translators: %1$s: Page title (Preview), %2$s: Plugin name (TablePress)
+#: classes/class-view.php:163 controllers/controller-admin.php:128
+#: views/view-editor_button_thickbox.php:73
+#: views/view-editor_button_thickbox.php:118
+#: views/view-options_custom_css.php:42 views/view-preview_table.php:61
+msgid "%1$s &lsaquo; %2$s"
+msgstr "%1$s &lsaquo; %2$s"
+
+#. Plugin Name of the plugin
+#: tablepress.php classes/class-view.php:411
+msgid "TablePress"
+msgstr "TablePress"
+
+#: controllers/controller-admin.php:435
+msgid "Frequently Asked Questions"
+msgstr "Domande frequenti"
+
+#: controllers/controller-admin.php:435
+msgid "FAQ"
+msgstr "FAQ"
+
+#: controllers/controller-admin.php:436
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: controllers/controller-admin.php:437
+msgid "Support"
+msgstr "Supporto"
+
+#: controllers/controller-admin.php:621
+msgctxt "Default CSV delimiter in the translated language (\";\", \",\", or \"tab\")"
+msgid ","
+msgstr ","
+
+#: controllers/controller-admin.php:708 controllers/controller-admin.php:709
+#: controllers/controller-admin.php:710
+msgid "All Tables"
+msgstr "Tutte le tabelle"
+
+#: controllers/controller-admin.php:715 controllers/controller-admin.php:716
+#: admin/js/add/screen.jsx:58 admin/js/build/add.js:1
+msgid "Add New Table"
+msgstr "Aggiungi nuova tabella"
+
+#: controllers/controller-admin.php:717
+msgid "Add New"
+msgstr "Aggiungi nuova"
+
+#: controllers/controller-admin.php:722
+msgid "Edit Table"
+msgstr "Modifica Tabella"
+
+#: controllers/controller-admin.php:729 controllers/controller-admin.php:730
+msgid "Import a Table"
+msgstr "Importa una tabella"
+
+#: controllers/controller-admin.php:731
+msgctxt "navigation bar"
+msgid "Import"
+msgstr "Importa"
+
+#: controllers/controller-admin.php:736 controllers/controller-admin.php:737
+msgid "Export a Table"
+msgstr "Esporta una tabella"
+
+#: controllers/controller-admin.php:738
+msgctxt "navigation bar"
+msgid "Export"
+msgstr "Esporta"
+
+#: controllers/controller-admin.php:751
+msgid "About TablePress"
+msgstr "A proposito di TablePress"
+
+#: classes/class-import.php:180
+msgid "Imported from Manual Input"
+msgstr "Importato da inserimento manuale"
+
+#. translators: %1$s: Page title (Preview), %2$s: Plugin name (TablePress)
+#: controllers/controller-admin.php:1365 controllers/controller-admin.php:1375
+#: views/class-all-tables-list-table.php:242 views/view-preview_table.php:61
+#: admin/js/build/edit.js:1 admin/js/edit/buttons.js:213
+msgid "Preview"
+msgstr "Anteprima"
+
+#: controllers/controller-admin.php:1464
+msgid "TablePress was uninstalled successfully."
+msgstr "TablePress &egrave; stato correttamente disinstallato."
+
+#: controllers/controller-admin.php:1465
+msgid "All tables, data, and options were deleted."
+msgstr "Tutte le tabelle, i dati e le opzioni sono stati cancellati."
+
+#: controllers/controller-admin.php:1467
+msgid "You may now ask the network admin to delete the plugin&#8217;s folder <code>tablepress</code> from the server, if no other site in the network uses it."
+msgstr "Puoi ora chiedere all'amministratore di rete di cancellare la cartella del plugin <code>tablepress</code>dal server, se nessun altro nella rete lo utilizza."
+
+#: controllers/controller-admin.php:1472
+msgid "Your TablePress &#8220;Custom CSS&#8221; files have been deleted automatically."
+msgstr "I tuoi file di &#8220;CSS personalizzazione&#8221; TablePress sono stati cancellati automaticamente."
+
+#: controllers/controller-admin.php:1477
+msgid "You may now also delete your TablePress &#8220;Custom CSS&#8221; files in the <code>wp-content</code> folder."
+msgstr "Puoi anche di cancellare i tuoi file &#8220;CSS Custom&#8221; di TablePress dalla cartella <code>wp-content</code>."
+
+#: controllers/controller-admin.php:1486 views/view-options.php:227
+#: views/view-options.php:236
+msgid "Uninstall TablePress"
+msgstr "Disinstalla TablePress"
+
+#: controllers/controller-admin_ajax.php:289 views/view-preview_table.php:69
+msgid "This is a preview of your table."
+msgstr "Questa &egrave; una anteprima della tua tabella."
+
+#: controllers/controller-frontend.php:1005
+#: views/class-all-tables-list-table.php:306
+msgid "%s ago"
+msgstr "%s fa"
+
+#: models/model-table.php:413
+msgid "Copy of %s"
+msgstr "Copia di %s"
+
+#: views/view-about.php:47
+msgid "Plugin Purpose"
+msgstr "Scopo del plugin"
+
+#: views/view-about.php:48
+msgid "Usage"
+msgstr "Uso"
+
+#: views/view-about.php:52
+msgid "Credits and Thanks"
+msgstr "Riconoscimenti e ringraziamenti"
+
+#. translators: %1$s: URL to TablePress website, %2$s: URL to WordPress Plugin
+#. Directory
+#: classes/class-view.php:99 views/view-about.php:139
+msgid "More information about TablePress can be found on the <a href=\"%1$s\">plugin website</a> or on its page in the <a href=\"%2$s\">WordPress Plugin Directory</a>."
+msgstr "Ulteriori informazioni su TablePress possono essere reperite sul <a href=\"%1$s\">sito del plugin</a> o sulla sua pagina nella <a href=\"%2$s\">directory dei plugin di WordPress</a>."
+
+#: classes/class-render.php:541 views/class-all-tables-list-table.php:229
+msgid "Edit"
+msgstr "Modifica"
+
+#: controllers/controller-admin.php:1475
+msgid "Please also ask him to delete your TablePress &#8220;Custom CSS&#8221; files from the server."
+msgstr "Chiedigli anche di eliminare i tuoi file di &#8220;CSS personalizzato&#8221; di TablePress dal server."
+
+#: views/view-about.php:49
+msgid "More Information and Documentation"
+msgstr "Altre informazioni e documentazione"
+
+#: controllers/controller-admin_ajax.php:290 views/view-preview_table.php:69
+msgid "Because of CSS styling in your theme, the table might look different on your page!"
+msgstr "A causa della formattazione CSS nel tuo tema, la tabella può apparire diversamente sulla tua pagina!"
+
+#: controllers/controller-admin.php:1482
+msgid "Go to &#8220;Plugins&#8221; page"
+msgstr "Vai alla pagina dei &#8220;Plugin&#8221;"
+
+#: classes/class-elementor-widget-table.php:198 blocks/table/build/index.js:5
+#: blocks/table/src/edit.js:119
+msgid "Table:"
+msgstr "Tabella:"
+
+#: views/view-about.php:80
+msgid "Tables may contain text, numbers, formulas, and even HTML code (e.g. to include images or links)."
+msgstr "Le tabelle possono contenere testo, numeri, formule e anche codice HTML (ad es. per includere immagini o link)."
+
+#. translators: %s: Table ID
+#: classes/class-render.php:360
+msgid "<!-- The table with the ID %s is empty! -->"
+msgstr "<!-- La tabella con ID %s è vuota! -->"
+
+#: classes/class-view.php:116
+msgid "TablePress Help"
+msgstr "Aiuto di TablePress"
+
+#: admin/js/build/edit.js:2 admin/js/build/list.js:1
+#: admin/js/edit/other-actions.js:67 admin/js/list.js:67
+#: admin/js/list/screen.jsx:162
+msgid "Do you really want to delete this table?"
+msgid_plural "Do you really want to delete these tables?"
+msgstr[0] "Vuoi veramente eliminare questa tabella?"
+msgstr[1] "Vuoi veramente eliminare queste tabelle?"
+
+#: classes/class-view.php:499 views/view-options.php:212
+#: admin/js/build/edit.js:1 admin/js/edit/buttons.js:235
+msgid "Save Changes"
+msgstr "Salva le modifiche"
+
+#: controllers/controller-admin.php:419
+msgid "Plugin page"
+msgstr "Pagina del plugin"
+
+#: controllers/controller-admin.php:743 controllers/controller-admin.php:744
+#: controllers/controller-admin.php:745
+msgid "Plugin Options"
+msgstr "Opzioni del plugin"
+
+#: controllers/controller-admin.php:750 controllers/controller-admin.php:752
+msgid "About"
+msgstr "Informazioni"
+
+#: controllers/controller-admin.php:1484
+msgid "Go to Dashboard"
+msgstr "Vai alla Bacheca"
+
+#: classes/class-elementor-widget-table.php:180
+#: controllers/controller-admin.php:237 models/model-table.php:411
+#: views/class-all-tables-list-table.php:173
+#: views/class-all-tables-list-table.php:218
+#: views/class-editor-button-thickbox-list-table.php:150
+#: admin/js/build/edit.js:1 admin/js/build/export.js:1
+#: admin/js/build/import.js:1 admin/js/edit/table-preview.js:34
+#: admin/js/export/screen.jsx:37 admin/js/import/screen.jsx:60
+msgid "(no name)"
+msgstr "(senza nome)"
+
+#: views/view-about.php:50
+msgid "Help and Support"
+msgstr "Aiuto e supporto"
+
+#: views/view-about.php:51
+msgid "Author and License"
+msgstr "Autore e licenza"
+
+#: views/view-about.php:53
+msgid "Debug and Version Information"
+msgstr "Debug e informazioni di versione"
+
+#: views/view-about.php:79
+msgid "TablePress allows you to create and manage tables in the admin area of WordPress."
+msgstr "TablePress ti permette di creare e gestire tabelle nell'area di amministrazione di WordPress."
+
+#: controllers/controller-admin.php:1365
+#: controllers/controller-admin_ajax.php:306
+msgid "The preview could not be loaded."
+msgstr "Impossibile caricare l'anteprima."
+
+#: controllers/controller-admin.php:1375
+msgid "The table could not be loaded."
+msgstr "Impossibile caricare la tabella."
+
+#: controllers/controller-admin.php:1469
+msgid "You may now manually delete the plugin&#8217;s folder <code>tablepress</code> from the <code>plugins</code> directory on your server or use the &#8220;Delete&#8221; link for TablePress on the WordPress &#8220;Plugins&#8221; page."
+msgstr "Puoi ora eliminare manualmente la cartella del plugin <code>tablepress</code> dalla directory <code>plugins</code> sul tuo server, o usare il link &#8220;Elimina&#8221; per TablePress nella pagina &#8220;Plugin&#8221; di WordPress."

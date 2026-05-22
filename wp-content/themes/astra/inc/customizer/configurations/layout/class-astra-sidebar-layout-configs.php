@@ -3,6 +3,8 @@
  * Bottom Footer Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -17,6 +19,7 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 	 * Register Astra Sidebar Layout Configurations.
 	 */
 	class Astra_Sidebar_Layout_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Astra Sidebar Layout Configurations.
 		 *
@@ -45,15 +48,15 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 					'choices'           => array(
 						'no-sidebar'    => array(
 							'label' => __( 'No Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'no-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'no-sidebar', false ) : '',
 						),
 						'left-sidebar'  => array(
 							'label' => __( 'Left Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'left-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'left-sidebar', false ) : '',
 						),
 						'right-sidebar' => array(
 							'label' => __( 'Right Sidebar', 'astra' ),
-							'path'  => class_exists( 'Astra_Builder_UI_Controller' ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'right-sidebar', false ) : '',
+							'path'  => ( class_exists( 'Astra_Builder_UI_Controller' ) ) ? Astra_Builder_UI_Controller::fetch_svg_icon( 'right-sidebar', false ) : '',
 						),
 					),
 				),
@@ -133,6 +136,7 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-upgrade',
 					'campaign' => 'sidebar',
+					'renderAs' => 'list',
 					'choices'  => array(
 						'one'   => array(
 							'title' => __( 'Sidebar spacing', 'astra' ),
@@ -163,4 +167,10 @@ if ( ! class_exists( 'Astra_Sidebar_Layout_Configs' ) ) {
 	}
 }
 
+
 new Astra_Sidebar_Layout_Configs();
+
+
+
+
+

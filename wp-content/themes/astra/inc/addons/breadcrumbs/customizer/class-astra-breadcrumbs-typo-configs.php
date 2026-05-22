@@ -3,6 +3,8 @@
  * Typography - Breadcrumbs Options for theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.7.0
  */
@@ -28,6 +30,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Typo_Configs' ) ) {
 	 * Register Colors and Background - Breadcrumbs Options Customizer Configurations.
 	 */
 	class Astra_Breadcrumbs_Typo_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Colors and Background - Breadcrumbs Options Customizer Configurations.
 		 *
@@ -48,7 +51,6 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Typo_Configs' ) ) {
 					'default'   => astra_get_option( 'section-breadcrumb-typo' ),
 					'type'      => 'control',
 					'control'   => 'ast-settings-group',
-					'is_font'   => true,
 					'title'     => esc_html__( 'Content Font', 'astra' ),
 					'section'   => 'section-breadcrumb',
 					'transport' => 'postMessage',
@@ -59,7 +61,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Typo_Configs' ) ) {
 							'operator' => '!=',
 							'value'    => 'none',
 						),
-						true === Astra_Builder_Helper::$is_header_footer_builder_active ?
+						( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ?
 							Astra_Builder_Helper::$design_tab_config : Astra_Builder_Helper::$general_tab_config,
 					),
 					'divider'   => array( 'ast_class' => 'ast-section-spacing ast-bottom-section-divider' ),
@@ -79,7 +81,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Typo_Configs' ) ) {
 					'title'     => esc_html__( 'Font Family', 'astra' ),
 					'connect'   => 'breadcrumb-font-weight',
 					'priority'  => 5,
-					'divider'   => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+					'divider'   => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 				),
 
 				/**
@@ -97,7 +99,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Typo_Configs' ) ) {
 					'title'             => esc_html__( 'Font Weight', 'astra' ),
 					'connect'           => 'breadcrumb-font-family',
 					'priority'          => 10,
-					'divider'           => array( 'ast_class' => 'ast-sub-bottom-divider' ),
+					'divider'           => array( 'ast_class' => 'ast-sub-bottom-dotted-divider' ),
 				),
 
 				/**

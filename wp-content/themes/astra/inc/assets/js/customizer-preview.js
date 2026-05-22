@@ -160,7 +160,7 @@
 		wp.customize.preview.bind( 'active', function() {
 			var partials = $.extend({}, astraCustomizer.dynamic_partial_options), key;
 			var register_partial = async function () {
-				for ( const key in partials ) {
+				for ( key in partials) {
 					wp.customize.selectiveRefresh.partial.add(
 						new wp.customize.selectiveRefresh.Partial(
 							key,
@@ -276,7 +276,6 @@ wp.customize( 'astra-settings[store-notice-position]', function( setting ) {
 		if( 'hang-over-top' === position ) {
 			wp.customize.preview.send( 'refresh' );
 		} else {
-			jQuery('body').css('margin-top', 0);
 			jQuery('body').removeClass( 'ast-woocommerce-store-notice-hanged' );
 			jQuery('.woocommerce-store-notice').attr( 'data-position', position );
 		}

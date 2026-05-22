@@ -15,13 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 $astra_sidebar = apply_filters( 'astra_get_sidebar', 'sidebar-1' );
 
 echo '<div ';
-	echo wp_kses_post(
-		astra_attr(
-			'sidebar',
-			array(
-				'id'    => 'secondary',
-				'class' => join( ' ', astra_get_secondary_class() ),
-			)
+	echo astra_attr(
+		'sidebar',
+		array(
+			'id'    => 'secondary',
+			'class' => join( ' ', astra_get_secondary_class() ),
 		)
 	);
 	echo '>';
@@ -32,9 +30,9 @@ echo '<div ';
 
 		<?php
 
-		if ( is_active_sidebar( $astra_sidebar ) ) {
+		if ( is_active_sidebar( $astra_sidebar ) ) :
 				dynamic_sidebar( $astra_sidebar );
-		}
+		endif;
 
 		astra_sidebars_after();
 		?>

@@ -14,6 +14,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The remote URL.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -22,6 +23,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Base path.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -30,6 +32,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Base URL.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -38,6 +41,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Subfolder name.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -46,6 +50,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The docs folder.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -54,6 +59,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The local stylesheet's path.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -62,6 +68,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The local stylesheet's URL.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -70,6 +77,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The remote CSS.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -78,6 +86,7 @@ class Astra_Docs_Loader {
 	/**
 	 * The final docs data.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @var string
 	 */
@@ -93,6 +102,7 @@ class Astra_Docs_Loader {
 	 *
 	 * Get a new instance of the object for a new URL.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @param string $url The remote URL.
 	 * @param string $subfolder_name The subfolder name.
@@ -111,6 +121,7 @@ class Astra_Docs_Loader {
 	 *
 	 * Fallback to the remote URL if we were unable to write the file locally.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -133,6 +144,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the local stylesheet URL.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -150,6 +162,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get remote data locally.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -173,6 +186,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get local stylesheet contents.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string|false Returns the remote URL contents.
 	 */
@@ -196,6 +210,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get remote file contents.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string Returns the remote URL contents.
 	 */
@@ -226,6 +241,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Write the CSS to the filesystem.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @return string|false Returns the absolute path of the file on success, or false on fail.
 	 */
@@ -264,6 +280,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the stylesheet path.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -280,6 +297,7 @@ class Astra_Docs_Loader {
 	 * This is a hash, generated from the site-URL, the wp-content path and the URL.
 	 * This way we can avoid issues with sites changing their URL, or the wp-content path etc.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -290,6 +308,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Check if the local stylesheet exists.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return bool
 	 */
@@ -300,6 +319,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the base path.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -313,6 +333,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the base URL.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return string
 	 */
@@ -326,6 +347,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the folder for docs.
 	 *
+	 * @access public
 	 * @return string
 	 */
 	public function get_docs_folder() {
@@ -344,6 +366,7 @@ class Astra_Docs_Loader {
 	 * This way docs file will get updated regularly,
 	 * and we avoid edge cases where unused files remain in the server.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return void
 	 */
@@ -358,6 +381,7 @@ class Astra_Docs_Loader {
 	 *
 	 * This runs as part of a cleanup routine.
 	 *
+	 * @access public
 	 * @since 4.6.0
 	 * @return bool
 	 */
@@ -369,6 +393,7 @@ class Astra_Docs_Loader {
 	/**
 	 * Get the filesystem.
 	 *
+	 * @access protected
 	 * @since 4.6.0
 	 * @return \WP_Filesystem_Base
 	 */

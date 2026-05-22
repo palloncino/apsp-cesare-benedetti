@@ -3,6 +3,8 @@
  * Customizer Control: Logo SVG Icon
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2024, Astra
  * @link        https://wpastra.com/
  * @since       4.7.0
  */
@@ -16,9 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Customizer custom control for SVG Logo Icon support.
  */
 class Astra_Control_Logo_SVG_Icon extends WP_Customize_Control {
+
 	/**
 	 * The control type.
 	 *
+	 * @access public
 	 * @var string
 	 */
 	public $type = 'ast-logo-svg-icon';
@@ -47,7 +51,7 @@ class Astra_Control_Logo_SVG_Icon extends WP_Customize_Control {
 	/**
 	 * True if the link is button.
 	 *
-	 * @var bool
+	 * @var boolean
 	 */
 	public $is_button_link = '';
 
@@ -56,6 +60,5 @@ class Astra_Control_Logo_SVG_Icon extends WP_Customize_Control {
 	 *
 	 * @see WP_Customize_Control::render_content()
 	 */
-	protected function render_content() {
-	}
+	protected function render_content() {}
 }

@@ -2,7 +2,9 @@
 /**
  * Copyright footer Configuration.
  *
+ * @author      Astra
  * @package     Astra
+ * @copyright   Copyright (c) 2023, Astra
  * @link        https://wpastra.com/
  * @since       4.5.2
  */
@@ -118,8 +120,9 @@ function astra_copyright_footer_configuration() {
 			'priority' => 99,
 			'settings' => array(),
 			'context'  => Astra_Builder_Helper::$design_tab,
-			'divider'  => array( 'ast_class' => 'ast-top-section-divider' ),
+			'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
 		),
+
 
 		/**
 		 * Option: Margin Space
@@ -159,5 +162,5 @@ function astra_copyright_footer_configuration() {
 }
 
 if ( Astra_Builder_Customizer::astra_collect_customizer_builder_data() ) {
-	add_action( 'init', 'astra_copyright_footer_configuration', 10, 0 );
+	astra_copyright_footer_configuration();
 }

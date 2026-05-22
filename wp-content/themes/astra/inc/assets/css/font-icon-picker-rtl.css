@@ -81,10 +81,6 @@
      transition: background .25s, box-shadow .25s;
      transition: background .25s, box-shadow .25s, -webkit-box-shadow .25s
  }
-
- .rfipbtn__button {
-    display: none;
- }
  
  .rfipbtn__button i {
      font-size: 26px;
@@ -121,8 +117,7 @@
      -webkit-box-flex: 0;
      -ms-flex: 0 0 86px;
      flex: 0 0 60px;
-     padding: 2px;
-     
+     padding: 2px
  }
  
  .rfipbtn--multi {
@@ -151,7 +146,7 @@
      margin: 2px;
      padding: 0;
      height: 28px;
-     width: 60px;
+     width: 48px;
      display: -webkit-box;
      display: -ms-flexbox;
      display: flex;
@@ -179,22 +174,23 @@
      display: -webkit-box;
      display: -ms-flexbox;
      display: flex;
+     height: 28px;
+     width: 28px;
      -webkit-box-align: center;
      -ms-flex-align: center;
      align-items: center;
      -webkit-box-pack: center;
      -ms-flex-pack: center;
      justify-content: center;
-     font-size: 18px; 
-     height: 41px;
-     width: 60px;
+     font-size: 18px
  }
-
+ 
  .rfipbtn__elm img,
  .rfipbtn__elm svg {
-     height: 50px;
-     width: 50px;
+     height: 18px;
+     width: 18px;
  }
+ 
  .rfipbtn__elm svg {
      fill : #333;
  }
@@ -1423,27 +1419,24 @@
  }
  
  .rfipbtn--default {
-    background-color: var(--ast-customizer-color-9);
-    border: 1px dashed #9ca3af;
-    width: 100%;
-    min-height: 100px;
-    justify-content: center;
-    opacity: 0.5;
- }
-
- .rfipbtn--default:hover {
-    opacity: 1;
-    background: var(--ast-customizer-color-13);
+     background-color: #fff;
+     border: 1px solid #e0e0e0;
+     width: 100%;
  }
  
  .rfipbtn--default:active,
  .rfipbtn--default:focus {
      -webkit-box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
      box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
-     border: 1px solid #bdbdbd;
+     border: 1px solid #bdbdbd
  }
  
-
+ .rfipbtn--default .rfipbtn__button {
+     border: 0 none transparent;
+     border-right: 1px solid #e0e0e0;
+     background-color: #f5f5f5;
+     color: #424242
+ }
  
  .rfipbtn--default .rfipbtn__button:hover {
      background-color: #bdbdbd
@@ -1464,18 +1457,8 @@
  }
  
  .rfipbtn--default .rfipbtn__del {
-    display: none;
+     background-color: #eee
  }
-
- .rfipbtn:hover .rfipbtn__del {
-    display: flex !important;
-    background-color: #fff;
-    position: absolute;
-    top: 7px;
-    left: 5px;
-    border: 1px solid var(--ast-customizer-color-7);
-    border-radius: 2px;
-}
  
  .rfipbtn--default .rfipbtn__del:hover {
      background-color: #e0e0e0
@@ -2872,10 +2855,8 @@
  }
  
  .rfipbtn--default .rfipbtn__del {
-    height: 24px;
-    width: 24px;
+     height: 18px;
  }
-
  [class^=fipicon-] {
      speak: none;
      font-style: normal;

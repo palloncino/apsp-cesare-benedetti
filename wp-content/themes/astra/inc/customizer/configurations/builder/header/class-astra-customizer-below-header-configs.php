@@ -3,6 +3,8 @@
  * Astra Theme Customizer Configuration Below Header.
  *
  * @package     astra-builder
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       3.0.0
  */
@@ -20,6 +22,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 	 * @since 3.0.0
 	 */
 	class Astra_Customizer_Below_Header_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Builder Below Header Customizer Configurations.
 		 *

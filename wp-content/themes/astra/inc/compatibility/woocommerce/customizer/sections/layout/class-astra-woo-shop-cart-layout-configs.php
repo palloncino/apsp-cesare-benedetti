@@ -3,6 +3,8 @@
  * WooCommerce Options for Astra Theme.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.1.0
  */
@@ -13,10 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 
+
 	/**
 	 * Customizer Sanitizes Initial setup
 	 */
 	class Astra_Woo_Shop_Cart_Layout_Configs extends Astra_Customizer_Config_Base {
+
 		/**
 		 * Register Astra-WooCommerce Shop Cart Layout Customizer Configurations.
 		 *
@@ -76,6 +80,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 					'default'  => astra_get_option( 'enable-cart-upsells' ),
 					'title'    => __( 'Enable Cross-sells', 'astra' ),
 					'priority' => 2.7,
+					'divider'  => array( 'ast_class' => 'ast-section-spacing' ),
 				),
 			);
 
@@ -87,7 +92,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 					'section'  => 'section-woo-shop-cart',
 					'priority' => 1,
 					'label'    => '',
-					'help'     => '<strong>' . __( 'Note:', 'astra' ) . '</strong>' . __( ' Certain Cart page options may not work smoothly on the block editor based Cart page. For best results with these features, prefer using a shortcode based Cart page.', 'astra' ),
+					'help'     => '<p style="margin-bottom: 20px;>"><strong>' . __( 'Note:', 'astra' ) . '</strong>' . __( ' Certain Cart page options may not work smoothly on the block editor based Cart page. For best results with these features, prefer using a shortcode based Cart page.', 'astra' ) . '</p>',
 				);
 
 				$_configs[] = array(
@@ -97,7 +102,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 					'section'  => 'woocommerce_checkout',
 					'priority' => 1,
 					'label'    => '',
-					'help'     => '<strong>' . __( 'Note:', 'astra' ) . '</strong>' . __( ' Certain Checkout page options may not work smoothly on the block editor based Checkout page. For best results with these features, prefer using a shortcode-based Checkout page.', 'astra' ),
+					'help'     => '<p style="margin-bottom: 20px;>"><strong>' . __( 'Note:', 'astra' ) . '</strong>' . __( ' Certain Checkout page options may not work smoothly on the block editor based Checkout page. For best results with these features, prefer using a shortcode-based Checkout page.', 'astra' ) . '</p>',
 				);
 			}
 
@@ -108,6 +113,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-upgrade',
 					'campaign' => 'woocommerce',
+					'renderAs' => 'list',
 					'choices'  => array(
 						'two'   => array(
 							'title' => __( 'Modern cart layout', 'astra' ),
@@ -132,6 +138,7 @@ if ( ! class_exists( 'Astra_Woo_Shop_Cart_Layout_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-upgrade',
 					'campaign' => 'woocommerce',
+					'renderAs' => 'list',
 					'choices'  => array(
 						'two'   => array(
 							'title' => __( 'Modern layout', 'astra' ),

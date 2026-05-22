@@ -16,3 +16,7 @@ _repo_stash/
 
 *.log
 .DS_Store
+
+# Local secrets (never commit)
+LOCAL-CREDENTIALS.local.md
+credentials.local.*

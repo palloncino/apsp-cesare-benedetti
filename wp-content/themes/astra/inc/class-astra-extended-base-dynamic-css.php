@@ -16,6 +16,7 @@ if ( ! class_exists( 'Astra_Extended_Base_Dynamic_CSS' ) ) {
 	 * Class Astra_Extended_Base_Dynamic_CSS.
 	 */
 	final class Astra_Extended_Base_Dynamic_CSS {
+
 		/**
 		 * Member Variable
 		 *
@@ -40,8 +41,7 @@ if ( ! class_exists( 'Astra_Extended_Base_Dynamic_CSS' ) ) {
 		/**
 		 * Constructor
 		 */
-		public function __construct() {
-		}
+		public function __construct() { }
 
 		/**
 		 * Prepare Advanced Margin / Padding Dynamic CSS.
