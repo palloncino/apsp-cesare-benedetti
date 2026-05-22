@@ -1,0 +1,207 @@
+/**
+ * Custom CSS for Amministrazione Trasparente Pages
+ * Styles for Italian legislative transparency content (D.Lgs. 33/2013)
+ */
+
+/* Main page content container */
+.page-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Legislative section headings */
+.page-content h3 {
+    color: #1a1a1a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0!important;
+    padding: 0;
+    letter-spacing: -0.02em;
+}
+
+
+/* Riferimenti normativi heading - special styling */
+.page-content h3:first-of-type {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Contenuto dell'obbligo heading */
+.page-content h3:nth-of-type(2) {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Sub-headings (h4) - Article references */
+.page-content h4 {
+    color: #555;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.01em;
+}
+
+/* Paragraphs */
+.page-content p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Lists */
+.page-content ul,
+.page-content ol {
+    margin: 1.5rem 0 1.5rem 2rem;
+    padding: 0;
+}
+
+.page-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.page-content ul li::marker {
+    color: #5a6c7d;
+}
+
+/* Links */
+.page-content a {
+    color: #2c3e50;
+    text-decoration: none;
+    border-bottom: 1px solid #bdc3c7;
+    transition: all 0.2s ease;
+}
+
+.page-content a:hover {
+    color: #34495e;
+    border-bottom-color: #34495e;
+    background: rgba(52, 73, 94, 0.03);
+}
+
+/* Legislative references (Art., D.Lgs., comma, etc.) */
+.page-content p:has-text("Art."),
+.page-content p:has-text("D.Lgs"),
+.page-content p:has-text("comma"),
+.page-content p:has-text("lett.") {
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+}
+
+/* Highlight legislative citations inline */
+.page-content strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Quote blocks */
+.page-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0 0 0 1.5rem;
+    font-style: italic;
+    color: #5a6c7d;
+}
+
+/* Tables (if present) */
+.page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.page-content table th {
+    background: #2c3e50;
+    color: white;
+    padding: 0.85rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.page-content table td {
+    padding: 0.75rem;
+}
+
+.page-content table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Document/attachment links */
+.page-content a[href$=".pdf"]::after {
+    content: " [PDF]";
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-left: 0.25em;
+}
+
+.page-content a[href$=".doc"]::after,
+.page-content a[href$=".docx"]::after {
+    content: " [DOC]";
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-left: 0.25em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.3rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    
+    .page-content h4 {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .page-content ul,
+    .page-content ol {
+        margin-left: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .page-content {
+        max-width: 100%;
+        font-size: 12pt;
+    }
+    
+    .page-content h3 {
+        page-break-after: avoid;
+        color: #000;
+    }
+    
+    .page-content a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+}
+
+/* Special styling for "Riferimenti normativi" and "Contenuto dell'obbligo" sections */
+.page-content h3 + h4 {
+    margin-top: 1rem;
+}
+
+/* Improve readability for long legislative text */
+.page-content {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

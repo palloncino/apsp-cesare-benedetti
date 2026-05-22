@@ -1,0 +1,60 @@
+body.home .main-header-bar.ast-header-breadcrumb {
+    display: none;
+}
+
+.main-header-bar.ast-header-breadcrumb {}
+
+.breadcrumb {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li+li::before {
+    content: '›';
+    margin-right: 0.5em;
+    color: #888;
+    font-size: 0.75em;
+}
+
+.breadcrumb a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Fix for links with <br> tags inside - prevent line breaks */
+a br {
+    display: none;
+}
+
+/* Ensure link text appears on the same line as bullet points */
+li a {
+    display: inline;
+}
+
+/* Fix for list items with links containing <br> tags */
+li a br {
+    display: none;
+}

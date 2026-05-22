@@ -1,0 +1,50 @@
+/**
+ * Fix z-index for main navigation menu dropdown
+ * Ensures dropdown appears above entry-header
+ * Only modifies z-index, does not change positioning
+ */
+
+/* Site header - ensure it's above entry-header */
+.site-header,
+.ast-header,
+.ast-header-wrapper {
+    z-index: 50 !important;
+}
+
+/* Main navigation - high z-index for dropdowns */
+.main-navigation,
+.ast-builder-menu {
+    z-index: 100 !important;
+}
+
+/* Dropdown menus - highest z-index to appear above entry-header */
+.main-navigation .sub-menu,
+.main-navigation .children,
+.ast-builder-menu .sub-menu,
+.ast-builder-menu .children,
+.main-navigation ul ul,
+.ast-builder-menu ul ul {
+    z-index: 101 !important;
+}
+
+/* Ensure dropdown items are visible */
+.main-navigation .sub-menu li,
+.main-navigation .children li,
+.ast-builder-menu .sub-menu li,
+.ast-builder-menu .children li {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: list-item !important;
+}
+
+.main-navigation .sub-menu a,
+.main-navigation .children a,
+.ast-builder-menu .sub-menu a,
+.ast-builder-menu .children a {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    color: #333 !important;
+    background: transparent !important;
+}
+

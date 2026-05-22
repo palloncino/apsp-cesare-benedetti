@@ -1,0 +1,58 @@
+/**
+ * Page Tracking CSS
+ * Temporary styling for page tracking checkboxes
+ * Easy to remove later - just delete this file
+ */
+
+.at-page-checkbox {
+    margin-right: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.at-checkbox-label {
+    display: none;
+}
+
+/* Style for completed pages */
+.at-page-checkbox:checked + .at-checkbox-label + a,
+.at-page-checkbox:checked + a {
+    text-decoration: line-through;
+    opacity: 0.7;
+    color: #888;
+}
+
+/* Hover effect for checkboxes */
+.at-page-checkbox:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Loading state */
+.at-page-checkbox:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Container for better alignment */
+.at-dynamic-menu-widget li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.at-dynamic-menu-widget li a {
+    flex: 1;
+}
+
+/* Nested menu styling */
+.at-dynamic-menu-widget .nav-child li {
+    padding-left: 15px;
+}
+
+/* Visual feedback for completed pages */
+.at-page-checkbox:checked + a::before {
+    content: "✓ ";
+    color: #28a745;
+    font-weight: bold;
+} 

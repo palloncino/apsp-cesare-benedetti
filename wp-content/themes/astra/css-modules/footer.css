@@ -1,0 +1,159 @@
+/**
+ * Footer Styles for APSP Grigno
+ * This file can be edited independently via the CSS Editor
+ */
+
+/* ===========================================
+   FOOTER STYLING
+   =========================================== */
+
+footer.site-footer.apsp-footer {
+    background: linear-gradient(180deg, #1e2428 0%, #1b2024 100%);
+    color: #cfd6dc;
+    padding: 44px 0 18px;
+}
+
+footer.site-footer.apsp-footer .ast-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* Top brand row */
+.apsp-footer__top {
+    margin-bottom: 26px;
+}
+
+.apsp-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.apsp-footer__brand .custom-logo {
+    max-height: 46px;
+    width: auto;
+}
+
+.apsp-footer__site-name {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #d7dde2;
+    text-transform: uppercase;
+}
+
+/* 3 columns layout */
+.apsp-footer__columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px;
+    margin-bottom: 26px;
+}
+
+.apsp-footer__col h3 {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #d7dde2;
+}
+
+.apsp-footer__col h3::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin-top: 12px;
+    background: rgba(207, 214, 220, 0.18);
+}
+
+.apsp-footer__text p {
+    margin: 0 0 8px 0;
+    line-height: 1.7;
+    color: #cfd6dc;
+}
+
+.apsp-footer__muted {
+    color: rgba(207, 214, 220, 0.85);
+}
+
+/* Lined list like the screenshot */
+.apsp-footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.apsp-footer__list li {
+    padding: 12px 0;
+    border-top: 1px solid rgba(207, 214, 220, 0.16);
+    line-height: 1.55;
+}
+
+.apsp-footer__list li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.apsp-footer a {
+    color: #2aa6a5;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.apsp-footer a:hover {
+    color: #64c8c7;
+}
+
+/* Remove any login/admin links in footer */
+.apsp-footer a[href*="wp-login.php"],
+.apsp-footer a[href*="/wp-admin"] {
+    display: none !important;
+}
+
+/* Bottom row */
+.apsp-footer__bottom {
+    border-top: 1px solid rgba(207, 214, 220, 0.22);
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.apsp-footer__bottom-left,
+.apsp-footer__bottom-right {
+    font-size: 13px;
+    color: rgba(207, 214, 220, 0.85);
+}
+
+.apsp-footer__bottom-right a {
+    color: rgba(207, 214, 220, 0.9);
+    border-bottom: 1px solid rgba(207, 214, 220, 0.35);
+}
+
+.apsp-footer__bottom-right a:hover {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer.site-footer.apsp-footer .ast-container {
+        padding: 0 18px;
+    }
+
+    .apsp-footer__site-name {
+        font-size: 20px;
+    }
+
+    .apsp-footer__columns {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .apsp-footer__bottom {
+        justify-content: center;
+        text-align: center;
+    }
+} 

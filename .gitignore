@@ -1,0 +1,18 @@
+# WordPress core & runtime (keep custom code in git via _repo_stash paths or tracked overrides)
+wp-admin/
+wp-includes/
+wp-*.php
+xmlrpc.php
+license.txt
+readme.html
+index.php
+
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+scripts/wp-cli.phar
+_repo_stash/
+
+*.log
+.DS_Store

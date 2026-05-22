@@ -1,0 +1,253 @@
+/**
+ * APSP CSS Editor Admin Styles
+ */
+
+.apsp-css-editor-wrap {
+    margin: 20px 0;
+}
+
+.apsp-css-editor-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+}
+
+.apsp-css-editor-main {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.apsp-css-editor-header {
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apsp-css-editor-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.apsp-css-editor-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.apsp-css-editor-content {
+    padding: 0;
+}
+
+.apsp-css-textarea {
+    width: 100%;
+    min-height: 100vh;
+    border: none;
+    outline: none;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    resize: vertical;
+}
+
+
+
+.apsp-css-textarea:focus {
+    box-shadow: none;
+}
+
+.apsp-css-editor-status {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    background: #f8f9fa;
+}
+
+.apsp-status-message {
+    font-weight: 500;
+}
+
+.apsp-status-message.success {
+    color: #28a745;
+}
+
+.apsp-status-message.error {
+    color: #dc3545;
+}
+
+.apsp-status-message.info {
+    color: #17a2b8;
+}
+
+/* Sidebar */
+.apsp-css-editor-sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apsp-css-editor-panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.apsp-css-editor-panel h3 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.apsp-css-editor-panel p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.apsp-css-editor-panel strong {
+    color: #2c3e50;
+}
+
+/* Backup section */
+#backup-select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Shortcuts */
+.apsp-shortcuts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.apsp-shortcuts li {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.apsp-shortcuts kbd {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    color: #333;
+    margin-right: 8px;
+}
+
+/* CSS Snippets */
+.apsp-css-snippets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.snippet-btn {
+    text-align: left !important;
+    font-size: 0.9rem !important;
+    padding: 8px 12px !important;
+}
+
+/* Admin bar button */
+#wp-admin-bar-apsp-css-editor .ab-item {
+    background: #3498db !important;
+    color: #fff !important;
+}
+
+#wp-admin-bar-apsp-css-editor .ab-item:hover {
+    background: #2980b9 !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .apsp-css-editor-container {
+        flex-direction: column;
+    }
+    
+    .apsp-css-editor-sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .apsp-css-editor-panel {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .apsp-css-editor-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .apsp-css-editor-actions {
+        justify-content: center;
+    }
+    
+    .apsp-css-editor-sidebar {
+        flex-direction: column;
+    }
+    
+    .apsp-css-textarea {
+        min-height: 80vh;
+        font-size: 13px;
+    }
+}
+
+/* Loading states */
+.apsp-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.apsp-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #3498db;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Syntax highlighting hints */
+.apsp-css-textarea {
+    background-image: 
+        linear-gradient(90deg, rgba(52, 152, 219, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(52, 152, 219, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Focus states */
+.apsp-css-editor-panel:focus-within {
+    border-color: #3498db;
+    box-shadow: 0 0 0 1px rgba(52, 152, 219, 0.2);
+} 

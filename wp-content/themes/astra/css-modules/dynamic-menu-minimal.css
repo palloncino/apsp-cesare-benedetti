@@ -1,0 +1,299 @@
+/* ===========================================
+   MINIMAL DYNAMIC MENU STYLES
+   =========================================== */
+
+/* Fixed width container for the menu sidebar */
+.entry-content .col-md-6:last-child {
+    flex: 0 0 350px !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+    width: 350px !important;
+}
+
+/* Content column takes remaining space - override bootstrap 50% width */
+/* Use very specific selector to ensure it overrides bootstrap */
+.entry-content > .row > .col-md-6:first-child,
+.entry-content .row .col-md-6:first-child {
+    flex: 1 1 0% !important;
+    flex-grow: 1 !important;
+    flex-basis: 0% !important;
+    min-width: 0 !important;
+    max-width: none !important; /* Override bootstrap's 50% max-width */
+    width: auto !important;
+}
+
+/* Ensure override at medium breakpoint where bootstrap applies */
+@media (min-width: 768px) {
+    .entry-content > .row > .col-md-6:first-child,
+    .entry-content .row .col-md-6:first-child {
+        flex: 1 1 0% !important;
+        flex-grow: 1 !important;
+        flex-basis: 0% !important;
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
+/* Minimal dynamic menu widget */
+.at-dynamic-menu-widget {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    position: sticky;
+    top: 20px;
+}
+
+/* Minimal widget title */
+.at-dynamic-menu-widget .widget-title {
+    background: transparent;
+    color: #374151;
+    padding: 8px 0;
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Minimal search field */
+.at-dynamic-menu-search {
+    padding: 8px 0 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 8px;
+}
+
+.at-dynamic-menu-search-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.at-dynamic-menu-search-field:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Minimal menu container */
+.at-dynamic-menu-widget .nav.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main menu items - minimal styling */
+.at-dynamic-menu-widget .nav.menu > li {
+    border-bottom: none;
+}
+
+.at-dynamic-menu-widget .nav.menu > li:last-child {
+    border-bottom: none;
+}
+
+/* Main menu links - clean and minimal */
+.at-dynamic-menu-widget .nav.menu > li > a {
+    display: block;
+    padding: 8px 0;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    border-left: none;
+}
+
+.at-dynamic-menu-widget .nav.menu > li > a:hover {
+    background-color: transparent;
+    color: #1f2937;
+    border-left-color: transparent;
+}
+
+/* Current page styling */
+.at-dynamic-menu-widget .nav.menu > li.current-menu-item > a,
+.at-dynamic-menu-widget .nav.menu > li.current_page_item > a {
+    background-color: transparent;
+    color: #1d4ed8;
+    border-left-color: transparent;
+    font-weight: 500;
+}
+
+/* Sub-menu styling - minimal */
+.at-dynamic-menu-widget .nav-child {
+    background-color: transparent;
+    border-left: none;
+    margin-left: 12px;
+}
+
+.at-dynamic-menu-widget .nav-child > li > a {
+    display: block;
+    padding: 6px 0;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.at-dynamic-menu-widget .nav-child > li > a:hover {
+    background-color: transparent;
+    color: #374151;
+}
+
+/* Current sub-page styling */
+.at-dynamic-menu-widget .nav-child > li.current-menu-item > a,
+.at-dynamic-menu-widget .nav-child > li.current_page_item > a {
+    background-color: transparent;
+    color: #1d4ed8;
+    font-weight: 500;
+}
+
+/* Subsection styling - different from regular sub-pages */
+.at-dynamic-menu-widget .item-subsection a {
+    font-style: italic;
+    color: #9ca3af;
+    font-size: 12px;
+    padding-left: 32px;
+    position: relative;
+}
+
+.at-dynamic-menu-widget .item-subsection a:hover {
+    color: #6b7280;
+}
+
+.at-dynamic-menu-widget .item-subsection a::before {
+    content: "#";
+    position: absolute;
+    left: 20px;
+    color: #6b7280;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Regular page links - no icon */
+.at-dynamic-menu-widget .nav-child > li:not(.item-subsection) > a {
+    position: relative;
+    padding-left: 24px;
+}
+
+/* Current subsection styling */
+.at-dynamic-menu-widget .current-subsection a {
+    color: #1d4ed8;
+    font-weight: 500;
+}
+
+/* Deep nested items */
+.at-dynamic-menu-widget .nav-child .nav-child > li > a {
+    padding: 4px 0 4px 0;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.at-dynamic-menu-widget .nav-child .nav-child > li > a:hover {
+    background-color: transparent;
+    color: #6b7280;
+}
+
+/* Remove default list styling */
+.at-dynamic-menu-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.at-dynamic-menu-widget li {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .entry-content .col-md-6:last-child {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .at-dynamic-menu-widget {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .at-dynamic-menu-widget .nav.menu > li > a {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+    
+    .at-dynamic-menu-widget .nav-child > li > a {
+        padding: 10px 16px 10px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Ensure the menu doesn't collapse when search results are empty */
+.at-dynamic-menu-widget {
+    min-height: 200px;
+}
+
+.at-dynamic-menu-widget .nav.menu {
+    min-height: 100px;
+}
+
+/* Hide empty search results gracefully */
+.at-dynamic-menu-widget .nav.menu:empty::after {
+    content: "Nessun risultato trovato";
+    display: block;
+    padding: 20px 16px;
+    color: #9ca3af;
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Ensure two-column layout row doesn't wrap */
+.entry-content .row {
+    flex-wrap: nowrap !important;
+}
+
+/* Table constraints to prevent pushing sidebar */
+.entry-content .col-md-6:first-child .page-content-wrapper {
+    min-width: 0 !important;
+    width: 100% !important;
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper table,
+.entry-content .col-md-6:first-child .page-content-wrapper .wp-block-table,
+.entry-content .col-md-6:first-child .page-content-wrapper > table {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    table-layout: auto !important;
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper .wp-block-table {
+    overflow-x: auto;
+    overflow-y: visible;
+    display: block;
+    min-width: 0 !important;
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper .wp-block-table table {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: table !important;
+}
+
+/* Prevent any content from forcing width beyond container */
+.entry-content .col-md-6:first-child .page-content-wrapper * {
+    max-width: 100%;
+    box-sizing: border-box;
+}

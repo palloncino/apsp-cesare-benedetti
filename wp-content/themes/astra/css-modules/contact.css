@@ -1,0 +1,305 @@
+/**
+ * 🎯 SEZIONE CONTATTI E DOVE SIAMO - Stile Pulito e Minimal
+ * 📅 Aggiornato: 27/01/2025
+ * 🎯 Target: Pagine "Contatti" e "Dove Siamo" con struttura HTML specifica
+ * 📄 Pagine: contatti.php, dove-siamo.php
+ */
+
+/* ===========================================
+   🎯 SEZIONE CONTATTI PRINCIPALE
+   =========================================== */
+
+.contact-info-section {
+    width: 100%;                    /* Larghezza completa */
+    max-width: none;                /* Nessun limite di larghezza */
+    margin: 0;                      /* Nessun margine */
+    padding: 40px 20px;             /* Spazio interno */
+    display: flex;                  /* Layout flessibile */
+    flex-direction: column;         /* Direzione verticale */
+    gap: 40px;                      /* Spazio tra le sezioni */
+}
+
+/* ===========================================
+   📞 DETTAGLI CONTATTO
+   =========================================== */
+
+.contact-details {
+    display: grid;                  /* Layout a griglia per i contatti */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Griglia responsive */
+    gap: 30px;                      /* Spazio tra gli elementi */
+    padding: 0;                     /* Nessun padding */
+    background: none;               /* Nessun sfondo */
+    border: none;                   /* Nessun bordo */
+    box-shadow: none;               /* Nessuna ombra */
+    width: 100%;                    /* Larghezza completa */
+}
+
+.contact-title {
+    font-size: 1.5rem;              /* Titolo medio */
+    color: #333;                    /* Colore nero semplice */
+    margin-bottom: 25px;            /* Spazio sotto il titolo */
+    font-weight: 600;               /* Testo semi-grassetto */
+    text-align: left;               /* Allineamento a sinistra */
+    border-bottom: 2px solid #e0e0e0; /* Linea sottile sotto il titolo */
+    padding-bottom: 10px;           /* Spazio sopra la linea */
+    grid-column: 1 / -1;            /* Occupa tutta la larghezza della griglia */
+    margin-bottom: 30px;            /* Spazio sotto il titolo */
+}
+
+/* ===========================================
+   📍 ELEMENTI CONTATTO
+   =========================================== */
+
+.contact-item {
+    display: flex;                  /* Layout flessibile */
+    align-items: flex-start;        /* Allinea in alto */
+    gap: 15px;                      /* Spazio tra icona e testo */
+    padding: 0;                     /* Nessun padding */
+    border: none;                   /* Nessun bordo */
+    background: none;               /* Nessun sfondo */
+    transition: none;               /* Nessuna animazione */
+}
+
+.contact-item:hover {
+    background: none;               /* Nessun effetto hover */
+    border: none;                   /* Nessun bordo */
+    transform: none;                /* Nessun movimento */
+    box-shadow: none;               /* Nessuna ombra */
+}
+
+.contact-icon {
+    font-size: 1.3rem;              /* Icona media */
+    margin-top: 2px;                /* Piccolo aggiustamento verticale */
+    min-width: 25px;                /* Larghezza minima per allineamento */
+    text-align: center;             /* Centra l'icona */
+    flex-shrink: 0;                 /* Non ridurre la dimensione dell'icona */
+}
+
+.contact-text {
+    flex: 1;                        /* Occupa tutto lo spazio rimanente */
+    line-height: 1.5;               /* Spazio tra le righe */
+    display: flex;                  /* Layout flessibile per allineare label e contenuto */
+    flex-direction: column;         /* Direzione verticale */
+    gap: 2px;                       /* Spazio tra gli elementi */
+}
+
+.contact-text strong {
+    color: #333;                    /* Colore nero semplice */
+    font-weight: 600;               /* Testo semi-grassetto */
+    display: block;                 /* Block per andare a capo */
+    font-size: 0.9rem;              /* Dimensione leggermente più piccola */
+    text-transform: uppercase;      /* Lettere maiuscole */
+    letter-spacing: 0.5px;          /* Spazio tra le lettere */
+    margin-bottom: 4px;             /* Spazio sotto l'etichetta */
+    color: #666;                    /* Colore grigio per le etichette */
+}
+
+.contact-text a {
+    color: #0066cc;                 /* Colore blu semplice */
+    text-decoration: none;          /* Nessuna sottolineatura */
+    font-weight: normal;            /* Peso normale */
+    transition: color 0.2s ease;    /* Transizione veloce del colore */
+}
+
+.contact-text a:hover {
+    color: #004499;                 /* Blu più scuro al passaggio del mouse */
+    text-decoration: underline;     /* Sottolineatura al hover */
+}
+
+/* Stile per i div con indirizzo */
+.contact-text div {
+    color: #333;                    /* Colore nero per il testo normale */
+    font-size: 1rem;                /* Dimensione normale */
+    line-height: 1.4;               /* Spazio tra le righe */
+}
+
+/* ===========================================
+   🏠 STILI SPECIFICI PER "DOVE SIAMO"
+   =========================================== */
+
+/* Stile per il nome della struttura (Casa di Soggiorno) */
+.contact-text strong:first-child {
+    font-size: 1.1rem;              /* Dimensione più grande per il nome struttura */
+    color: #2c3e50;                 /* Colore blu scuro per evidenziare */
+    margin-bottom: 8px;             /* Più spazio sotto */
+    line-height: 1.3;               /* Spazio tra le righe più compatto */
+}
+
+/* Stile per indirizzo su più righe */
+.contact-text div:has(br) {
+    line-height: 1.5;               /* Spazio tra le righe per indirizzi */
+}
+
+/* Stile per link multipli nella stessa riga */
+.contact-text a + a {
+    margin-left: 8px;               /* Spazio tra link multipli */
+}
+
+.contact-text a + a:before {
+    content: "oppure";              /* Testo "oppure" tra i link */
+    color: #666;                    /* Colore grigio */
+    margin-right: 8px;              /* Spazio prima del secondo link */
+    font-weight: normal;            /* Peso normale */
+}
+
+/* ===========================================
+   🗺️ SEZIONE MAPPA
+   =========================================== */
+
+.map-section {
+    background: none;                /* Nessun sfondo */
+    padding: 0;                      /* Nessun padding */
+    border: none;                    /* Nessun bordo */
+    box-shadow: none;                /* Nessuna ombra */
+    width: 100%;                     /* Larghezza completa */
+}
+
+.map-title {
+    font-size: 1.5rem;              /* Titolo medio */
+    color: #333;                    /* Colore nero semplice */
+    margin-bottom: 25px;            /* Spazio sotto il titolo */
+    font-weight: 600;               /* Testo semi-grassetto */
+    text-align: left;               /* Allineamento a sinistra */
+    border-bottom: 2px solid #e0e0e0; /* Linea sottile sotto il titolo */
+    padding-bottom: 10px;           /* Spazio sopra la linea */
+}
+
+/* ===========================================
+   📱 DESIGN RESPONSIVE - PER TABLET E TELEFONI
+   =========================================== */
+
+@media (max-width: 768px) {
+    .contact-info-section {
+        gap: 30px;                   /* Meno spazio tra le sezioni */
+        padding: 30px 15px;          /* Meno spazio interno */
+    }
+    
+    .contact-details {
+        grid-template-columns: 1fr;  /* Una sola colonna su schermi piccoli */
+        gap: 20px;                   /* Meno spazio tra gli elementi */
+    }
+    
+    .contact-title,
+    .map-title {
+        font-size: 1.4rem;           /* Titoli più piccoli */
+        margin-bottom: 20px;         /* Meno spazio sotto */
+    }
+    
+    .contact-item {
+        gap: 12px;                   /* Meno spazio tra icona e testo */
+    }
+    
+    .contact-icon {
+        font-size: 1.2rem;           /* Icone più piccole */
+        min-width: 22px;             /* Larghezza minima più piccola */
+    }
+    
+    .contact-text strong {
+        font-size: 0.85rem;          /* Etichette più piccole */
+    }
+    
+    .contact-text strong:first-child {
+        font-size: 1rem;             /* Nome struttura più piccolo su mobile */
+    }
+    
+    .apsp-map-wrapper iframe {
+        height: 400px;               /* Mappa più piccola su mobile ma ancora grande */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-section {
+        padding: 20px 10px;          /* Ancora meno spazio interno */
+    }
+    
+    .contact-details {
+        gap: 15px;                   /* Ancora meno spazio tra gli elementi */
+    }
+    
+    .contact-title,
+    .map-title {
+        font-size: 1.3rem;           /* Titoli ancora più piccoli */
+        margin-bottom: 15px;         /* Meno spazio sotto */
+    }
+    
+    .contact-item {
+        gap: 10px;                   /* Meno spazio tra icona e testo */
+    }
+    
+    .contact-icon {
+        font-size: 1.1rem;           /* Icone ancora più piccole */
+        min-width: 20px;             /* Larghezza minima più piccola */
+    }
+    
+    .contact-text strong {
+        font-size: 0.8rem;           /* Etichette più piccole */
+    }
+    
+    .contact-text strong:first-child {
+        font-size: 0.95rem;          /* Nome struttura ancora più piccolo */
+    }
+    
+    .contact-text div {
+        font-size: 0.95rem;          /* Testo più piccolo */
+    }
+    
+    .apsp-map-wrapper iframe {
+        height: 350px;               /* Mappa ancora più piccola ma non troppo */
+    }
+}
+
+/* ===========================================
+   🎨 EFFETTI SPECIALI E ANIMAZIONI
+   =========================================== */
+
+/* Animazione di entrata per gli elementi contatto */
+.contact-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-item:nth-child(3) { animation-delay: 0.3s; }
+.contact-item:nth-child(4) { animation-delay: 0.4s; }
+.contact-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effetto hover per le icone */
+.contact-icon {
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);          /* L'icona si ingrandisce leggermente */
+}
+
+/* ===========================================
+   🌟 STILI AGGIUNTIVI PER ACCESSIBILITÀ
+   =========================================== */
+
+/* Focus styles per accessibilità */
+.contact-text a:focus {
+    outline: 2px solid #3498db;     /* Contorno blu quando selezionato */
+    outline-offset: 2px;            /* Spazio dal link */
+    border-radius: 4px;             /* Angoli arrotondati */
+}
+
+/* Stili per schermi ad alto contrasto */
+@media (prefers-contrast: high) {
+    .contact-details,
+    .map-section {
+        border: 2px solid #000000;  /* Bordo più spesso */
+    }
+    
+    .contact-text a {
+        color: #0000ff;             /* Blu più scuro per i link */
+    }
+} 

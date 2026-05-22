@@ -1,0 +1,156 @@
+.footer-container {
+	background-color: #2d2d2d;
+	color: #f0f0f0;
+	padding: 40px 0 0;
+	font-family: Arial, sans-serif;
+	width: 100%;
+	clear: both;
+	box-sizing: border-box;
+}
+
+.footer-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.footer-cols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1.5rem;
+}
+
+.footer-col {
+	flex: 1 1 250px;
+	min-width: 220px;
+}
+
+.footer-widget h4,
+.footer-widget h4 a {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-widget h4 a:hover {
+	text-decoration: underline;
+}
+
+.footer-widget p {
+	font-size: 14px;
+	line-height: 1.6;
+	color: #ddd;
+}
+
+.footer-bloglist-item {
+	margin-bottom: 12px;
+}
+
+.footer-bloglist-item a {
+	font-size: 14px;
+	color: #9ec5ff;
+	text-decoration: none;
+}
+
+.footer-bloglist-item a:hover {
+	text-decoration: underline;
+}
+
+.footer-bloglist-date {
+	display: block;
+	font-size: 12px;
+	color: #aaa;
+	margin-top: 4px;
+}
+
+.footer-contacts-item {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 10px;
+	gap: 10px;
+}
+
+.footer-contacts-item i {
+	color: #9ec5ff;
+	margin-top: 3px;
+}
+
+.footer-contacts-item-value {
+	font-size: 14px;
+}
+
+.footer-contacts-item-value a {
+	color: #9ec5ff;
+}
+
+.footer-image-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	margin: 30px 0 20px;
+}
+
+.footer-image-container {
+	flex: 0 0 auto;
+}
+
+.footer-logo-img {
+	max-height: 80px;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.footer-bottom {
+	border-top: 1px solid #555;
+	padding: 16px 0 24px;
+	margin-top: 10px;
+}
+
+.footer-bottom-inner {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	text-align: center;
+}
+
+.footer-copyright {
+	font-size: 13px;
+	color: #ccc;
+}
+
+.footer-copyright a {
+	color: #9ec5ff;
+}
+
+.footer-nav-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px 16px;
+}
+
+.footer-nav-link {
+	font-size: 14px;
+	color: #9ec5ff;
+	text-decoration: none;
+}
+
+.footer-nav-link:hover {
+	text-decoration: underline;
+}
+
+/* Single site footer: no duplicate theme bar below */
+body.apsp-cesare-benedetti .site-footer.apsp-footer {
+	display: none !important;
+}

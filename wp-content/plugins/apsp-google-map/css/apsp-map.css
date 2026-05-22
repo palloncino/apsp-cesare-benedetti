@@ -1,0 +1,93 @@
+/**
+ * APSP Google Map Shortcode Styles
+ * Professional styling for the map embed
+ */
+
+.apsp-map-wrapper {
+    margin: 0;
+    text-align: left;
+    font-family: inherit;
+    background: none;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.apsp-map-title {
+    margin-bottom: 25px !important;
+    color: #333 !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+    padding-bottom: 10px !important;
+}
+
+.apsp-map-wrapper iframe {
+    border: none !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: none !important;
+    max-width: 100% !important;
+    height: 500px !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.apsp-map-wrapper iframe:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transform: none !important;
+}
+
+.apsp-map-address {
+    display: none !important; /* Hide address box to match clean design */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .apsp-map-wrapper {
+        margin: 0 !important;
+    }
+    
+    .apsp-map-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .apsp-map-wrapper iframe {
+        width: 100% !important;
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .apsp-map-wrapper iframe {
+        height: 350px !important;
+    }
+    
+    .apsp-map-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .apsp-map-wrapper iframe {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}
+
+/* Accessibility improvements */
+.apsp-map-wrapper:focus-within {
+    outline: 2px solid #e0e0e0 !important;
+    outline-offset: 2px !important;
+}
+
+.apsp-map-wrapper iframe:focus {
+    outline: 2px solid #e0e0e0 !important;
+    outline-offset: 2px !important;
+} 

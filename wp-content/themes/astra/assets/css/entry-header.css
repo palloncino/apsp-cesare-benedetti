@@ -1,0 +1,154 @@
+/* Minimal compact header */
+.entry-header {
+    background: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  
+  .entry-header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  .entry-header .header-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .entry-header .page-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #222;
+    line-height: 1.2;
+  }
+  
+  .entry-header .header-bottom {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .entry-header .header-right {
+    max-width: 300px;
+    width: 300px;
+    flex-shrink: 0;
+  }
+  
+  .entry-header .page-meta {
+    font-size: 12px;
+    color: #666;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .entry-header .page-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+  }
+  
+  .entry-header .page-date-item {
+  }
+  
+  .entry-header .page-date-item i {
+    margin-right: 4px!important;
+  }
+  .entry-header .page-date-item strong {
+    margin-right: 4px!important;  
+  }
+  
+  .entry-header .header-bottom {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .entry-header .breadcrumb {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  
+  .entry-header .breadcrumb a {
+    color: #0073aa;
+    text-decoration: none;
+  }
+  
+  .entry-header .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .entry-header .breadcrumb-separator {
+    color: #aaa;
+  }
+  
+     /* Small screens */
+   @media (max-width: 600px) {
+     .entry-header .header-top {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 8px;
+     }
+   
+     .entry-header .header-right {
+       max-width: 100%;
+       width: 100%;
+     }
+   
+     .entry-header .page-meta {
+       font-size: 11px;
+     }
+     
+     /* Horizontal scrolling for breadcrumb on mobile when too many items */
+     .entry-header .header-bottom {
+       width: 100%;
+       overflow-x: auto;
+       overflow-y: hidden;
+       -webkit-overflow-scrolling: touch;
+       scrollbar-width: thin;
+     }
+     
+     .entry-header .breadcrumb {
+       flex-wrap: nowrap;
+       min-width: max-content;
+       padding-right: 20px;
+     }
+     
+     .entry-header .breadcrumb a,
+     .entry-header .breadcrumb span {
+       white-space: nowrap;
+     }
+   }
+  
+
+  .header-top .page-meta {
+    margin: 0!important;
+    padding: 0!important;
+    border: none!important;
+  }
+  .header-top .page-title {
+    padding: 0!important;
+  }
+  
+
+  .site-content .ast-container {
+    background: #fff;
+    padding: 0;
+  }
+
+  .site-content .ast-container .entry-content {}
+
+  #page {
+  }

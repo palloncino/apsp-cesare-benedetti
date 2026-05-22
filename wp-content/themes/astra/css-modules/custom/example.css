@@ -1,0 +1,40 @@
+/**
+ * Example Custom CSS File
+ * This file demonstrates the dynamic CSS loading system
+ * You can create any number of CSS files in this folder
+ */
+
+/* ===========================================
+   EXAMPLE CUSTOM STYLES
+   =========================================== */
+
+.example-section {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.example-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.example-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .example-section {
+        padding: 20px 15px;
+    }
+    
+    .example-title {
+        font-size: 1.5rem;
+    }
+} 

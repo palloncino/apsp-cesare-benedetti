@@ -1,0 +1,157 @@
+/**
+ * Flat & Compact Homepage Styling
+ * Removes excessive padding, shadows, and border-radius
+ */
+
+/* Remove excessive padding from page content */
+.page-content.homepage {
+    padding: 0 !important;
+}
+
+/* Flatten section headings */
+.page-content.homepage h2 {
+    margin: 2rem 0 1rem !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+/* Flatten hero carousel */
+body .homepage-grid {
+    border-radius: 0 !important;
+    margin: 1rem 0 !important;
+    box-shadow: none !important;
+}
+
+/* Flatten carousel tiles */
+body .homepage-grid .homepage-tile {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+body .homepage-grid .homepage-tile__img img {
+    border-radius: 0 !important;
+}
+
+/* Flatten homepage list */
+.homepage-list {
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+}
+
+.homepage-list__item {
+    padding: 0.75rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #eee !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.homepage-list__item:hover {
+    box-shadow: none !important;
+    background: #f8f9fa !important;
+}
+
+.homepage-thumb {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Flatten weather widget */
+.weather-widget {
+    border-radius: 0 !important;
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}
+
+.weather-day {
+    border-radius: 0 !important;
+    padding: 0.75rem !important;
+}
+
+/* Flatten map widget */
+.map-widget {
+    margin: 1rem 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}
+
+.map-widget iframe {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Compact carousel indicators - keep them round */
+body .homepage-carousel-indicators {
+    bottom: 15px !important;
+    gap: 8px !important;
+}
+
+body .homepage-carousel-indicator {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important; /* Keep dots round */
+}
+
+body .homepage-carousel-indicator.active {
+    width: 28px !important;
+    border-radius: 5px !important; /* Slightly rounded pill shape */
+}
+
+/* Remove excessive spacing */
+.page-content.homepage > * {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Compact homepage tiles */
+body .homepage-tile__title {
+    padding: 1rem !important;
+}
+
+body .homepage-tile__content {
+    padding: 1rem !important;
+}
+
+/* Flatten any cards or boxes */
+.homepage .card,
+.homepage .box {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    padding: 1rem !important;
+}
+
+/* Remove text shadows */
+.page-content.homepage h1,
+.page-content.homepage h2,
+.page-content.homepage h3 {
+    text-shadow: none !important;
+}
+
+/* Compact buttons */
+.page-content.homepage .button,
+.page-content.homepage .btn {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Responsive - even more compact on mobile */
+@media (max-width: 768px) {
+    .page-content.homepage h2 {
+        margin: 1.5rem 0 0.75rem !important;
+        padding: 0.25rem 0 !important;
+    }
+    
+    .weather-widget {
+        padding: 1rem !important;
+    }
+    
+    .homepage-list__item {
+        padding: 0.5rem 0 !important;
+    }
+}
+

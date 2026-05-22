@@ -1,0 +1,170 @@
+<?php
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Astra
+ * @since 1.0.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+get_header(); ?>
+
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <main id="main" class="site-main">
+                    <?php
+                    while ( have_posts() ) :
+                        the_post();
+                        ?>
+                        
+                        <article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
+                            
+                            <?php if ( ! is_front_page() ) : ?>
+                                <header class="entry-header">
+                                    <h1 class="page-title"><?php the_title(); ?></h1>
+                                    
+                                    <!-- Page Meta Information -->
+                                    <?php do_action( 'astra_after_page_title' ); ?>
+                                </header>
+                            <?php endif; ?>
+
+                            <div class="entry-content">
+                                <?php
+                                // Check if this page should show the dynamic menu
+                                $should_show_menu = false;
+                                
+                                // Get the root pages from the dynamic menu options
+                                $roots_config = get_option( 'at_dynamic_menu_roots', array(
+                                    'disposizioni-generali'        => 'Disposizioni generali',
+                                    'organizzazione'               => 'Organizzazione',
+                                    'consulenti-e-collaboratori'   => 'Consulenti e collaboratori',
+                                    'personale'                    => 'Personale',
+                                    'bandi-di-concorso'            => 'Bandi di concorso',
+                                    'performance'                  => 'Performance',
+                                    'enti-controllati'             => 'Enti controllati',
+                                    'attivita-e-procedimenti'      => 'Attività e procedimenti',
+                                    'provvedimenti'                => 'Provvedimenti',
+                                    'controlli-sulle-imprese'      => 'Controlli sulle imprese',
+                                    'bandi-di-gara-e-contatti'     => 'Bandi di gara e contatti',
+                                    'sovvenzioni-contributi-sussidi-vantaggi-economici' => 'Sovvenzioni, contributi, sussidi, vantaggi economici',
+                                    'bilanci'                      => 'Bilanci',
+                                    'beni-immobili-e-gestione-patrimonio' => 'Beni immobili e gestione patrimonio',
+                                    'controlli-rilievi-sull-amministrazione' => 'Controlli rilievi sull\'amministrazione',
+                                    'servizi-erogati'              => 'Servizi erogati',
+                                    'pagamenti-dell-amministrazione' => 'Pagamenti dell\'amministrazione',
+                                    'opere-pubbliche'              => 'Opere pubbliche',
+                                    'pianificazione-e-governo-del-territorio' => 'Pianificazione e governo del territorio',
+                                    'informazioni-ambientali'      => 'Informazioni ambientali',
+                                    'strutture-sanitarie-e-private-accreditate' => 'Strutture sanitarie e private accreditate',
+                                    'interventi-straordinari-di-emergenza' => 'Interventi straordinari di emergenza',
+                                    'altri-contenuti'              => 'Altri contenuti',
+                                    'contatore-accessi'            => 'Contatore accessi',
+                                    'amministrazione-trasparente'  => 'Amministrazione trasparente',
+                                ));
+                                
+                                // Extract just the slugs for checking
+                                $roots = array_keys( $roots_config );
+                                
+                                // Get current page
+                                $current_page = get_post();
+                                if ( $current_page ) {
+                                    // Check if current page is a root page
+                                    $current_slug = $current_page->post_name;
+                                    if ( in_array( $current_slug, $roots ) ) {
+                                        $should_show_menu = true;
+                                    } else {
+                                        // Check if current page is a child of any root page
+                                        $current_ancestors = get_post_ancestors( $current_page );
+                                        foreach ( $current_ancestors as $ancestor_id ) {
+                                            $ancestor = get_post( $ancestor_id );
+                                            if ( $ancestor && in_array( $ancestor->post_name, $roots ) ) {
+                                                $should_show_menu = true;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                if ( $should_show_menu ) {
+                                    // Two-column layout for pages with menu
+                                    echo '<div class="row">';
+                                    echo '<div class="col-md-6">';
+                                }
+                                ?>
+                                
+                                <div class="page-content-wrapper">
+                                <?php
+                                the_content();
+
+                                wp_link_pages(
+                                    array(
+                                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astra' ),
+                                        'after'  => '</div>',
+                                    )
+                                );
+                                ?>
+                                </div><!-- .page-content-wrapper -->
+                                
+                                <?php if ( $should_show_menu ) : ?>
+                                    </div><!-- .col-md-6 -->
+                                    
+                                    <div class="col-md-6">
+                                        <div class="dynamic-menu-sidebar">
+                                            <?php echo do_shortcode( '[at_dynamic_menu]' ); ?>
+                                        </div>
+                                    </div>
+                                    </div><!-- .row -->
+                                <?php endif; ?>
+                            </div><!-- .entry-content -->
+
+                            <?php if ( get_edit_post_link() ) : ?>
+                                <footer class="entry-footer">
+                                    <?php
+                                    edit_post_link(
+                                        sprintf(
+                                            wp_kses(
+                                                /* translators: %s: Name of current post. Only visible to screen readers */
+                                                __( 'Edit <span class="screen-reader-text">%s</span>', 'astra' ),
+                                                array(
+                                                    'span' => array(
+                                                        'class' => array(),
+                                                    ),
+                                                )
+                                            ),
+                                            wp_kses_post( get_the_title() )
+                                        ),
+                                        '<span class="edit-link">',
+                                        '</span>'
+                                    );
+                                    ?>
+                                </footer><!-- .entry-footer -->
+                            <?php endif; ?>
+                        </article><!-- #post-<?php the_ID(); ?> -->
+
+                        <?php
+                        // If comments are open or we have at least one comment, load up the comment template.
+                        if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif;
+
+                    endwhile; // End of the loop.
+                    ?>
+                </main><!-- #main -->
+            </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</div><!-- .site-content -->
+
+<?php get_footer(); ?>

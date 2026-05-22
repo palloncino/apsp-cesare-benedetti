@@ -1,0 +1,1163 @@
+/**
+Theme Name: Astra
+Theme URI: https://wpastra.com/
+Author: Brainstorm Force
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 5,700+ five-star reviews! It's ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website. It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc. Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly. It's fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates. Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme. Try the live demo of Astra: https://zipwp.org/themes/astra/
+Version: 4.11.3
+Requires at least: 5.3
+WC requires at least: 3.0
+WC tested up to: 9.6
+Tested up to: 6.8
+Requires PHP: 5.3
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra
+Domain Path: /languages
+Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
+AMP: true
+
+Astra WordPress Theme, Copyright 2020 WPAstra.
+Astra is distributed under the terms of the GNU GPL.
+
+Astra is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of.
+Nicolas Gallagher and Jonathan Neal https://necolas.github.com/normalize.css/
+
+Astra icon font is based on IcoMoon-Free vector icon by Keyamoon.
+IcoMoon-Free vector icon distributed under terms of CC BY 4.0 or GPL. (https://creativecommons.org/licenses/by/4.0/ or https://www.gnu.org/licenses/gpl.html)
+Source: http://keyamoon.com/
+
+Flexibility is a JavaScript polyfill for Flexbox By Jonathan Neal, 10up. (https://github.com/jonathantneal/flexibility)
+Licensed under MIT ( https://github.com/jonathantneal/flexibility/blob/master/LICENSE.md )
+
+Screenshot image is a collage of actual sites created using the Astra WordPress Theme.
+
+Icons used in the Screenshot image are all licensed under Creative Commons ( CC BY 4.0 ) License ( https://fontawesome.com/license/free )
+https://fontawesome.com/v5.15/icons/store?style=solid
+https://fontawesome.com/v5.15/icons/shopping-cart?style=solid
+https://fontawesome.com/v5.15/icons/pen-square?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
+
+Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://gumroad.com/l/humaaans )
+https://websitedemos.net/web-design-agency-08/wp-content/uploads/sites/796/2021/05/standing-24.png
+https://websitedemos.net/web-design-agency-08/wp-content/uploads/sites/796/2021/05/sitting-2.png
+
+Hand-drawn illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
+https://websitedemos.net/web-design-agency-08/wp-content/uploads/sites/796/2021/05/girl-with-image-container.png
+https://websitedemos.net/web-design-agency-08/wp-content/uploads/sites/796/2021/05/boy-with-code-container.png
+https://websitedemos.net/web-design-agency-08/wp-content/uploads/sites/796/2021/05/web-browser.png
+
+The same site as screenshot can be imported from here https://websitedemos.net/web-design-agency-08/.
+
+For more information, refer to this document on how to create a page like in the screenshot - https://wpastra.com/docs/replicating-the-screenshot/.
+
+Astra default breadcrumb is based on Breadcrumb Trail by Justin Tadlock. (https://github.com/justintadlock/breadcrumb-trail)
+Breadcrumb Trail is distributed under the terms of the GNU GPL v2 or later.
+
+Astra local fonts feature is based on Webfonts Loader by WordPress Themes Team (WPTT). (https://github.com/WPTT/webfont-loader)
+Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE )
+
+/* Note: The CSS files are loaded from assets/css/ folder. */
+
+/* ===========================================
+   CUSTOM STYLING FOR CASALANER SITE
+   =========================================== */
+
+/* Main Container Improvements */
+.site-content {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.page-title {
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+.page-content h1 {
+    font-size: 28px;
+    padding-left: 15px;
+}
+
+.page-content h2 {
+    font-size: 24px;
+    color: #34495e;
+}
+
+.page-content h3 {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+.page-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Sidebar Styling */
+.widget-area {
+    padding: 25px;
+}
+
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* ===========================================
+   FOOTER STYLING - MOVED TO css-modules/footer.css
+   =========================================== */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-content {
+        padding: 0 10px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+    }
+
+    .main-navigation a {
+        padding: 12px 15px;
+        margin: 2px 0;
+    }
+
+    .page-content {
+        padding: 15px 10px;
+        margin: 10px 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .page-title {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .widget-area {
+        margin-top: 20px;
+        padding: 15px 10px;
+    }
+
+    /* Fix horizontal overflow issues */
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    /* Reduce card padding on mobile */
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust table for mobile */
+    table {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+    }
+
+    /* Fix form elements on mobile */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select {
+        padding: 10px 12px;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+
+    /* Fix sidebar on mobile */
+    .at-sidebar {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    /* Fix dynamic menu widget on mobile */
+    .at-dynamic-menu-widget {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Fix hero section on mobile */
+    /* Hero section moved to css-modules/hero.css */
+
+    /* Fix services section on mobile */
+    #servizi {
+        padding: 40px 10px;
+    }
+
+    #servizi h2 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .service-card {
+        padding: 20px;
+        margin: 0 10px 20px 10px;
+    }
+}
+
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+    box-sizing: border-box;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+th {
+    background: #3498db;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+/* Form Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Alert/Notice Styling */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    border-color: #17a2b8;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* Page Meta Information Styling */
+.page-meta {
+    margin: 20px 0 30px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page-dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page-date-item i {
+    color: #3498db;
+    font-size: 1em;
+}
+
+.page-date-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.page-date-item time {
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive design for page meta */
+@media (max-width: 768px) {
+    .page-dates {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-date-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===========================================
+   SIMPLIFIED DYNAMIC MENU STYLES
+   =========================================== */
+
+/* Main widget container */
+.at-dynamic-menu-widget {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+/* Widget title */
+.at-dynamic-menu-widget .widget-title {
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 12px 16px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Menu container */
+.at-dynamic-menu-widget .nav.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main menu items - PARENT LEVEL */
+.at-dynamic-menu-widget .nav.menu>li {
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.at-dynamic-menu-widget .nav.menu>li:last-child {
+    border-bottom: none;
+}
+
+/* Main menu links - PARENT LEVEL */
+.at-dynamic-menu-widget .nav.menu>li>a {
+    display: block;
+    padding: 14px 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.at-dynamic-menu-widget .nav.menu>li>a:hover {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    border-left-color: #3498db;
+}
+
+/* Current page styling - PARENT LEVEL */
+.at-dynamic-menu-widget .nav.menu>li.current-menu-item>a,
+.at-dynamic-menu-widget .nav.menu>li.current_page_item>a {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+    border-left-color: #1976d2;
+}
+
+/* Submenu container - CHILD LEVEL */
+.at-dynamic-menu-widget .nav-child {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    border-left: 2px solid #e0e0e0;
+}
+
+/* Submenu items - CHILD LEVEL */
+.at-dynamic-menu-widget .nav-child>li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.at-dynamic-menu-widget .nav-child>li:last-child {
+    border-bottom: none;
+}
+
+/* Submenu links - CHILD LEVEL */
+.at-dynamic-menu-widget .nav-child>li>a {
+    display: block;
+    padding: 10px 16px 10px 32px;
+    color: #555555;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    border-left: 2px solid transparent;
+}
+
+.at-dynamic-menu-widget .nav-child>li>a:hover {
+    background-color: #f0f0f0;
+    color: #333333;
+    border-left-color: #3498db;
+}
+
+/* Current page styling for submenu - CHILD LEVEL */
+.at-dynamic-menu-widget .nav-child>li.current-menu-item>a,
+.at-dynamic-menu-widget .nav-child>li.current_page_item>a {
+    background-color: #e8f4fd;
+    color: #1976d2;
+    font-weight: 500;
+    border-left-color: #1976d2;
+}
+
+/* Deep nested submenu - GRANDCHILD LEVEL */
+.at-dynamic-menu-widget .nav-child .nav-child {
+    background-color: #f5f5f5;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 16px;
+}
+
+.at-dynamic-menu-widget .nav-child .nav-child>li>a {
+    padding: 8px 16px 8px 48px;
+    font-size: 12px;
+    color: #777777;
+    font-weight: 400;
+}
+
+.at-dynamic-menu-widget .nav-child .nav-child>li>a:hover {
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+/* Current page styling for deep nested - GRANDCHILD LEVEL */
+.at-dynamic-menu-widget .nav-child .nav-child>li.current-menu-item>a,
+.at-dynamic-menu-widget .nav-child .nav-child>li.current_page_item>a {
+    background-color: #e8f4fd;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+/* Remove default list styling */
+.at-dynamic-menu-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.at-dynamic-menu-widget li {
+    margin: 0;
+}
+
+.at-dynamic-menu-widget .small {
+    font-size: 0.9em;
+}
+
+/* ===========================================
+   MOBILE PAGE LAYOUT FIX
+   =========================================== */
+
+.mobile-page-layout__main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Horizontal scrolling for mobile page headers when too many items */
+@media (max-width: 768px) {
+    .page-header,
+    .mobile-page-header {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        width: 100%;
+    }
+    
+    .page-header > *,
+    .mobile-page-header > * {
+        min-width: max-content;
+    }
+    
+    /* Ensure breadcrumb can scroll horizontally on mobile */
+    .page-header .breadcrumb,
+    .mobile-page-header .breadcrumb {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 5px;
+        margin-right: -20px;
+        padding-right: 20px;
+    }
+    
+    .page-header .breadcrumb > *,
+    .mobile-page-header .breadcrumb > * {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+    
+    /* Also handle entry-header breadcrumb on mobile */
+    .entry-header .breadcrumb {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 5px;
+    }
+}
+
+/* ===========================================
+   TWO-COLUMN LAYOUT FOR DYNAMIC MENU PAGES
+   =========================================== */
+
+/* Two-column layout container */
+.entry-content .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 30px;
+    margin: 0 !important;
+    min-height: 100vh;
+    height: 100%;
+    align-items: flex-start;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.entry-content .col-md-6 {
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Content column - takes remaining space after sidebar */
+/* Override any bootstrap-grid.css rules that might set col-md-6 to 50% */
+/* Use very specific selector to ensure it overrides bootstrap */
+.entry-content > .row > .col-md-6:first-child,
+.entry-content .row .col-md-6:first-child {
+    flex: 1 1 0% !important;
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+    flex-basis: 0% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Override at all breakpoints where bootstrap might apply col-md-6 rules */
+@media (min-width: 768px) {
+    .entry-content .row .col-md-6:first-child {
+        flex: 1 1 auto !important;
+        flex-grow: 1 !important;
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .entry-content .row .col-md-6:first-child {
+        flex: 1 1 auto !important;
+        flex-grow: 1 !important;
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .entry-content .row .col-md-6:first-child {
+        flex: 1 1 auto !important;
+        flex-grow: 1 !important;
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper {
+    flex: 1 1 auto; /* Flex item that grows and shrinks */
+    display: block; /* Block container for content, not flex */
+    min-height: 0; /* Allow shrinking */
+    height: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto; /* Allow horizontal scroll for wide tables */
+    overflow-y: visible;
+    box-sizing: border-box;
+}
+
+/* Menu column width - overridden by dynamic-menu-minimal.css */
+/* Use more specific selector to ensure sidebar is always positioned correctly */
+.entry-content > .row > .col-md-6.sidebar-column,
+.entry-content .row .col-md-6.sidebar-column,
+.entry-content .row .col-md-6:last-child {
+    flex: 0 0 350px !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+    width: 350px !important;
+    min-height: 100vh;
+    height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+}
+
+/* Fix for incorrectly nested sidebar - move it to correct position */
+.entry-content .col-md-6 .col-md-6.sidebar-column {
+    position: relative;
+}
+
+/* Ensure sidebar is always a direct child of row, not nested */
+.entry-content .row > .col-md-6.sidebar-column {
+    order: 2;
+}
+
+/* Dynamic menu sidebar styling - minimal */
+.dynamic-menu-sidebar {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-menu-sidebar .widget {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dynamic-menu-sidebar .widget:last-child {
+    margin-bottom: 0;
+}
+
+/* Page content wrapper styling for two-column layout */
+.page-content-wrapper {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table constraints within two-column layout - ensure tables stay in left column */
+.entry-content .col-md-6:first-child .page-content-wrapper {
+    position: relative;
+    word-wrap: break-word;
+    min-width: 0 !important; /* Critical for flex shrinking */
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper > * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Critical: Wrap all tables in scrollable container to prevent flex layout breakage */
+.entry-content .col-md-6:first-child .page-content-wrapper > table,
+.entry-content .col-md-6:first-child .page-content-wrapper table,
+.entry-content .col-md-6:first-child .page-content-wrapper tbody,
+.entry-content .col-md-6:first-child .page-content-wrapper thead,
+.entry-content .col-md-6:first-child .page-content-wrapper tfoot {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: table !important;
+    table-layout: auto !important;
+    box-sizing: border-box !important;
+    margin: 20px 0 !important;
+}
+
+/* Wrap WordPress block tables */
+.entry-content .col-md-6:first-child .page-content-wrapper .wp-block-table {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: auto;
+    overflow-y: visible;
+    display: block;
+    margin: 20px 0;
+    min-width: 0;
+}
+
+.entry-content .col-md-6:first-child .page-content-wrapper .wp-block-table table {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: table !important;
+    box-sizing: border-box !important;
+    table-layout: auto !important;
+}
+
+/* Wrap direct table elements in a container to prevent overflow */
+.entry-content .col-md-6:first-child .page-content-wrapper > table {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Ensure all content inside page-content-wrapper respects container width */
+.entry-content .col-md-6:first-child .page-content-wrapper * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent any element from forcing width beyond container */
+.entry-content .col-md-6:first-child .page-content-wrapper img,
+.entry-content .col-md-6:first-child .page-content-wrapper iframe,
+.entry-content .col-md-6:first-child .page-content-wrapper video {
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* If table is too wide, allow horizontal scroll within content area */
+@media (min-width: 769px) {
+    .entry-content .col-md-6:first-child .page-content-wrapper {
+        overflow-x: auto; /* Allow horizontal scroll for wide tables */
+        overflow-y: visible;
+    }
+}
+
+/* Responsive adjustments for two-column layout */
+@media (max-width: 768px) {
+    .entry-content .row {
+        flex-direction: column;
+        gap: 20px;
+        min-height: auto;
+        height: auto;
+    }
+
+    .entry-content .col-md-6 {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+        min-height: auto;
+        height: auto;
+        display: block;
+    }
+
+    .entry-content .col-md-6:first-child {
+        display: block;
+        min-height: auto;
+        height: auto;
+        width: 100% !important;
+        overflow: visible;
+    }
+
+    .entry-content .col-md-6:first-child .page-content-wrapper {
+        display: block;
+        min-height: auto;
+        height: auto;
+        overflow-x: auto; /* Still allow scroll on mobile for wide tables */
+        flex: none;
+    }
+
+    .entry-content .col-md-6:last-child {
+        min-height: auto;
+        height: auto;
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+        flex: none !important;
+    }
+
+    .dynamic-menu-sidebar {
+        height: auto;
+        display: block;
+    }
+
+    .dynamic-menu-sidebar {
+        margin-top: 0;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    /* Make the widget more compact on mobile */
+    .at-dynamic-menu-widget {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .at-dynamic-menu-widget .nav.menu>li>a {
+        padding: 12px 16px;
+        font-size: 14px;
+        border-left: none;
+    }
+
+    .at-dynamic-menu-widget .nav-child>li>a {
+        padding: 8px 16px 8px 25px;
+        font-size: 13px;
+        border-left: none;
+    }
+
+    .at-dynamic-menu-widget .nav-child .nav-child>li>a {
+        padding: 6px 16px 6px 30px;
+        font-size: 12px;
+        border-left: none;
+    }
+}
+
+/* ===========================================
+   PAGE LAYOUT STYLES FOR SIDEBAR
+   =========================================== */
+
+/* Sidebar container for page ID 82 */
+.at-sidebar {
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 0;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar widget spacing */
+.at-sidebar .widget {
+    margin-bottom: 0;
+}
+
+.at-sidebar .widget:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN FOR AT DYNAMIC MENU
+   =========================================== */
+
+.contact-form-inner {
+    padding: 1.5rem;
+}
+
+/* Mobile-specific fixes for horizontal overflow */
+@media (max-width: 768px) {
+    section#amministrazione-trasparente {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .contact-form-inner {
+        padding: 1rem;
+    }
+
+    /* Ensure all containers respect viewport width */
+    .container,
+    .site-content,
+    .main-content {
+        max-width: 100vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    /* Fix any potential horizontal scroll issues */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Reduce excessive margins and paddings */
+    .widget-area {
+        padding: 10px;
+    }
+
+    .page-content h1,
+    .page-content h2,
+    .page-content h3 {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Fix any potential table overflow */
+    table {
+        max-width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ===========================================
+   HERO SECTION AND SERVICES STYLING - MOVED TO css-modules/
+   =========================================== */
+
+/* Improved focus styling for better accessibility */
+a:focus,
+.at-dynamic-menu-widget a:focus,
+.btn:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 4px solid #000000 !important;
+    outline-offset: 0px !important;
+    border-radius: 2px !important;
+    z-index: 9999 !important;
+    position: relative !important;
+}
+
+/* Arrow indicator above focused elements */
+a:focus::before,
+.at-dynamic-menu-widget a:focus::before,
+.btn:focus::before,
+button:focus::before,
+input[type="button"]:focus::before,
+input[type="submit"]:focus::before,
+input:focus::before,
+textarea:focus::before,
+/* select:focus::before {
+    content: '▼' !important;
+    position: absolute !important;
+    top: -20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    color: #000000 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 2px 4px !important;
+    border-radius: 2px !important;
+    z-index: 10000 !important;
+    line-height: 1 !important;
+} */
+
+/* Remove default focus outline for better control */
+*:focus {
+    outline: none;
+}
+
+/* Custom CSS to fix logo background issue */
+.site-logo-img {
+    background: transparent !important;
+    background-color: transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    position: relative !important;
+}
+
+.site-logo-img img {
+    background: transparent !important;
+    background-color: transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    position: relative !important;
+}
+
+/* Remove any pseudo-elements that might be causing the overlay */
+.site-logo-img::before,
+.site-logo-img::after {
+    display: none !important;
+    content: none !important;
+}
+
+.site-logo-img img::before,
+.site-logo-img img::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ===========================================
+   📏 LARGHEZZA COMPLETA PER CONTENUTO
+   =========================================== */
+
+/* ===========================================
+   🏠 FULL WIDTH HERO SECTION FOR HOME PAGE (POST 33)
+   =========================================== */
+
+
+
+/* ===========================================
+   📏 DEFAULT LAYOUT FOR OTHER PAGES
+   =========================================== */
+
+.site-content {
+    width: 100% !important;
+    max-width: 1230px !important;
+}
+
+.ast-container {
+    width: 100% !important;
+    max-width: 1230px !important;
+}
+
+.page-id-2 .entry-content {
+    margin-top: 0rem;
+}
+
+.entry-content {
+    margin-bottom: 100px;
+    margin-top: 1rem;
+    padding: 0px 20px;
+}
+
+.color-white {
+    color: #ffffff !important;
+}
+
+/* CONTATTI */
+/* ===========================================
+   CONTACT SECTION STYLING - MOVED TO css-modules/contact.css
+   =========================================== */
+
+/* END CONTATTI */
