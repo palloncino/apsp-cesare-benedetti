@@ -53,3 +53,33 @@ function cesare_benedetti_page_url( $path ) {
 
 	return home_url( '/' . $slug . '/' );
 }
+
+if ( defined( 'WP_ENVIRONMENT_TYPE' ) && 'local' === WP_ENVIRONMENT_TYPE ) {
+	/**
+	 * Avoid slow 404 storms when trimmed uploads are missing on disk.
+	 *
+	 * @param array|false $out    Image data or false.
+	 * @param int         $id     Attachment ID.
+	 * @param string|int[] $size  Size name or dimensions.
+	 * @return array|false
+	 */
+	add_filter(
+		'image_downsize',
+		static function ( $out, $id, $size ) {
+			if ( false !== $out ) {
+				return $out;
+			}
+
+			$file = get_attached_file( (int) $id );
+			if ( ! $file || file_exists( $file ) ) {
+				return $out;
+			}
+
+			$url = plugins_url( 'assets/placeholder.svg', __FILE__ );
+
+			return array( $url, 800, 450, false );
+		},
+		10,
+		3
+	);
+}
